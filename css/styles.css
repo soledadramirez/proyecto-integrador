@@ -1,0 +1,153 @@
+*{
+  box-sizing: border-box;
+}
+ul, ol{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+h2{
+  text-align: center;
+}
+body{
+  margin: 0 auto;
+  font-family: 'Poiret One', cursive;
+}
+.container{
+  background-color: #fff;
+}
+header{
+ margin: 0;
+ font-family: 'Poiret One', cursive;
+ background-image: url(../img/libros2.jpg);
+}
+header h1{
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 15px;
+  color: #fff;
+}
+.separador{
+  line-height: 35px;
+  background-color: rgb(70, 135, 199);
+  color: #fff;
+}
+.separador h2{
+  text-align: left;
+  padding-left: 20px;
+}
+section{
+  width: 85%;
+  color: #000;
+  border-radius: 5px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px 20px 20px;
+  box-shadow: 2px 2px 10px #2e2e2e;
+}
+/*section{
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px auto;
+  padding: 0 20px 20px;
+  box-shadow: 2px 2px 10px #c7c7c7;*/
+}
+section h2{
+  padding: 20px;
+  color: #000;
+  text-align: center;
+}
+.datos input{
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding-left: 10px;
+  line-height: 25px;
+  width: 300px;
+  box-shadow: 2px 2px 10px #c7c7c7;
+}
+.check input{
+  width: 15px;
+  box-shadow: none;
+}
+.check label{
+  font-size: 14px;
+}
+.login{
+  background-color: rgb(70, 135, 199);
+  box-shadow: 2px 2px 3px #a4a4a4;
+  border-radius: 5px;
+  width: 300px;
+  line-height: 30px;
+  border: 0;
+  font-family: 'Poiret One', cursive;
+  color: #fff;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.login:hover{
+  background-color: #424242;
+}
+.login h2{
+  color: #000;
+}
+hr{
+  margin: 10px;
+}
+.datos-alt button{
+  display: block;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px 20px;
+  margin: 10px;
+  width: 300px;
+  margin: 10px auto;
+
+}
+.datos-alt button:hover{
+  font-weight: bold;
+}
+.face{
+  background-color: #3b5998;
+}
+.google{
+  background-color: #db4a39;
+}
+.recover p{
+  text-align: right;
+  padding: 0;
+  margin: 5px 0;
+}
+.recover a{
+  color: #000;
+  font-size: 14px;
+}
+.recover a:hover{
+  color: rgb(70, 135, 199);
+}
+.recover p.cuenta{
+  text-align: center;
+}
+footer{
+  background-color: rgb(70, 135, 199);
+  color: #fff;
+}
+footer ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+footer a{
+  color: #fff;
+}
