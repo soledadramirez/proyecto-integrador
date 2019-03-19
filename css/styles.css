@@ -1,6 +1,9 @@
 *{
   box-sizing: border-box;
 }
+html{
+  font-size: 50px;
+}
 ul, ol{
   padding: 0;
   margin: 0;
@@ -22,76 +25,73 @@ body{
 }
 header{
  margin: 0;
- font-family: 'Poiret One', cursive;
  background-image: url(../img/libros2.jpg);
 }
 header h1{
   margin: 0;
-  padding-left: 20px;
-  padding-top: 15px;
+  padding: 25px 20px 25px;
   color: #fff;
 }
 .separador{
-  line-height: 35px;
   background-color: rgb(70, 135, 199);
   color: #fff;
 }
 .separador h2{
   text-align: left;
-  padding-left: 20px;
+  padding: 8px 20px 10px;
+  margin: 0;
+  font-size: 60px;
 }
-section{
+form{
   width: 85%;
   color: #000;
   border-radius: 5px;
   text-align: center;
   margin: 30px auto;
   padding: 20px 20px 20px;
-  box-shadow: 2px 2px 10px #2e2e2e;
 }
-/*section{
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 90%;
-  border-radius: 10px;
-  text-align: center;
-  margin: 10px auto;
-  padding: 0 20px 20px;
-  box-shadow: 2px 2px 10px #c7c7c7;*/
-}
-section h2{
+form h2{
+  margin: 0 0 40px;
   padding: 20px;
   color: #000;
   text-align: center;
 }
+form i{
+  color: rgb(70, 135, 199);
+}
 .datos input{
+  font-size: 40px;
   background-color: #fff;
   display: inline-block;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 30px 0;
   padding-left: 10px;
-  line-height: 25px;
-  width: 300px;
+  line-height: 80px;
+  width: 80%;
   box-shadow: 2px 2px 10px #c7c7c7;
+  font-family: 'Poiret One', cursive;
 }
 .check input{
-  width: 15px;
-  box-shadow: none;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
 }
 .check label{
-  font-size: 14px;
+  font-size: 40px;
 }
 .login{
+  display: block;
   background-color: rgb(70, 135, 199);
   box-shadow: 2px 2px 3px #a4a4a4;
   border-radius: 5px;
-  width: 300px;
-  line-height: 30px;
+  width: 60%;
+  line-height: 80px;
   border: 0;
   font-family: 'Poiret One', cursive;
   color: #fff;
-  font-size: 16px;
-  margin: 10px 0;
+  font-size: 40px;
+  margin: 30px auto 40px;
+  font-weight: bold;
 }
 .login:hover{
   background-color: #424242;
@@ -107,10 +107,11 @@ hr{
   color: #fff;
   border-radius: 5px;
   border: 0;
-  padding: 10px 20px;
-  margin: 10px;
-  width: 300px;
-  margin: 10px auto;
+  width: 60%;
+  margin: 10px auto 35px;
+  box-shadow: 2px 2px 3px #a4a4a4;
+  line-height: 80px;
+  font-size: 40px;
 
 }
 .datos-alt button:hover{
@@ -123,23 +124,26 @@ hr{
   background-color: #db4a39;
 }
 .recover p{
-  text-align: right;
-  padding: 0;
+  text-align: center;
+  padding: 6px;
   margin: 5px 0;
+  font-size: 29px;
+    color: #000;
 }
 .recover a{
   color: #000;
-  font-size: 14px;
 }
 .recover a:hover{
   color: rgb(70, 135, 199);
+  font-weight: bold;
 }
-.recover p.cuenta{
-  text-align: center;
+.cuenta a{
+  text-decoration: underline;
 }
 footer{
   background-color: rgb(70, 135, 199);
   color: #fff;
+  line-height: 80px;
 }
 footer ul{
   display: flex;
