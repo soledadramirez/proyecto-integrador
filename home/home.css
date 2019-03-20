@@ -1,0 +1,402 @@
+
+
+/* -------------------------------GENERALES---------------------------------------- */
+
+
+
+ul {
+  list-style-type: none;
+  padding: 0
+
+}
+li {
+  text-decoration: none
+
+}
+li a {
+    text-decoration: none
+}
+body{
+margin: 0
+
+}
+/*
+--------------------------PARTE SUPERIOR (LOGO , LOGIN, ICONOS DE CONTACTO)----------- */
+header{
+  margin-bottom: 2vh;
+  height: 22vh;
+}
+
+.partesuperior {
+  display: flex;
+  justify-content: space-between;
+  height: 70%;
+
+
+
+}
+
+.logo {
+  width: 18%;
+  height: 95%;
+  margin-left: 42%;
+}
+
+
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+.login {
+
+  margin-right: 5%;
+}
+.login .iconos {
+  display: inline-block;
+}
+.login li  {
+  display:block;
+  margin-right: 20px;
+  font-family: 'Poiret One', cursive;
+  float: left;
+
+}
+.login li a{
+
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+  font-size: 16px;
+
+
+}
+.boton{
+  display:none;
+
+}
+/* ------------------------------- MENÚ ---------------------------------- */
+
+
+.contenedormenu{
+  background-color:rgb(70, 135, 199);
+  /* background-color:rgb(44, 55, 164); */
+  height: 30%;
+  width: 100%;
+  margin: 0 0 0 0;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.menu {
+  width: 70%;
+  height: 100%;
+  margin: 10px auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 0.5em;
+
+}
+
+.menu li a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+}
+
+.imagenhome {
+  width:100%;
+  height: 76vh;
+  margin: 0 auto;
+  position: relative
+}
+.imagenhome img{
+  width: 100%;
+  height: 100%;
+  border: 1px solid black
+
+}
+
+
+ /* --------------PARTE CENTRAL SUPERIOR (IMAGEN LIBRO Y CAFÉ, Y LOS FEATURES LATERALES)--- */
+.partecentral-superior {
+  overflow: hidden;
+  margin: 13vh 0
+}
+
+.libro-cafe{
+  width: 50%;
+  height:58vh;
+  float:left;
+  box-shadow: 10px 10px 5px grey;
+}
+.libro-cafe img {
+  width: 100%;
+  height: 100%;
+}
+
+.textolateral {
+ float: right;
+ margin-right:10%;
+ height: 60vh;
+ width : 35%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+
+}
+
+.textolateral hr{
+  width: 20%;
+  display: inline-block;
+  height: 1px;
+    border: 0;
+    border-top: 3px solid rgb(70, 135, 199)
+
+}
+
+
+.textolateral p {
+  margin-bottom: 12vh;
+  font-family: 'Poiret One', cursive;
+  font-weight: 300;
+  margin-bottom: 10%
+}
+.textolateral h2{
+  margin-top: 5px
+}
+
+/* --------------PARTE CENTRAL INFERIOR (IMAGEN LIBRO Y RISAS, Y LOS FEATURES LATERALES)--- */
+
+.partecentral-inferior {
+  overflow: hidden;
+  margin: 13vh 0;
+}
+.libro-risas{
+  width: 50%;
+  height:58vh;
+  float:right;
+  box-shadow: -10px 10px 5px grey;
+}
+.libro-risas img {
+  width: 100%;
+  height: 100%;
+}
+.textolateral2 {
+ float: right;
+ margin-right:10%;
+ height: 60vh;
+ width: 35%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+
+}
+
+
+.textolateral2 hr{
+  width: 20%;
+  display: inline-block;
+  height: 1px;
+    border: 0;
+    border-top: 3px solid rgb(70, 135, 199);
+    margin: 8px 0;
+
+}
+
+
+.textolateral2 p {
+  margin-bottom: 12vh;
+  font-family: 'Poiret One', cursive;
+  font-weight: 300;
+  margin-bottom: 10%
+}
+.textolateral2 h2{
+  margin-top: 5px
+}
+
+/* --------------PARTE INFERIOR ()--- */
+
+.parteinferior {
+  text-align: center;
+  width: 80% ;
+  margin: 0 auto;
+
+
+}
+.parteinferior-superior{
+border-bottom: solid rgb(70, 135, 199);
+font-family: 'EB Garamond', serif;
+
+
+}
+.features {
+  width: 100%;
+  margin-top: 8vh;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.feature1{
+  display:flex;
+  justify-content: flex-start;
+  width:30%;
+  margin-right: 2%;
+
+
+}
+.featureimagen{
+ margin-top: 8%;
+ width: 80%;
+ height: 10vh
+}
+.featureimagen img{
+  width:100%;
+  height:100%
+}
+.featuretexto{
+  text-align:left;
+  margin-left:10%;
+  font-family: 'EB Garamond', serif;
+
+}
+footer{
+  margin-top: 3%;
+  border-top: solid black 0.5px;
+  color:white;
+  display:flex;
+  justify-content: space-between;
+  background-color: rgb(70, 135, 199);
+  font-family: 'Poiret One', cursive;
+}
+footer p{
+  margin 2%;
+}
+.footer-right{
+  margin-right: 3%
+}
+.footer-left{
+  margin-left: 3%
+}
+
+
+@media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+
+  .feature3 {
+    display: none;
+
+    }
+  /* body{
+    background-color: red;
+
+  } */
+  .login .iconos{
+    display:none;
+  }
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 767px){
+
+    /* body{
+      background-color:yellow;
+    } */
+    .login .iconos{
+      display:none;
+    }
+    .login {
+    margin-right: 0
+  }
+  .login li a{
+    font-size: 13px;
+  }
+
+    .boton{
+      display: inline-block;
+    }
+    h2{
+      font-size: 1.3em;
+    }
+    .featuretexto p{
+      display: none;
+    }
+
+  }
+
+  /* Smartphones (portrait and landscape) ----------- */
+      @media only screen
+      and (min-device-width : 320px)
+      and (max-device-width : 480px) {
+
+        /* body{
+          background-color: blue;
+
+        } */
+        .login{
+          display:none;
+        }
+        .contenedormenu {
+          display: none;
+        }
+       .partesuperior {
+         height: 95%;
+         width: 100;
+       }
+     .logo {
+       width: 25%;
+     }
+     .boton{
+       display: inline-block;
+     }
+     .nav div{
+       height: 4px;
+       background-color: black;
+       margin: 5px 0;
+       border-radius: 25px;
+     }
+     .nav {
+       width:30px;
+       display:block;
+       margin: 1em 1em 0 0;
+     }
+     h2{
+       font-size: 0.9em;
+       margin-top:0;
+     }
+     p2{
+       font-size: 0.9em;
+     }
+     .encuentros{
+       display:none;
+     }
+
+     .textolateral, .textolateral2 {
+       margin-right: 4px;
+       height:63vh;
+       width:45%;
+        justify-content: center;
+     }
+     .featuretexto p{
+       display: none;
+     }
+     .feature1{
+       display: flex;
+       flex-direction: column-reverse;
+       align-items:  center;
+     }
+    .featureimagen{
+      width: 50%;
+    }
