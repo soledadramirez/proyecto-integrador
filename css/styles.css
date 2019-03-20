@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 html{
-  font-size: 50px;
+  font-size: 24px;
 }
 ul, ol{
   padding: 0;
@@ -11,7 +11,6 @@ ul, ol{
 }
 a{
   text-decoration: none;
-  color: #000;
 }
 h2{
   text-align: center;
@@ -27,9 +26,11 @@ header{
  margin: 0;
  background-image: url(../img/libros2.jpg);
 }
-header h1{
+header h1 {
   margin: 0;
-  padding: 25px 20px 25px;
+  padding: 20px 20px;
+}
+header a{
   color: #fff;
 }
 .separador{
@@ -40,18 +41,17 @@ header h1{
   text-align: left;
   padding: 8px 20px 10px;
   margin: 0;
-  font-size: 60px;
+  font-size: 40px;
 }
 form{
   width: 85%;
   color: #000;
   border-radius: 5px;
   text-align: center;
-  margin: 30px auto;
-  padding: 20px 20px 20px;
+  margin: 0px auto;
 }
 form h2{
-  margin: 0 0 40px;
+  margin: 0 0 10px;
   padding: 20px;
   color: #000;
   text-align: center;
@@ -60,37 +60,36 @@ form i{
   color: rgb(70, 135, 199);
 }
 .datos input{
-  font-size: 40px;
+  font-size: 24px;
   background-color: #fff;
   display: inline-block;
   border-radius: 5px;
-  margin: 30px 0;
+  margin: 0 0 10px;
   padding-left: 10px;
-  line-height: 80px;
-  width: 80%;
-  box-shadow: 2px 2px 10px #c7c7c7;
+  line-height: 60px;
+  width: 90%;
   font-family: 'Poiret One', cursive;
 }
 .check input{
-  font-size: 40px;
-  width: 50px;
-  height: 50px;
+  font-size: 30px;
+  width: 15px;
+  height: 15px;
 }
 .check label{
-  font-size: 40px;
+  font-size: 25px;
 }
 .login{
   display: block;
   background-color: rgb(70, 135, 199);
   box-shadow: 2px 2px 3px #a4a4a4;
   border-radius: 5px;
-  width: 60%;
-  line-height: 80px;
+  width: 70%;
+  line-height: 55px;
   border: 0;
   font-family: 'Poiret One', cursive;
   color: #fff;
-  font-size: 40px;
-  margin: 30px auto 40px;
+  font-size: 26px;
+  margin: 15px auto;
   font-weight: bold;
 }
 .login:hover{
@@ -102,16 +101,20 @@ form i{
 hr{
   margin: 10px;
 }
+.datos-alt h2{
+  margin: 0;
+  padding: 0 0 5px;
+}
 .datos-alt button{
-  display: block;
+  display: inline;
   color: #fff;
   border-radius: 5px;
   border: 0;
-  width: 60%;
-  margin: 10px auto 35px;
+  width: 40%;
+  margin:10px auto;
   box-shadow: 2px 2px 3px #a4a4a4;
-  line-height: 80px;
-  font-size: 40px;
+  line-height: 30px;
+  font-size: 14px;
 
 }
 .datos-alt button:hover{
@@ -125,33 +128,146 @@ hr{
 }
 .recover p{
   text-align: center;
-  padding: 6px;
-  margin: 5px 0;
-  font-size: 29px;
-    color: #000;
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #000;
 }
 .recover a{
-  color: #000;
+  color: rgb(70, 135, 199);
 }
 .recover a:hover{
   color: rgb(70, 135, 199);
   font-weight: bold;
 }
-.cuenta a{
-  text-decoration: underline;
-}
 footer{
   background-color: rgb(70, 135, 199);
   color: #fff;
-  line-height: 80px;
+  line-height: 40px;
 }
 footer ul{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  padding: 15px 0;
 }
 footer a{
   color: #fff;
+}
+footer a:hover{
+  font-weight: bold;
+}
+@media (min-width: 480px) and (max-width: 768px){
+  html{
+    font-size: 30px;
+  }
+  .separador h2{
+    font-size: 36px;
+  }
+  form{
+    margin: 20px auto;
+    border: 1px solid #c7c7c7;
+    box-shadow: 5px 5px 10px #c7c7c7;
+  }
+  form h2{
+    margin-bottom: 0;
+    padding: 20px 0;
+    line-height: 50px;
+  }
+  .datos input{
+    margin: 0 0 20px;
+  }
+  .check input{
+    width: 18px;
+    height: 18px;
+  }
+  .login{
+    margin: 0 auto 25px;
+    width: 55%;
+    line-height: 60px;
+  }
+  .datos-alt h2{
+    margin: 20px;
+    font-size: 40px;
+  }
+  .datos-alt button{
+    display: block;
+    margin: 10px auto 20px;
+    width: 40%;
+    line-height: 44px;
+    font-size: 20px;
+  }
+}
+  @media (min-width: 769px){
+    html{
+      font-size: 20px;
+    }
+    header{
+     margin: 0;
+    }
+    .separador h2{
+      font-size: 26px;
+    }
+    .cont-form{
+      margin: 0 auto;
+      width: 85%;
+      background-image: url(../img/libros9.jpg);
+      background-size: cover;
+    }
+    form{
+      border-radius: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 45%;
+      margin: 20px 0 20px auto;
+      border: 1px solid #c7c7c7;
+      box-shadow: 5px 5px 10px #c7c7c7;
+    }
+    form h2{
+      margin-bottom: 0;
+      padding: 20px 0;
+      line-height: 50px;
+    }
+    .datos input{
+      font-size: 20px;
+    }
+    .check label{
+      font-size: 20px;
+    }
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
