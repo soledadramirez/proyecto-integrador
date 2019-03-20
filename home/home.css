@@ -317,9 +317,12 @@ footer p{
     .login .iconos{
       display:none;
     }
-    .login{
-      display:none;
-    }
+    .login {
+    margin-right: 0
+  }
+  .login li a{
+    font-size: 13px;
+  }
 
     .boton{
       display: inline-block;
