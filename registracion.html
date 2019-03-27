@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Booky la comunidad lectora</title>
+    <link rel="stylesheet" href="css/registracion.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0>"
+  </head>
+  <body>
+
+    <div class="container">
+      <header>
+          <h1><a href="home.html"> Booky</a> </h1>
+          <div class="separador">
+            <h2>La comunidad lectora</h2>
+          </div>
+        </header>
+
+      <main>
+        <section class="cajita">
+        <h1>Registrate</h1>
+        <form class="" action="registracion.html" method="get">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input id="name" type="text" name="name" value="" placeholder="Nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Apellido</label>
+            <input id="name" type="text" name="name" value="" placeholder="Apellido" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Mail</label>
+            <input id="email" type="email" name="email" value="" placeholder="E-Mail" required>
+          </div>
+          <div class="form-group">
+            <label for="pass">Password</label>
+            <input id="pass" type="password" name="pass" value="" placeholder="Password" required>
+          </div>
+          <h3>Genero</h3>
+          <input id="masc" type="radio" name="genero" value="m">
+          <label class="gen" for="masc">Masculino</label>
+          <input id="fem" type="radio" name="genero" value="f">
+          <label class="gen" for="fem">Femenino</label>
+          <h3>Pais</h3>
+          <select class="" name="country" required>
+            <option value="" selected>Por favor elija un pais</option>
+            <option value="ar">Argentina</option>
+            <option value="uy">Uruguay</option>
+            <option value="py">Paraguay</option>
+            <option value="cl">Chile</option>
+          </select>
+          <div class="form-group">
+            <button type="submit" name="button">Unite</button>
+          </div>
+        </form>
+        </section>
+      </main>
+      <footer>
+      <div class="footer-left">
+      <p>*2019*</p>
+
+
+      </div>
+      <div class="footer-right">
+      <p> 1733423 | 4326 Digital House Monroe</p>
+
+      </div>
+      </footer>
+  </body>
+</html>
