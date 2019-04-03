@@ -40,12 +40,23 @@ header{
   width: 18%;
   height: 95%;
   margin-left: 42%;
+  text-align: center;
+
 }
 
 
-.logo img{
+/* .logo img{
   width: 100%;
   height: 100%;
+} */
+
+.logo a {
+  font-family: 'Poiret One', cursive;
+  font-size: 50px;
+  text-decoration: none;
+  color:rgb(70, 135, 199);
+  font-weight: bold;
+
 }
 .login {
 
@@ -60,13 +71,22 @@ header{
   font-family: 'Poiret One', cursive;
   float: left;
 
+
+}
+.login li:hover,
+.login li:focus{
+  box-shadow: inset 0 0.5em -0.4em var(--hover);
+  transform: translateY(0.20em);
+  text-decoration: underline;
+  text-decoration-color: rgb(70, 135, 199);
+
 }
 .login li a{
 
   text-decoration: none;
   color:black;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 19px;
 
 
 }
@@ -107,7 +127,31 @@ header{
   font-size: 0.5em;
 
 }
+.menu ul li{
+position: relative;
+}
+.menu ul li ul{
+display: block;
+position: absolute;
+background-color: rgb(70, 135, 199);
+width: 150%;
+z-index: 23;
 
+}
+.menu ul li ul li {
+margin-top: 20%;
+width: 130px;
+border-radius: 4px;
+display: none;
+padding: 5px;
+}
+.menu ul li ul li :hover {
+color: black;
+}
+.menu ul li:hover ul li{
+display:block;
+
+}
 .menu li a{
   color: white;
   text-decoration: none;
