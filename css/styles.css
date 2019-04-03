@@ -20,37 +20,42 @@ h1, h2{
 body{
   margin: 0 auto;
   font-family: 'Poiret One', cursive;
+  min-height: 100%;
 }
 .container{
   background-color: #fff;
 }
 header{
- padding: 0 20px;
- width: 40%;
+ width: 100%;
+ padding: 10px 15px;
  display: flex;
- justify-content: space-around;
+ justify-content: flex-start;
  align-items:flex-end;
 }
 header img{
-  padding-top: 20px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding-top: 0px;
 }
 header h1{
   position: relative;
   top: 7px;
-  padding: 0 10px;
+  padding: 0 20px 0 20px;
 }
 header h2{
+  display: none;
   padding: 0 5px;
   position: relative;
   top: 2px;
 }
 header a{
-  color: #000;
+  color: #fff;
   font-size: 50px;
+  color: #188c7a;
 }
 div.cont-form{
-  margin: 35px auto;
-  width:
+  margin: 10px auto;
 }
 form{
   width: 85%;
@@ -66,7 +71,7 @@ form h2{
   text-align: center;
 }
 form i{
-  color: #00aad4;
+  color: #188c7a;
 }
 .datos input{
   font-size: 24px;
@@ -89,7 +94,7 @@ form i{
 }
 .login{
   display: block;
-  background-color: #00aad4;
+  background-color: #188c7a;
   box-shadow: 2px 2px 3px #a4a4a4;
   border-radius: 5px;
   width: 70%;
@@ -119,7 +124,7 @@ hr{
   color: #fff;
   border-radius: 5px;
   border: 0;
-  width: 40%;
+  width: 50%;
   margin:10px auto;
   box-shadow: 2px 2px 3px #a4a4a4;
   line-height: 30px;
@@ -142,19 +147,17 @@ hr{
   color: #000;
 }
 .recover a{
-  color: #00aad4;
+  color: #188c7a;
 }
 .recover a:hover{
-  color: #00aad4;
+  color: #188c7a;
   font-weight: bold;
 }
 footer{
-  background-color: #00aad4;
+  background-color: #188c7a;
   color: #fff;
   width: 100%;
   line-height: 40px;
-  position: absolute;
-  bottom: 0;
 }
 footer ul{
   display: flex;
@@ -168,7 +171,7 @@ footer a{
 footer a:hover{
   font-weight: bold;
 }
-@media (min-width: 480px) and (max-width: 768px){
+@media only screen and (min-width: 480px){
   html{
     font-size: 30px;
   }
@@ -202,21 +205,22 @@ footer a:hover{
     font-size: 40px;
   }
   .datos-alt button{
-    display: block;
+    display: inline;
     margin: 10px auto 20px;
     width: 40%;
     line-height: 44px;
     font-size: 20px;
   }
 }
-  @media (min-width: 769px){
+  @media only screen and (min-width: 769px){
     html{
       font-size: 20px;
     }
     header{
-     margin: 0;
+     margin: 0 0 30px;;
     }
-    .separador h2{
+    header h2{
+      color: #fff;
       font-size: 26px;
     }
     .cont-form{
