@@ -9,6 +9,9 @@ ul, ol{
   margin: 0;
   list-style-type: none;
 }
+li{
+  display: inline-block;
+}
 a{
   text-decoration: none;
 }
@@ -29,7 +32,7 @@ header{
  width: 100%;
  padding: 10px 15px;
  display: flex;
- justify-content: flex-start;
+ justify-content: space-between;
  align-items:flex-end;
 }
 header img{
@@ -43,16 +46,22 @@ header h1{
   top: 7px;
   padding: 0 20px 0 20px;
 }
-header h2{
-  display: none;
-  padding: 0 5px;
-  position: relative;
-  top: 2px;
-}
 header a{
   color: #fff;
   font-size: 50px;
   color: #188c7a;
+}
+header nav{
+  color: #188c7a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav.menu-header{
+  display: none;
+}
+header nav.menu-header a{
+  font-size: 30px;
 }
 div.cont-form{
   margin: 10px auto;
@@ -175,8 +184,8 @@ footer a:hover{
   html{
     font-size: 30px;
   }
-  .separador h2{
-    font-size: 36px;
+  header nav.menu-header{
+    display: inline-block;
   }
   form{
     margin: 0px auto;
