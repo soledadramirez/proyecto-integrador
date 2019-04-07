@@ -168,9 +168,11 @@ display:block;
 .imagenhome img{
   width: 100%;
   height: 100%;
-  border: 1px solid black
-
+  border: 1px solid black;
+  filter: blur(3px)
 }
+
+
 
 
  /* --------------PARTE CENTRAL SUPERIOR (IMAGEN LIBRO Y CAFÉ, Y LOS FEATURES LATERALES)--- */
