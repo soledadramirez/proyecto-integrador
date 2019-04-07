@@ -12,36 +12,50 @@ ul, ol{
 a{
   text-decoration: none;
 }
-h2{
+h1, h2{
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 body{
   margin: 0 auto;
   font-family: 'Poiret One', cursive;
+  min-height: 100%;
 }
 .container{
   background-color: #fff;
 }
 header{
- margin: 0;
- background-image: url(../img/libros2.jpg);
+ width: 100%;
+ padding: 10px 15px;
+ display: flex;
+ justify-content: flex-start;
+ align-items:flex-end;
 }
-header h1 {
-  margin: 0;
-  padding: 20px 20px;
+header img{
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding-top: 0px;
+}
+header h1{
+  position: relative;
+  top: 7px;
+  padding: 0 20px 0 20px;
+}
+header h2{
+  display: none;
+  padding: 0 5px;
+  position: relative;
+  top: 2px;
 }
 header a{
   color: #fff;
+  font-size: 50px;
+  color: #188c7a;
 }
-.separador{
-  background-color: rgb(70, 135, 199);
-  color: #fff;
-}
-.separador h2{
-  text-align: left;
-  padding: 8px 20px 10px;
-  margin: 0;
-  font-size: 40px;
+div.cont-form{
+  margin: 10px auto;
 }
 form{
   width: 85%;
@@ -52,12 +66,12 @@ form{
 }
 form h2{
   margin: 0 0 10px;
-  padding: 20px;
+  padding: 0;
   color: #000;
   text-align: center;
 }
 form i{
-  color: rgb(70, 135, 199);
+  color: #188c7a;
 }
 .datos input{
   font-size: 24px;
@@ -80,7 +94,7 @@ form i{
 }
 .login{
   display: block;
-  background-color: rgb(70, 135, 199);
+  background-color: #188c7a;
   box-shadow: 2px 2px 3px #a4a4a4;
   border-radius: 5px;
   width: 70%;
@@ -110,7 +124,7 @@ hr{
   color: #fff;
   border-radius: 5px;
   border: 0;
-  width: 40%;
+  width: 50%;
   margin:10px auto;
   box-shadow: 2px 2px 3px #a4a4a4;
   line-height: 30px;
@@ -133,15 +147,16 @@ hr{
   color: #000;
 }
 .recover a{
-  color: rgb(70, 135, 199);
+  color: #188c7a;
 }
 .recover a:hover{
-  color: rgb(70, 135, 199);
+  color: #188c7a;
   font-weight: bold;
 }
 footer{
-  background-color: rgb(70, 135, 199);
+  background-color: #188c7a;
   color: #fff;
+  width: 100%;
   line-height: 40px;
 }
 footer ul{
@@ -156,7 +171,7 @@ footer a{
 footer a:hover{
   font-weight: bold;
 }
-@media (min-width: 480px) and (max-width: 768px){
+@media only screen and (min-width: 480px){
   html{
     font-size: 30px;
   }
@@ -164,7 +179,7 @@ footer a:hover{
     font-size: 36px;
   }
   form{
-    margin: 20px auto;
+    margin: 0px auto;
     border: 1px solid #c7c7c7;
     box-shadow: 5px 5px 10px #c7c7c7;
   }
@@ -190,26 +205,27 @@ footer a:hover{
     font-size: 40px;
   }
   .datos-alt button{
-    display: block;
+    display: inline;
     margin: 10px auto 20px;
     width: 40%;
     line-height: 44px;
     font-size: 20px;
   }
 }
-  @media (min-width: 769px){
+  @media only screen and (min-width: 769px){
     html{
       font-size: 20px;
     }
     header{
-     margin: 0;
+     margin: 0 0 30px;;
     }
-    .separador h2{
+    header h2{
+      color: #fff;
       font-size: 26px;
     }
     .cont-form{
       margin: 0 auto;
-      width: 85%;
+      width: 70%;
       background-image: url(../img/libros9.jpg);
       background-size: cover;
     }
@@ -217,7 +233,7 @@ footer a:hover{
       border-radius: 0;
       background-color: rgba(255, 255, 255, 0.8);
       width: 45%;
-      margin: 20px 0 20px auto;
+      margin: 0 0 20px auto;
       border: 1px solid #c7c7c7;
       box-shadow: 5px 5px 10px #c7c7c7;
     }
