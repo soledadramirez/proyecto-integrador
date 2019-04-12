@@ -1,22 +1,22 @@
-.search-form {
-  margin-top: 40px;
-}
-
-.container .jumbotron {
-  text-align: center;
-
+#search {
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .jumbotron {
-  margin-top: 60px;
+  text-align: center;
 }
 
 .container .pasos {
   text-align: center;
+  margin-top: 40px;
 }
 
-.libros {
-  height: 300px;
-  text-align: center;
-  margin-bottom: 50px;
+.text-center {
+  margin-bottom: 60px;
+}
+
+#carouselContent {
+  margin-top: 50px;
 }
