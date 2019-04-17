@@ -1,12 +1,22 @@
-.top-buffer { margin-top:40px;
-  margin-bottom: 40px;
+#search {
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-.container .jumbotron {
+.jumbotron {
   text-align: center;
-
 }
 
 .container .pasos {
   text-align: center;
+  margin-top: 40px;
+}
+
+.text-center {
+  margin-bottom: 60px;
+}
+
+#carouselContent {
+  margin-top: 50px;
 }
