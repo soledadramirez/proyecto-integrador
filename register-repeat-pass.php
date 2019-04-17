@@ -1,5 +1,5 @@
 <?php
-require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
+require_once "funciones-repeat-pass.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
 $errores = [];
 
 $usuarioOk = "";
