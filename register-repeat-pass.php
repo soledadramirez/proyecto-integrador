@@ -47,7 +47,7 @@ if($_POST){
          <p>Ya tienes una cuenta? <a href="login.html"> Iniciar Sesión </a></p>
       </header>
         <div class="cont-form">
-        <form action="register.php" method="POST" enctype="multipart/form-data">
+        <form action="register-repeat-pass.php" method="POST" enctype="multipart/form-data">
             <article class="datos">
               <h2>Crea una cuenta</h2>
               <div class="user">
