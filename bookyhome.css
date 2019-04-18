@@ -1,16 +1,53 @@
+
+body{
+  background-size: cover;
+  font-family: 'Poiret One', cursive;
+}
+h2{
+  margin: 0;
+}
+.container nav{
+background-color: #18867a !important;
+}
+.container nav a{
+  color: #000 !important;
+}
+.blanco{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px;
+}
 #search {
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 50px 5px 50px;
 }
-
+.btn{
+  line-height: 25px;
+}
+.fondo{
+  width: 95%;
+  min-height: 100px;
+  background-image: url(img/libros2.jpg);
+  background-size: 100%;
+  padding: 20px 0 30px;
+}
 .jumbotron {
+  line-height: 50px;
+  width: 100%;
   text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
-
+.paral {
+min-height: 80px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+}
 .container .pasos {
   text-align: center;
-  margin-top: 40px;
 }
 
 .text-center {
@@ -19,4 +56,28 @@
 
 #carouselContent {
   margin-top: 50px;
+}
+div.row{
+  background-color: #a4a4a4;
+  color: #EFFBF8;
+  margin-bottom: 10px;
+}
+
+div.paso{
+  border-left: 1px solid #fff;
+  padding-top: 25px;
+}
+div.paso:first-child{
+  border-left: 0;
+}
+.destacado{
+  margin: 40px 0 0;
+  font-size: 30px;
+  color: #18867a;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0;
+}
+.libros{
+  background-color: #18867a;
 }

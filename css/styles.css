@@ -22,9 +22,6 @@ body{
   font-family: 'Poiret One', cursive;
   min-height: 100%;
 }
-.container{
-  background-color: #fff;
-}
 header{
  width: 100%;
  padding: 10px 15px;
