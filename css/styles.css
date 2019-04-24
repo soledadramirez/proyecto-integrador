@@ -1,0 +1,349 @@
+*{
+  box-sizing: border-box;
+}
+html.login{
+  font-size: 24px;
+}
+ul, ol{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+h1, h2{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0 auto;
+  font-family: 'Poiret One', cursive;
+  min-height: 100%;
+}
+
+h2{
+  margin: 0;
+  font-size: 40px;
+  font-weight: 900;
+}
+header{
+ width: 100%;
+ padding: 10px 15px;
+ display: flex;
+ justify-content: flex-start;
+ align-items:flex-end;
+}
+header img{
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding-top: 0px;
+}
+header h1{
+  position: relative;
+  top: 7px;
+  padding: 0 20px 0 20px;
+}
+header h2{
+  display: none;
+  padding: 0 5px;
+  position: relative;
+  top: 2px;
+}
+header a{
+  color: #fff;
+  font-size: 50px;
+  color: #188c7a;
+}
+div.cont-form{
+  margin: 10px auto;
+}
+.cont-form{
+  width: 85%;
+  color: #000;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0px auto;
+}
+form h2{
+  margin: 0 0 10px;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+form i{
+  color: #188c7a;
+}
+.datos input{
+  font-size: 24px;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0 0 10px;
+  padding-left: 10px;
+  line-height: 60px;
+  width: 90%;
+  font-family: 'Poiret One', cursive;
+}
+.check input{
+  font-size: 30px;
+  width: 15px;
+  height: 15px;
+}
+.check label{
+  font-size: 25px;
+}
+.btn-login{
+  display: block;
+  background-color: #188c7a;
+  box-shadow: 2px 2px 3px #a4a4a4;
+  border-radius: 5px;
+  width: 70%;
+  line-height: 55px;
+  border: 0;
+  font-family: 'Poiret One', cursive;
+  color: #fff;
+  font-size: 26px;
+  margin: 15px auto;
+  font-weight: bold;
+}
+.btn-login:hover{
+  background-color: #424242;
+}
+.login h2{
+  color: #000;
+}
+hr{
+  margin: 10px;
+}
+.datos-alt h2{
+  margin: 0;
+  padding: 0 0 5px;
+}
+.datos-alt button{
+  display: inline;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  width: 50%;
+  margin:10px auto;
+  box-shadow: 2px 2px 3px #a4a4a4;
+  line-height: 30px;
+  font-size: 14px;
+
+}
+.datos-alt button:hover{
+  font-weight: bold;
+}
+.face{
+  background-color: #3b5998;
+}
+.google{
+  background-color: #db4a39;
+}
+.recover p{
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #000;
+}
+.recover a{
+  color: #188c7a;
+}
+.recover a:hover{
+  color: #188c7a;
+  font-weight: bold;
+}
+footer{
+  background-color: #188c7a;
+  color: #fff;
+  width: 100%;
+  line-height: 40px;
+}
+footer ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer a{
+  color: #fff;
+}
+footer a:hover{
+  font-weight: bold;
+}
+.navbar{
+background-color: #18867a !important;
+padding: 8px 10px;
+color: #fff;
+font-size: 18px;
+}
+.navbar a{
+  color: #fff !important;
+}
+.container nav a{
+  color: #000 !important;
+}
+.blanco{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px;
+}
+#search {
+  justify-content: center;
+  margin: 50px 5px 50px;
+}
+.btn{
+  line-height: 25px;
+}
+.fondo{
+  min-height: 100px;
+  background-image: url(../img/libros2.jpg);
+  background-size: 100%;
+  padding-top: 20px;
+}
+.jumbotron {
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 0 auto 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.paral {
+min-height: 80px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+}
+.container .pasos {
+  text-align: center;
+}
+
+.text-center {
+  margin-bottom: 60px;
+}
+
+#carouselContent {
+  margin-top: 50px;
+}
+div.pasos{
+  background-color: #a4a4a4;
+  color: #fff;
+}
+
+div.paso{
+  border-left: inset;
+  padding-top: 25px;
+  margin-top: 18px;
+}
+div.paso:first-child{
+  border-left: 0;
+}
+.destacado{
+  margin: 40px 0 0;
+  font-size: 30px;
+  color: #18867a;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0;
+}
+.libros{
+  background-color: #18867a;
+  text-align: center;
+  margin: 8px 0;
+}
+
+  @media only screen and (min-width: 480px){
+    html.login{
+      font-size: 30px;
+    }
+    .separador h2{
+      font-size: 36px;
+    }
+    form.form-login{
+      margin: 0px auto;
+      border: 1px solid #c7c7c7;
+      box-shadow: 5px 5px 10px #c7c7c7;
+    }
+    form h2{
+      margin-bottom: 0;
+      padding: 20px 0;
+      line-height: 50px;
+    }
+    .datos input{
+      margin: 0 0 20px;
+    }
+    .check input{
+      width: 18px;
+      height: 18px;
+    }
+    form.form-login{
+      margin: 0 auto 25px;
+      width: 55%;
+      line-height: 60px;
+    }
+    .datos-alt h2{
+      margin: 20px;
+      font-size: 40px;
+    }
+    .datos-alt button{
+      display: inline;
+      margin: 10px auto 20px;
+      width: 40%;
+      line-height: 44px;
+      font-size: 20px;
+    }
+    hr{
+    display: none;
+    }
+
+@media only screen and (min-width: 769px) {
+  html.login{
+    font-size: 20px;
+  }
+  header{
+   margin: 0 0 30px;;
+  }
+  header h2{
+    color: #fff;
+    font-size: 26px;
+  }
+  .cont-form{
+    margin: 0 auto;
+    width: 70%;
+    background-image: url(../img/libros9.jpg);
+    background-size: cover;
+  }
+  form.form-login{
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 45%;
+    margin: 0 0 20px auto;
+    border: 1px solid #c7c7c7;
+    box-shadow: 5px 5px 10px #c7c7c7;
+  }
+  form h2{
+    margin-bottom: 0;
+    padding: 20px 0;
+    line-height: 50px;
+  }
+  .datos input{
+    font-size: 20px;
+  }
+  .check label{
+    font-size: 20px;
+  }
+hr{
+  display: none;
+}
+.navbar{
+  padding: 8px 90px;
+}
+
+}

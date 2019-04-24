@@ -1,5 +1,11 @@
+<?php  ?>
+
+
+
+
+
 <!DOCTYPE html>
-<html class="login" lang="en" dir="ltr">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Booky la comunidad lectora</title>
@@ -10,14 +16,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="container">
-      <header>
-            <img src="img/logo-verde-g.png" alt="">
-            <h1 class="titulo"><a href="home.html">Booky</a></h1>
-            <h2>La comunidad lectora</h2>
+      <div class="container">
+        <header>
+           <nav class="cont-logo">
+             <img src="img/logo-verde-g.png" alt="">
+             <h1 class="titulo"><a href="home.html">Booky</a></h1>
+            </nav>
+           <p>¿No estás registrado? <a href="Copia de registracion2.php"> Creá una cuenta</a></p>
         </header>
+      </div>
         <div class="cont-form">
-        <form class="form-login">
+        <form>
             <article class="datos">
               <h2>Login</h2>
               <div class="user">
@@ -32,7 +41,7 @@
                 <input id="recordar" type="checkbox" name="check" value="s">
                 <label for="recordar">recordarme</label>
               </div>
-              <button class="btn-login" type="submit" name="button">Login</button>
+              <button class="login" type="submit" name="button">Login</button>
               <hr>
             </article>
             <article class="datos-alt">
