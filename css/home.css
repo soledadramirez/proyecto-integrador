@@ -1,446 +1,110 @@
 
-
-/* -------------------------------GENERALES---------------------------------------- */
-
-
-
-ul {
-  list-style-type: none;
-  padding: 0
-
-}
-li {
-  text-decoration: none
-
-}
-li a {
-    text-decoration: none
-}
 body{
-margin: 0
-
-}
-/*
---------------------------PARTE SUPERIOR (LOGO , LOGIN, ICONOS DE CONTACTO)----------- */
-header{
-  margin-bottom: 2vh;
-  height: 22vh;
-}
-
-.partesuperior {
-  display: flex;
-  justify-content: space-between;
-  height: 70%;
-
-
-
-}
-
-.logo {
-  width: 18%;
-  height: 95%;
-  margin-left: 42%;
-  text-align: center;
-
-}
-
-
-/* .logo img{
-  width: 100%;
-  height: 100%;
-} */
-
-.logo a {
   font-family: 'Poiret One', cursive;
-  font-size: 50px;
-  text-decoration: none;
-  color:rgb(70, 135, 199);
-  font-weight: bold;
-
 }
-.login {
-
-  margin-right: 5%;
+h2{
+  margin: 0;
+  font-size: 40px;
+  font-weight: 900;
 }
-.login .iconos {
-  display: inline-block;
+
+.navbar{
+background-color: #18867a !important;
+padding: 8px 10px;
+color: #fff;
+font-size: 18px;
 }
-.login li  {
-  display:block;
-  margin-right: 20px;
-  font-family: 'Poiret One', cursive;
-  float: left;
-
-
+.navbar a{
+  color: #fff !important;
 }
-.login li:hover,
-.login li:focus{
-  box-shadow: inset 0 0.5em -0.4em var(--hover);
-  transform: translateY(0.20em);
-  text-decoration: underline;
-  text-decoration-color: rgb(70, 135, 199);
-
+.container nav a{
+  color: #000 !important;
 }
-.login li a{
-
-  text-decoration: none;
-  color:black;
-  font-weight: bold;
-  font-size: 19px;
-
-
+.blanco{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px;
 }
-.boton{
-  display:none;
 
-}
-/* ------------------------------- MENÚ ---------------------------------- */
-
-
-.contenedormenu{
-  background-color:rgb(70, 135, 199);
-  /* background-color:rgb(44, 55, 164); */
-  height: 30%;
-  width: 100%;
-  margin: 0 0 0 0;
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-}
-.menu {
-  width: 70%;
-  height: 100%;
-  margin: 10px auto;
-  display: flex;
-  align-content: center;
+#search {
   justify-content: center;
-  flex-wrap: wrap;
-
+  margin: 50px 5px 50px;
 }
-.menu ul {
-  list-style-type: none;
-  display: flex;
+.btn{
+  line-height: 25px;
+}
+.fondo{
+  min-height: 100px;
+  background-image: url(img/libros2.jpg);
+  background-size: 100%;
+  padding-top: 20px;
+}
+.jumbotron {
+  line-height: 50px;
   width: 100%;
-  align-content: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  font-size: 0.5em;
-
-}
-.menu ul li{
-position: relative;
-}
-.menu ul li ul{
-display: block;
-position: absolute;
-background-color: rgb(70, 135, 199);
-width: 150%;
-z-index: 23;
-
-}
-.menu ul li ul li {
-margin-top: 20%;
-width: 130px;
-border-radius: 4px;
-display: none;
-padding: 5px;
-}
-.menu ul li ul li :hover {
-color: black;
-}
-.menu ul li:hover ul li{
-display:block;
-
-}
-.menu li a{
-  color: white;
-  text-decoration: none;
-  font-family: 'Poiret One', cursive;
-  font-size: 20px;
-}
-
-.imagenhome {
-  width:100%;
-  height: 76vh;
-  margin: 0 auto;
-  position: relative
-}
-.imagenhome img{
-  width: 100%;
-  height: 100%;
-  border: 1px solid black
-
-}
-
-
- /* --------------PARTE CENTRAL SUPERIOR (IMAGEN LIBRO Y CAFÉ, Y LOS FEATURES LATERALES)--- */
-.partecentral-superior {
-  overflow: hidden;
-  margin: 13vh 0
-}
-
-.libro-cafe{
-  width: 50%;
-  height:58vh;
-  float:left;
-  box-shadow: 10px 10px 5px grey;
-}
-.libro-cafe img {
-  width: 100%;
-  height: 100%;
-}
-
-.textolateral {
- float: right;
- margin-right:10%;
- height: 60vh;
- width : 35%;
- display: flex;
- flex-direction: column;
- justify-content: space-around;
-
-}
-
-.textolateral hr{
-  width: 20%;
-  display: inline-block;
-  height: 1px;
-    border: 0;
-    border-top: 3px solid rgb(70, 135, 199)
-
-}
-
-
-.textolateral p {
-  margin-bottom: 12vh;
-  font-family: 'Poiret One', cursive;
-  font-weight: 300;
-  margin-bottom: 10%
-}
-.textolateral h2{
-  margin-top: 5px
-}
-
-/* --------------PARTE CENTRAL INFERIOR (IMAGEN LIBRO Y RISAS, Y LOS FEATURES LATERALES)--- */
-
-.partecentral-inferior {
-  overflow: hidden;
-  margin: 13vh 0;
-}
-.libro-risas{
-  width: 50%;
-  height:58vh;
-  float:right;
-  box-shadow: -10px 10px 5px grey;
-}
-.libro-risas img {
-  width: 100%;
-  height: 100%;
-}
-.textolateral2 {
- float: right;
- margin-right:10%;
- height: 60vh;
- width: 35%;
- display: flex;
- flex-direction: column;
- justify-content: space-around;
-
-}
-
-
-.textolateral2 hr{
-  width: 20%;
-  display: inline-block;
-  height: 1px;
-    border: 0;
-    border-top: 3px solid rgb(70, 135, 199);
-    margin: 8px 0;
-
-}
-
-
-.textolateral2 p {
-  margin-bottom: 12vh;
-  font-family: 'Poiret One', cursive;
-  font-weight: 300;
-  margin-bottom: 10%
-}
-.textolateral2 h2{
-  margin-top: 5px
-}
-
-/* --------------PARTE INFERIOR ()--- */
-
-.parteinferior {
   text-align: center;
-  width: 80% ;
-  margin: 0 auto;
-
-
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 0 auto 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 20px;
+  padding-right: 20px;
 }
-.parteinferior-superior{
-border-bottom: solid rgb(70, 135, 199);
-font-family: 'EB Garamond', serif;
-
-
+.paral {
+min-height: 80px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
 }
-.features {
-  width: 100%;
-  margin-top: 8vh;
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-}
-.feature1{
-  display:flex;
-  justify-content: flex-start;
-  width:30%;
-  margin-right: 2%;
-
-
-}
-.featureimagen{
- margin-top: 8%;
- width: 80%;
- height: 10vh
-}
-.featureimagen img{
-  width:100%;
-  height:100%
-}
-.featuretexto{
-  text-align:left;
-  margin-left:10%;
-  font-family: 'EB Garamond', serif;
-
-}
-footer{
-  margin-top: 3%;
-  border-top: solid black 0.5px;
-  color:white;
-  display:flex;
-  justify-content: space-between;
-  background-color: rgb(70, 135, 199);
-  font-family: 'Poiret One', cursive;
-}
-footer p{
-  margin 2%;
-}
-.footer-right{
-  margin-right: 3%
-}
-.footer-left{
-  margin-left: 3%
+.container .pasos {
+  text-align: center;
 }
 
+.text-center {
+  margin-bottom: 60px;
+}
 
-@media only screen
-    and (min-device-width : 768px)
-    and (max-device-width : 1024px) {
+#carouselContent {
+  margin-top: 50px;
+}
+div.pasos{
+  background-color: #a4a4a4;
+  color: #fff;
+}
 
-  .feature3 {
-    display: none;
+div.paso{
+  border-left: inset;
+  padding-top: 25px;
+  margin-top: 18px;
+}
+div.paso:first-child{
+  border-left: 0;
+}
+.destacado{
+  margin: 40px 0 0;
+  font-size: 30px;
+  color: #18867a;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0;
+}
+.libros{
+  background-color: #18867a;
+  text-align: center;
+  margin: 8px 0;
+}
+@media only screen and (min-width:480px) {
+hr{
+  display: none;
+}
+}
+@media only screen and (min-width: 769px) {
 
-    }
-  /* body{
-    background-color: red;
+hr{
+  display: none;
+}
+.navbar{
+  padding: 8px 90px;
+}
 
-  } */
-  .login .iconos{
-    display:none;
-  }
-  }
-
-  @media only screen and (min-width: 480px) and (max-width: 767px){
-
-    /* body{
-      background-color:yellow;
-    } */
-    .login .iconos{
-      display:none;
-    }
-    .login {
-    margin-right: 0
-  }
-  .login li a{
-    font-size: 13px;
-  }
-
-    .boton{
-      display: inline-block;
-    }
-    h2{
-      font-size: 1.3em;
-    }
-    .featuretexto p{
-      display: none;
-    }
-
-  }
-
-  /* Smartphones (portrait and landscape) ----------- */
-      @media only screen
-      and (min-device-width : 320px)
-      and (max-device-width : 480px) {
-
-        /* body{
-          background-color: blue;
-
-        } */
-        .login{
-          display:none;
-        }
-        .contenedormenu {
-          display: none;
-        }
-       .partesuperior {
-         height: 95%;
-         width: 100;
-       }
-     .logo {
-       width: 25%;
-     }
-     .boton{
-       display: inline-block;
-     }
-     .nav div{
-       height: 4px;
-       background-color: black;
-       margin: 5px 0;
-       border-radius: 25px;
-     }
-     .nav {
-       width:30px;
-       display:block;
-       margin: 1em 1em 0 0;
-     }
-     h2{
-       font-size: 0.9em;
-       margin-top:0;
-     }
-     p2{
-       font-size: 0.9em;
-     }
-     .encuentros{
-       display:none;
-     }
-
-     .textolateral, .textolateral2 {
-       margin-right: 4px;
-       height:63vh;
-       width:45%;
-        justify-content: center;
-     }
-     .featuretexto p{
-       display: none;
-     }
-     .feature1{
-       display: flex;
-       flex-direction: column-reverse;
-       align-items:  center;
-     }
-    .featureimagen{
-      width: 50%;
-    }
+}
