@@ -30,7 +30,7 @@ return $errores;
 }
 
 function nextID(){
-  $json = file_get_contents("db/db.json");
+  $json = file_get_contents("db.json");
   $array = json_decode($json, true);
 
   $lastUser = array_pop($array["usuarios"]);
