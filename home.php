@@ -1,3 +1,9 @@
+<?php
+session_start();
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -30,14 +36,26 @@
           </ul>
           <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="registracion.html"><span class="fas fa-user"></span> Sign Up</a>
+              <a class="nav-link" href="register.php"><span class="fas fa-user"></span> Sign Up</a>
             </li>
+            <?php if (isset($_SESSION["email"])): ?>
             <li class="nav-item">
-              <a class="nav-link" href="login.html"><span class="fas fa-sign-in-alt"></span> Login</a>
+              <a class="nav-link" href="logout.php"><span class="fas fa-sign-in-alt"></span> Logout</a>
+              <?php else: ?>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.php"><span class="fas fa-sign-in-alt"></span> Login</a>
+            <?php endif ?>
             </li>
           </ul>
         </div>
       </nav>
+      <div class="bienvenido">
+        <?php if (isset($_SESSION["email"])): ?>
+          <h1>Bienvenido: <?= $_SESSION["email"]?></h1>
+         <?php else: ?>
+          <h1> Bienvenido</h1>
+        <?php endif ?>
+      </div>
       <div class="fondo paral">
             <form class="form-group row" id="search" action="index.html" method="post">
               <input class="form-control col-xl-5" type="text" placeholder="Busca tu libro">

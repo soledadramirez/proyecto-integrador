@@ -1,11 +1,25 @@
-<?php  ?>
+<?php
+require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
+$errores = [];
+
+if($_POST){
+  $errores = validarLogin($_POST);
+  var_dump($errores); // TODO: Colocar los errores en los placeholders igual que en register.php
+
+  if (empty($errores)){
+    //logueamos
+    loguearUsuario($_POST["email"]);
+    //redirigimos a home
+    header("Location:home.php");
+    exit; //importante tener el exit luego de la redirección.
+  }
+}
 
 
 
-
-
+?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html class="login-reg" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Booky la comunidad lectora</title>
@@ -20,13 +34,13 @@
         <header>
            <nav class="cont-logo">
              <img src="img/logo-verde-g.png" alt="">
-             <h1 class="titulo"><a href="home.html">Booky</a></h1>
+             <h1 class="titulo"><a href="home.php">Booky</a></h1>
             </nav>
-           <p>¿No estás registrado? <a href="Copia de registracion2.php"> Creá una cuenta</a></p>
+           <p>¿No estás registrado? <a href="register.php"> Creá una cuenta</a></p>
         </header>
       </div>
         <div class="cont-form">
-        <form>
+        <form class="form-login"action="login.php" method="POST" enctype="multipart/form-data">
             <article class="datos">
               <h2>Login</h2>
               <div class="user">
@@ -41,7 +55,7 @@
                 <input id="recordar" type="checkbox" name="check" value="s">
                 <label for="recordar">recordarme</label>
               </div>
-              <button class="login" type="submit" name="button">Login</button>
+              <button class="btn-login" type="submit" name="button">Login</button>
               <hr>
             </article>
             <article class="datos-alt">
@@ -56,7 +70,7 @@
         </form>
       </div>
         </div>
-        <footer>
+        <!-- <footer>
           <nav>
             <ul>
               <li> <a href="#">Sobre Nosotros</a></li>
@@ -64,6 +78,6 @@
             </ul>
 
         </nav>
-        </footer>
+      </footer> -->
   </body>
 </html>

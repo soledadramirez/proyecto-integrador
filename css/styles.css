@@ -1,7 +1,10 @@
+
+    /*reseteos*/
+
 *{
   box-sizing: border-box;
 }
-html.login{
+html.login-reg{
   font-size: 24px;
 }
 ul, ol{
@@ -17,21 +20,28 @@ h1, h2{
   margin: 0;
   padding: 0;
 }
+    /* estilos generales, register y login*/
+
 body{
   margin: 0 auto;
   font-family: 'Poiret One', cursive;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
+.container{
+  background-color: #fff;
+}
 h2{
   margin: 0;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 900;
 }
 header{
  width: 100%;
- padding: 10px 15px;
+ padding: 10px 15px 10px;
  display: flex;
+ flex-direction: row;
  justify-content: flex-start;
  align-items:flex-end;
 }
@@ -52,13 +62,37 @@ header h2{
   position: relative;
   top: 2px;
 }
+header p{
+  display: none;
+  margin: 0;
+}
+header p a{
+  color: #188c7a;
+  font-size: 20px;
+
+}
+header nav a{
+  color: #fff;
+  font-size: 40px;
+  color: #188c7a;
+}
+header nav{
+  width: 100%;
+  color: #188c7a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav.menu-header{
+  display: none;
+}
+header nav.menu-header a{
+  font-size: 30px;
+}
 header a{
   color: #fff;
   font-size: 50px;
   color: #188c7a;
-}
-div.cont-form{
-  margin: 10px auto;
 }
 .cont-form{
   width: 85%;
@@ -68,7 +102,7 @@ div.cont-form{
   margin: 0px auto;
 }
 form h2{
-  margin: 0 0 10px;
+  margin: 10px 0 25px;
   padding: 0;
   color: #000;
   text-align: center;
@@ -77,14 +111,14 @@ form i{
   color: #188c7a;
 }
 .datos input{
-  font-size: 24px;
+  font-size: 22px;
   background-color: #fff;
   display: inline-block;
   border-radius: 5px;
-  margin: 0 0 10px;
+  margin: 0 0 20px;
   padding-left: 10px;
-  line-height: 60px;
-  width: 90%;
+  line-height: 50px;
+  width: 85%;
   font-family: 'Poiret One', cursive;
 }
 .check input{
@@ -112,6 +146,27 @@ form i{
 .btn-login:hover{
   background-color: #424242;
 }
+.registrarte{
+  display: block;
+  background-color: #188c7a;
+  box-shadow: 2px 2px 3px #a4a4a4;
+  border-radius: 5px;
+  width: 70%;
+  line-height: 55px;
+  border: 0;
+  font-family: 'Poiret One', cursive;
+  color: #fff;
+  font-size: 26px;
+  margin: 15px auto 35px;
+  font-weight: bold;
+}
+.registrarte:hover{
+  background-color: #424242;
+}
+.politica {
+  font-size: 15px;
+}
+
 .login h2{
   color: #000;
 }
@@ -143,6 +198,9 @@ hr{
 .google{
   background-color: #db4a39;
 }
+.recover{
+  padding-bottom: 15px;
+}
 .recover p{
   text-align: center;
   margin: 0 0 10px;
@@ -156,11 +214,14 @@ hr{
   color: #188c7a;
   font-weight: bold;
 }
+    /*estilos footer*/
+
 footer{
   background-color: #188c7a;
   color: #fff;
   width: 100%;
   line-height: 40px;
+
 }
 footer ul{
   display: flex;
@@ -174,6 +235,8 @@ footer a{
 footer a:hover{
   font-weight: bold;
 }
+    /*estilos home*/
+
 .navbar{
 background-color: #18867a !important;
 padding: 8px 10px;
@@ -185,6 +248,11 @@ font-size: 18px;
 }
 .container nav a{
   color: #000 !important;
+}
+.bienvenido{
+  background-color: transparent !important;
+  text-align: left;
+  padding-left: 30px;
 }
 .blanco{
   background-color: rgba(255, 255, 255, 0.8);
@@ -259,9 +327,18 @@ div.paso:first-child{
   margin: 8px 0;
 }
 
-  @media only screen and (min-width: 480px){
-    html.login{
+@media only screen and (min-width: 480px){
+    html.login-reg{
       font-size: 30px;
+    }
+    header nav.cont-logo{
+      display: flex;
+      justify-content: flex-start;
+      }
+    header p{
+      display: inline-block;
+      font-size: 20px;
+      width: 86%;
     }
     .separador h2{
       font-size: 36px;
@@ -289,8 +366,7 @@ div.paso:first-child{
       line-height: 60px;
     }
     .datos-alt h2{
-      margin: 20px;
-      font-size: 40px;
+      font-size: 25px;
     }
     .datos-alt button{
       display: inline;
@@ -308,17 +384,24 @@ div.paso:first-child{
     font-size: 20px;
   }
   header{
-   margin: 0 0 30px;;
+   margin: 0 0 10px;
   }
   header h2{
     color: #fff;
     font-size: 26px;
+  }
+  header p{
+    width: 40%;
+    font-size: 18px;
   }
   .cont-form{
     margin: 0 auto;
     width: 70%;
     background-image: url(../img/libros9.jpg);
     background-size: cover;
+  }
+  .cont-reg{
+   background-image: url(../img/libros3.jpg);
   }
   form.form-login{
     border-radius: 0;
@@ -332,6 +415,9 @@ div.paso:first-child{
     margin-bottom: 0;
     padding: 20px 0;
     line-height: 50px;
+  }
+  form p{
+    line-height: 20px;
   }
   .datos input{
     font-size: 20px;

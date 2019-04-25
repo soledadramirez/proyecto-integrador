@@ -1,0 +1,28 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "user": "ale",
+            "email": "ale@dh.com",
+            "pass": "$2y$10$j2cEZBSxCQD.lGXk5hWJF.yt6nxMUthfR6QI0DeiMnS6QpFPxp2M."
+        },
+        {
+            "id": 2,
+            "user": "juli",
+            "email": "julicas@gmail.com",
+            "pass": "$2y$10$n3IeJ7qtYpFoQdzqB0bwWu9AKOrxN89CwDiGrIbEpCBSqjDkIqxHS"
+        },
+        {
+            "id": 3,
+            "user": "karly",
+            "email": "karly@dh.com",
+            "pass": "$2y$10$EOSOHKr3zDi.hdYH99Nuuub3DIxz3bBilDzGjTT1w3LaAaLXCUDeS"
+        },
+        {
+            "id": 4,
+            "user": "juandelospalotes",
+            "email": "jdp@gmail.com",
+            "pass": "$2y$10$DuOoapqIyGsxyyVqRSIT4u\/rwpTYlc1sZBXTYWtXnERbx4yysomdK"
+        }
+    ]
+}
