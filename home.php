@@ -1,5 +1,6 @@
 <?php
-session_start();
+require_once "funciones.php";
+
  ?>
 
 
@@ -17,7 +18,7 @@ session_start();
   </head>
   <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="img/logobooky.jpg" width="120" height="60" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="img/logo-verde-g.png" width="120" height="60" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,14 +50,14 @@ session_start();
           </ul>
         </div>
       </nav>
-      <div class="bienvenido">
-        <?php if (isset($_SESSION["email"])): ?>
-          <h1>Bienvenido: <?= $_SESSION["email"]?></h1>
-         <?php else: ?>
-          <h1> Bienvenido</h1>
-        <?php endif ?>
-      </div>
       <div class="fondo paral">
+        <div class="bienvenido">
+          <?php if (isset($_SESSION["email"])): ?>
+            <h2>Bienvenido <?= $_SESSION["email"]?>!</h2>
+           <?php else: ?>
+            <h2> Bienvenido</h2>
+          <?php endif ?>
+        </div>
             <form class="form-group row" id="search" action="index.html" method="post">
               <input class="form-control col-xl-5" type="text" placeholder="Busca tu libro">
               <span><button type="submit" class="btn btn-success btn-lg">Buscar</button></span>
@@ -120,13 +121,13 @@ session_start();
       <div id="carouselContent" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active text-center p-4">
-                 <p>"Que otros se enorgullezcan por lo que han escrito, yo me enorgullezco por lo que he leído". Jorge Luís Borges.</p>
+                 <p>"Que otros se enorgullezcan por lo que han escrito, yo me enorgullezco por lo que he leído"<br> Jorge Luis Borges</p>
             </div>
             <div class="carousel-item text-center p-4">
-                <p>"Un libro debe ser el hacha que rompa el mar helado que hay dentro de nosotros". Franz Kafka.</p>
+                <p>"Un libro debe ser el hacha que rompa el mar helado que hay dentro de nosotros" <br>Franz Kafka</p>
             </div>
             <div class="carousel-item text-center p-4">
-                <p>"El que lee mucho y anda mucho, ve mucho y sabe mucho". Miguel de Cervantes Saavedra.</p>
+                <p>"El que lee mucho y anda mucho, ve mucho y sabe mucho" <br>Miguel de Cervantes Saavedra</p>
             </div>
         </div>
           <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
@@ -138,7 +139,32 @@ session_start();
             <span class="sr-only">Next</span>
           </a>
         </div>
+        <div class="conocenos">
+          <div class="text-conocenos">
+            <h1>Conocenos</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="img-conocenos">
+          <img src="img/libros-y-risas2.jpg" alt="">
+          </div>
+        </div>
 
+        <footer class="col-lg-12">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+          </ul>
+
+
+
+        </footer>
 
 
 

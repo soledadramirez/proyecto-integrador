@@ -2,9 +2,14 @@
 require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
 $errores = [];
 
+$emailOk = "";
+
 if($_POST){
   $errores = validarLogin($_POST);
-  var_dump($errores); // TODO: Colocar los errores en los placeholders igual que en register.php
+
+  $emailOk = trim($_POST["email"]);
+
+  //var_dump($errores); //  Colocar los errores en los placeholders igual que en register.php
 
   if (empty($errores)){
     //logueamos
@@ -43,14 +48,25 @@ if($_POST){
         <form class="form-login"action="login.php" method="POST" enctype="multipart/form-data">
             <article class="datos">
               <h2>Login</h2>
-              <div class="user">
-                <label for="user"><i class="fas fa-user"></i></label>
-                <input type="text" name="" value="" placeholder="nombre de usuario">
+
+              <div class="email">
+                <label for="email"><i class="fas fa-user"></i></label>
+                <?php if (isset($errores["email"])):?>
+                  <input type="email" name="email" value="" placeholder="<?= $errores["email"] ?>">
+                <?php else: ?>
+                  <input type="email" name="email" value="<?= $emailOk ?>" placeholder="ingresa tu email">
+                  <?php endif; ?>
               </div>
+
               <div class="pass">
                 <label for="pass"><i class="fas fa-lock"></i></label>
-                <input type="password" name="pass" value="" placeholder= "contraseña">
+                <?php if (isset($errores["pass"])): ?>
+                    <input id="pass" type="password" name="pass" value="" placeholder="<?= $errores["pass"] ?>">
+                <?php else: ?>
+                    <input id="pass" type="password" name="pass" value="" placeholder= "ingresa tu contraseña">
+                <?php endif; ?>
               </div>
+
               <div class="check">
                 <input id="recordar" type="checkbox" name="check" value="s">
                 <label for="recordar">recordarme</label>
@@ -70,7 +86,7 @@ if($_POST){
         </form>
       </div>
         </div>
-        <!-- <footer>
+        <footer>
           <nav>
             <ul>
               <li> <a href="#">Sobre Nosotros</a></li>
@@ -78,6 +94,6 @@ if($_POST){
             </ul>
 
         </nav>
-      </footer> -->
+      </footer>
   </body>
 </html>

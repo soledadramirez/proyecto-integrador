@@ -23,6 +23,18 @@
             "user": "juandelospalotes",
             "email": "jdp@gmail.com",
             "pass": "$2y$10$DuOoapqIyGsxyyVqRSIT4u\/rwpTYlc1sZBXTYWtXnERbx4yysomdK"
+        },
+        {
+            "id": 5,
+            "user": "sole",
+            "email": "liasoledad27@gmail.com",
+            "pass": "$2y$10$7J8ydP0fjkEBr86oT3yXOOFKmvXxavl2MGza8u2ZuMPrHTXyD95ES"
+        },
+        {
+            "id": 6,
+            "user": "li",
+            "email": "li@gmail.com",
+            "pass": "$2y$10$\/I.o0H98kNm0WKjlhMf6MuwNsshz5m5liNgM5Kfwb37IlDl9jaaYC"
         }
     ]
 }

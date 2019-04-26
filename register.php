@@ -19,6 +19,7 @@ if($_POST){
     $usuario = armarusuario();
     //guardarlo
     guardarUsuario($usuario);
+    loguearUsuario($_POST["email"]);
     header("Location:home.php");
     exit; //importante tener el exit luego de la redirección.
   }
@@ -74,7 +75,6 @@ if($_POST){
                 <?php else: ?>
                   <input id="pass" type="password" name="pass" value="" placeholder= "contraseña">
                 <?php endif; ?>
-
               </div>
               <div class="politica">
                 <p>Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de datos y la Política de cookies.</p>
@@ -85,7 +85,6 @@ if($_POST){
         </form>
       </div>
         </div>
-        <!--
         <footer>
           <nav>
             <ul>
@@ -94,6 +93,6 @@ if($_POST){
             </ul>
 
         </nav>
-      </footer> -->
+      </footer>
   </body>
 </html>

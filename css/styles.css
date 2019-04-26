@@ -1,5 +1,5 @@
 
-    /*reseteos*/
+                      /*reseteos*/
 
 *{
   box-sizing: border-box;
@@ -20,7 +20,7 @@ h1, h2{
   margin: 0;
   padding: 0;
 }
-    /* estilos generales, register y login*/
+          /* estilos generales, register y login*/
 
 body{
   margin: 0 auto;
@@ -111,7 +111,7 @@ form i{
   color: #188c7a;
 }
 .datos input{
-  font-size: 22px;
+  font-size: 16px;
   background-color: #fff;
   display: inline-block;
   border-radius: 5px;
@@ -214,14 +214,13 @@ hr{
   color: #188c7a;
   font-weight: bold;
 }
-    /*estilos footer*/
-
 footer{
   background-color: #188c7a;
   color: #fff;
   width: 100%;
   line-height: 40px;
-
+  position: absolute;
+  bottom: 0;
 }
 footer ul{
   display: flex;
@@ -231,17 +230,26 @@ footer ul{
 }
 footer a{
   color: #fff;
+  font-size: 18px;
 }
 footer a:hover{
   font-weight: bold;
 }
-    /*estilos home*/
+                                /*estilos home*/
 
 .navbar{
 background-color: #18867a !important;
 padding: 8px 10px;
 color: #fff;
 font-size: 18px;
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+}
+.navbar img{
+  display: block;
+  width: 50px;
+  height: 50px;
 }
 .navbar a{
   color: #fff !important;
@@ -249,14 +257,14 @@ font-size: 18px;
 .container nav a{
   color: #000 !important;
 }
-.bienvenido{
-  background-color: transparent !important;
-  text-align: left;
-  padding-left: 30px;
-}
 .blanco{
   background-color: rgba(255, 255, 255, 0.8);
   padding: 50px;
+}
+.bienvenido h2{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 5px 100px;
 }
 #search {
   justify-content: center;
@@ -269,7 +277,6 @@ font-size: 18px;
   min-height: 100px;
   background-image: url(../img/libros2.jpg);
   background-size: 100%;
-  padding-top: 20px;
 }
 .jumbotron {
   line-height: 50px;
@@ -298,7 +305,12 @@ background-position: 50% 50%;
 }
 
 #carouselContent {
-  margin-top: 50px;
+  margin: 50px auto 0;
+  color: #18867a;
+  font-size: 26px;
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
 }
 div.pasos{
   background-color: #a4a4a4;
@@ -307,24 +319,45 @@ div.pasos{
 
 div.paso{
   border-left: inset;
-  padding-top: 25px;
-  margin-top: 18px;
+  padding-top: 40px;
 }
 div.paso:first-child{
   border-left: 0;
 }
 .destacado{
   margin: 40px 0 0;
-  font-size: 30px;
+  font-size: 45px;
   color: #18867a;
   font-weight: bold;
   text-align: center;
   margin: 5px 0;
 }
+.row.libros{
+  padding: 20px 20px;
+}
 .libros{
   background-color: #18867a;
   text-align: center;
-  margin: 8px 0;
+  margin: 15px 0;
+}
+.libros img{
+  height: 100%;
+  width: 80%;
+}
+.conocenos{
+  background-color: #c7c7c7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.conocenos p{
+  padding: 50px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.img-conocenos{
+  padding: 80px 80px 80px 0;
 }
 
 @media only screen and (min-width: 480px){
@@ -361,8 +394,8 @@ div.paso:first-child{
       height: 18px;
     }
     form.form-login{
-      margin: 0 auto 25px;
-      width: 55%;
+      margin: 20px auto 25px;
+      width: 80%;
       line-height: 60px;
     }
     .datos-alt h2{
@@ -407,7 +440,7 @@ div.paso:first-child{
     border-radius: 0;
     background-color: rgba(255, 255, 255, 0.8);
     width: 45%;
-    margin: 0 0 20px auto;
+    margin: 0 0 0 auto;
     border: 1px solid #c7c7c7;
     box-shadow: 5px 5px 10px #c7c7c7;
   }
