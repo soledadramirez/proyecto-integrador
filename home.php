@@ -139,17 +139,24 @@ require_once "funciones.php";
             <span class="sr-only">Next</span>
           </a>
         </div>
-        <div class="conocenos">
-          <div class="text-conocenos">
-            <h1>Conocenos</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="conocenos row">
+          <div class="text-conocenos col-xl-6">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">Conocenos</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
           </div>
-          <div class="img-conocenos">
-          <img src="img/libros-y-risas2.jpg" alt="">
-          </div>
+        <div class="img-conocenos col-xl-6">
+            <div class="card">
+              <div class="card-body">
+                <img src="img/libros-y-risas2.jpg" alt="">
+              </div>
+            </div>
         </div>
-
-        <footer class="col-lg-12">
+        </div>
+        <footer class="col-lg-12 footer-home">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>

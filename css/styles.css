@@ -346,19 +346,26 @@ div.paso:first-child{
 }
 .conocenos{
   background-color: #c7c7c7;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 .conocenos p{
-  padding: 50px;
   font-size: 24px;
   font-weight: bold;
+  text-align: justify;
 }
-.img-conocenos{
-  padding: 80px 80px 80px 0;
+.card{
+  border: 0;
+  padding: 20px;
+  background-color: #c7c7c7;
 }
+.card-text, .card-body{
+  background-color: #c7c7c7;
+  border: 0;
+}
+.img-conocenos img{
+  width: 100%;
+  text-align: center;
+}
+
 
 @media only screen and (min-width: 480px){
     html.login-reg{
@@ -412,7 +419,7 @@ div.paso:first-child{
     display: none;
     }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 990px) {
   html.login{
     font-size: 20px;
   }
@@ -463,6 +470,12 @@ hr{
 }
 .navbar{
   padding: 8px 90px;
+}
+.conocenos p{
+  padding: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
 }
