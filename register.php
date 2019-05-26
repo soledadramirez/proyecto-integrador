@@ -35,7 +35,7 @@ if($_POST){
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -54,7 +54,8 @@ if($_POST){
               <div class="user">
                 <label for="user"><i class="fas fa-user"></i></label>
               <?php if(isset($errores["user"])):?>
-                <input id="user" type="text" name="user" value="" placeholder="<?= $errores["user"] ?>">
+                <input class="campos-con-errores" id="user" type="text" name="user" value="<?= $usuarioOk ?>" placeholder="nombre de usuario">
+                <p class="errores"> <?= $errores["user"] ?></p>
               <?php else: ?>
                 <input id="user" type="text" name="user" value="<?= $usuarioOk ?>" placeholder="nombre de usuario">
               <?php endif ?>
@@ -63,7 +64,8 @@ if($_POST){
               <div class="email">
                 <label for="email"><i class="far fa-envelope-open"></i></label>
                 <?php if (isset($errores["email"])): ?>
-                  <input id="email" type="text" name="email" value="" placeholder="<?= $errores["email"] ?>">
+                  <input class="campos-con-errores" id="email" type="text" name="email" value="<?= $emailOk?>" placeholder="correo electrónico">
+                  <p class="errores"> <?= $errores["email"] ?></p>
                 <?php else: ?>
                   <input id="email" type="text" name="email" value="<?= $emailOk?>" placeholder="correo electrónico">
               <?php endif; ?>
@@ -71,7 +73,9 @@ if($_POST){
               <div class="pass">
                 <label for="pass"><i class="fas fa-lock"></i></label>
                 <?php if (isset($errores["pass"])): ?>
-                    <input id="pass" type="password" name="pass" value="" placeholder="<?= $errores["pass"] ?>">
+                  <input class="campos-con-errores" id="pass" type="password" name="pass" value="" placeholder= "contraseña">
+                  <p class="errores"> <?= $errores["pass"] ?></p>
+
                 <?php else: ?>
                   <input id="pass" type="password" name="pass" value="" placeholder= "contraseña">
                 <?php endif; ?>

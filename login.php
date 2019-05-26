@@ -31,7 +31,7 @@ if($_POST){
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -52,7 +52,8 @@ if($_POST){
               <div class="email">
                 <label for="email"><i class="fas fa-user"></i></label>
                 <?php if (isset($errores["email"])):?>
-                  <input type="email" name="email" value="" placeholder="<?= $errores["email"] ?>">
+                  <input class="campos-con-errores" id="email" type="email" name="email" value="<?= $emailOk ?>" placeholder="ingresa tu email">
+                  <p class="errores"> <?= $errores["email"] ?></p>
                 <?php else: ?>
                   <input type="email" name="email" value="<?= $emailOk ?>" placeholder="ingresa tu email">
                   <?php endif; ?>
@@ -61,7 +62,9 @@ if($_POST){
               <div class="pass">
                 <label for="pass"><i class="fas fa-lock"></i></label>
                 <?php if (isset($errores["pass"])): ?>
-                    <input id="pass" type="password" name="pass" value="" placeholder="<?= $errores["pass"] ?>">
+                    <input class="campos-con-errores" id="pass" type="password" name="pass" value="" placeholder= "ingresa tu contraseña">
+                    <p class="errores"> <?= $errores["pass"] ?></p>
+
                 <?php else: ?>
                     <input id="pass" type="password" name="pass" value="" placeholder= "ingresa tu contraseña">
                 <?php endif; ?>
