@@ -261,10 +261,12 @@ align-items: flex-end;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 50px;
 }
-.bienvenido h2{
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: left;
+.bienvenido h3{
+  background-color: #18867a;
+  text-align: center;
   padding: 5px 100px;
+  color: #fff;
+  font-size: 20px;
 }
 #search {
   justify-content: center;
@@ -310,7 +312,7 @@ background-position: 50% 50%;
   font-size: 26px;
   font-weight: bold;
   width: 80%;
-  text-align: center;
+  text-align: center:ºº
 }
 div.pasos{
   background-color: #a4a4a4;

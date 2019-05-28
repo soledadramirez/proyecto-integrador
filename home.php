@@ -18,12 +18,13 @@ require_once "funciones.php";
   </head>
   <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="img/logo-verde-g.png" width="120" height="60" alt=""></a>
+        <a class="navbar-brand" href="#"><!--<img src="img/logo-verde-g.png" width="120" height="60" alt="">--><h1>Booky</h1> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
@@ -53,9 +54,9 @@ require_once "funciones.php";
       <div class="fondo paral">
         <div class="bienvenido">
           <?php if (isset($_SESSION["email"])): ?>
-            <h2>Bienvenido <?= $_SESSION["email"]?>!</h2>
+            <h3>Bienvenido <?= $_SESSION["email"]?>!!</h3>
            <?php else: ?>
-            <h2> Bienvenido</h2>
+            <h3> Bienvenido</h3>
           <?php endif ?>
         </div>
             <form class="form-group row" id="search" action="index.html" method="post">
