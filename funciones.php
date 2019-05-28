@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include_once "conexion.php";
+
 function validarRegistro($datos){
   $errores = [];
   $datosFinales = [];
@@ -50,25 +52,45 @@ function armarUsuario(){
 }
 
 function guardarUsuario($user){
-  $json = file_get_contents("db/db.json");
-  $array = json_decode($json, true);
+  // $json = file_get_contents("db/db.json");
+  // $array = json_decode($json, true);
+  //
+  // $array["usuarios"][] = $user;
+  // $array = json_encode($array, JSON_PRETTY_PRINT);
+  // file_put_contents("db/db.json", $array);
 
-  $array["usuarios"][] = $user;
-  $array = json_encode($array, JSON_PRETTY_PRINT);
-  file_put_contents("db/db.json", $array);
+  global $db;
+  $stmt = $db->prepare("INSERT INTO usuarios (id, nombre, email, password) VALUE (default, :name, :email, :password)");
+
+  $stmt->bindValue( ":name", $user["user"] );
+  $stmt->bindValue( ":email", $user["email"] );
+  $stmt->bindValue( ":password", $user["pass"]);
+  $stmt->execute();
+
 }
 
 function buscarPorEmail($email){
-  $json = file_get_contents("db/db.json");
-  $array = json_decode($json, true);
+//   $json = file_get_contents("db/db.json");
+//   $array = json_decode($json, true);
+//
+//   foreach ($array["usuarios"] as $usuario) {
+//     if($email == $usuario["email"]){
+//       return $usuario;
+//     }
+//   };
+//   return null;
+// }
+global $db;
+$stmt=$db->prepare("SELECT * FROM usuarios WHERE email = :email");
 
-  foreach ($array["usuarios"] as $usuario) {
-    if($email == $usuario["email"]){
-      return $usuario;
-    }
-  };
-  return null;
+$stmt->bindValue(":email", $email);
+$stmt->execute();
+
+$usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+return $usuario;
 }
+
 
 function existeUsuario($email){
   return buscarPorEmail($email) !== null;
