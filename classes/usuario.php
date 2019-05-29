@@ -1,6 +1,7 @@
 <?php
 
-class Usuario{
+class Usuario
+{
 
 protected $id;
 protected $nombre;
@@ -21,5 +22,28 @@ function __construct(Array $datos)
   $this->email= $datos["email"];
 
 }
+public function getId(){
+  return $this->id;
 }
- ?>
+public function getName(){
+  return $this->name;
+}
+public function getEmail(){
+  return $this->email;
+}
+public function getPassword(){
+  return $this->password;
+}
+public function setName($name){
+  $this->name = $name;
+  return $this;
+}
+public function setEmail($email){
+  $this->email = $email;
+  return $this;
+}
+public function setPassword($password){
+  $this->pass = $password;
+  return $this;
+}
+}

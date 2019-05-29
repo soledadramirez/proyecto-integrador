@@ -88,6 +88,7 @@ $stmt->execute();
 
 $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
+
 return $usuario;
 }
 

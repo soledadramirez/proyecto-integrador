@@ -1,5 +1,6 @@
 <?php
 
+require_once "init.php";
 require_once "classes/validator.php";
 require_once "conexion.php";
 require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
@@ -11,8 +12,8 @@ $emailOk = "";
 if($_POST){
 
   $errores = VALIDATOR::validarRegistro($_POST);
-  
 
+//var_dump($_POST);exit;
   $usuarioOk = trim($_POST["user"]);
   $emailOk = trim($_POST["email"]);
 
@@ -82,6 +83,16 @@ if($_POST){
 
                 <?php else: ?>
                   <input id="pass" type="password" name="pass" value="" placeholder= "contraseña">
+                <?php endif; ?>
+              </div>
+              <div class="pass2">
+                <label for="pass2"><i class="fas fa-lock"></i></label>
+                <?php if (isset($errores["pass"])): ?>
+                  <input class="campos-con-errores" id="pass2" type="password" name="pass2" value="" placeholder= "contraseña">
+                  <p class="errores"> <?= $errores["pass"] ?></p>
+
+                <?php else: ?>
+                  <input id="pass2" type="password" name="pass2" value="" placeholder= "repite tu contraseña">
                 <?php endif; ?>
               </div>
               <div class="politica">
