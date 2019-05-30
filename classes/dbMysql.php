@@ -3,7 +3,7 @@
 /**
  *
  */
-class DbMysql //extends DB
+class DbMysql extends Db
 {
   protected $conection;
 
@@ -42,7 +42,26 @@ class DbMysql //extends DB
 
   }
 
+  function buscarPorEmail($email) {
+      $stmt = $this->conection->prepare("SELECT * FROM usuarios WHERE email = :email");
 
+      $stmt->bindValue(":email", $email);
+      $stmt->execute();
+
+      $consulta = $stmt->fetch(PDO::FETCH_ASSOC);
+
+      if($consulta == false){
+        return NULL;
+      } else {
+        $usuario = new Usuario($consulta);
+        return $usuario;
+      }
+
+    }
+
+    public function existeElUsuario($email){
+      return $this->buscarPorEmail($email) !== null;
+    }
 
 
 
