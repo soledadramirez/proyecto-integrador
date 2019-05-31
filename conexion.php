@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=booky_db;port=8889";
+$dsn = "mysql:host=localhost;dbname=booky_db;port=3306";
 $user = "root";
 $pass = "root";
 

@@ -1,9 +1,13 @@
 <?php
-include_once "init.php";
+include "dbMysql.php";
+
+$dbMysql = new DbMysql;
 
 class Validator {
 
   public static function validarRegistro($datos){
+    global $dbMysql;
+
     $errores = [];
     $datosFinales = [];
 
@@ -39,7 +43,7 @@ class Validator {
       $errores["email"] = "El campo no puede estar vacío";
     } else if(filter_var($datosFinales["email"], FILTER_VALIDATE_EMAIL) == false){
       $errores["email"] = "Ingrese un email válido";
-    } else if(existeUsuario($datosFinales["email"])){
+    } else if($dbMysql->existeUsuario($datosFinales["email"])){
       $errores["email"] = "El email ya se encuentra registrado";
     }
 
@@ -54,6 +58,8 @@ class Validator {
   }
 
   public static function validarLogin($datos){
+    //llamar global dbMysql
+
     $errores = [];
     $datosFinales = [];
 
@@ -65,14 +71,14 @@ class Validator {
       $errores["email"] = "El campo no puede estar vacío";
     } else if(filter_var($datosFinales["email"], FILTER_VALIDATE_EMAIL) == false){
       $errores["email"] = "Ingrese un email válido";
-    } else if(!existeUsuario($datosFinales["email"])){
+    } else if(!$dbMysql->existeUsuario($datosFinales["email"])){
       $errores["email"] = "El email no existe";
     }
 
     if(strlen($datosFinales["pass"] ) == 0 ) {
     $errores["pass"] = "El campo no puede estar vacío";
     } else {
-      $usuario = buscarPorEmail($datosFinales["email"]);
+      $usuario = $dbMysql->buscarPorEmail($datosFinales["email"]);
 
       if(!password_verify($datosFinales["pass"], $usuario["pass"])){
         $errores["pass"] = "La contraseña no es correcta";

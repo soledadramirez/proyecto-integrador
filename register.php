@@ -1,9 +1,9 @@
 <?php
+//require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
 
-require_once "init.php";
-require_once "classes/validator.php";
-require_once "conexion.php";
-require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
+include "classes/usuario.php";
+include "classes/validator.php";
+
 $errores = [];
 
 $usuarioOk = "";
@@ -21,10 +21,12 @@ if($_POST){
 
   if(empty($errores)){
     //armar el usuario
-    $usuario = armarusuario();
+    $usuario = new Usuario($_POST);
+    var_dump($usuario, $_POST);
     //guardarlo
-    guardarUsuario($usuario);
-    loguearUsuario($_POST["email"]);
+    $dbMysql->guardarUsuario($usuario);
+
+    //loguearUsuario($_POST["email"]); // TODO: Método de auth.
     header("Location:home.php");
     exit; //importante tener el exit luego de la redirección.
   }

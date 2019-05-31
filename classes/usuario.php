@@ -12,7 +12,7 @@ function __construct(Array $datos)
 {
   if(isset($datos["id"])) {
     $this->id = $datos["id"];
-    $this->password = $datos["pass"];
+    $this->password = $datos["pass"]; //Hash
 
   } else {
      $this->id = NULL;
@@ -25,8 +25,8 @@ function __construct(Array $datos)
 public function getId(){
   return $this->id;
 }
-public function getName(){
-  return $this->name;
+public function getNombre(){
+  return $this->nombre;
 }
 public function getEmail(){
   return $this->email;
@@ -34,8 +34,8 @@ public function getEmail(){
 public function getPassword(){
   return $this->password;
 }
-public function setName($name){
-  $this->name = $name;
+public function setNombre($name){
+  $this->nombre = $name;
   return $this;
 }
 public function setEmail($email){

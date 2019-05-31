@@ -3,6 +3,9 @@
 /**
  *
  */
+
+include "Db.php";
+
 class DbMysql extends Db
 {
   protected $conection;
@@ -17,7 +20,6 @@ class DbMysql extends Db
     try {
 
       $this->conection = new PDO($dsn, $user, $pass);
-
       $this->conection -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
       echo "todo bien";
@@ -26,7 +28,7 @@ class DbMysql extends Db
 
     echo "Hubo un error";
 
-    echo $e ->getMessage();
+    echo $e->getMessage();
     exit;
     }
   }
@@ -42,7 +44,7 @@ class DbMysql extends Db
 
   }
 
-  function buscarPorEmail($email) {
+  public function buscarPorEmail($email) {
       $stmt = $this->conection->prepare("SELECT * FROM usuarios WHERE email = :email");
 
       $stmt->bindValue(":email", $email);
@@ -59,7 +61,7 @@ class DbMysql extends Db
 
     }
 
-    public function existeElUsuario($email){
+    public function existeUsuario($email){
       return $this->buscarPorEmail($email) !== null;
     }
 
