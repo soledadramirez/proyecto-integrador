@@ -59,7 +59,7 @@ class Validator {
 
   public static function validarLogin($datos){
     //llamar global dbMysql
-
+    global $dbMysql;
     $errores = [];
     $datosFinales = [];
 
