@@ -1,5 +1,5 @@
 <?php
-require_once "funciones.php";
+//include_once "validator.php";
 
  ?>
 

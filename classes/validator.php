@@ -1,5 +1,5 @@
 <?php
-include "dbMysql.php";
+include "classes/dbMysql.php";
 
 $dbMysql = new DbMysql;
 
@@ -35,8 +35,8 @@ class Validator {
     }
     */
 
-    if(strlen($datosFinales["user"]) == 0){
-      $errores["user"] = "El campo no puede estar vacío";
+    if(strlen($datosFinales["name"]) == 0){
+      $errores["name"] = "El campo no puede estar vacío";
     }
 
     if (strlen($datosFinales["email"]) == 0) {
@@ -60,6 +60,7 @@ class Validator {
   public static function validarLogin($datos){
     //llamar global dbMysql
     global $dbMysql;
+    global $usuario;
     $errores = [];
     $datosFinales = [];
 
@@ -80,7 +81,7 @@ class Validator {
     } else {
       $usuario = $dbMysql->buscarPorEmail($datosFinales["email"]);
 
-      if(!password_verify($datosFinales["pass"], $usuario["pass"])){
+      if(password_verify($datosFinales["pass"], $usuario->getPassword())== false){
         $errores["pass"] = "La contraseña no es correcta";
       }
     }

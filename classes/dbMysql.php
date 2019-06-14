@@ -3,8 +3,8 @@
 /**
  *
  */
-
-include "Db.php";
+include "classes/usuario.php";
+include "classes/Db.php";
 
 class DbMysql extends Db
 {
@@ -22,8 +22,6 @@ class DbMysql extends Db
       $this->conection = new PDO($dsn, $user, $pass);
       $this->conection -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      echo "todo bien";
-
     } catch (\Exception $e) {
 
     echo "Hubo un error";
@@ -35,8 +33,8 @@ class DbMysql extends Db
 
   public function guardarUsuario(Usuario $usuario){
 
-    $stmt = $this->conection->prepare("INSERT INTO usuarios (id, nombre, email, password) VALUES(default, :nombre, :email, :password)");
-    $stmt->bindValue(":nombre", $usuario->getNombre());
+    $stmt = $this->conection->prepare("INSERT INTO usuarios (id, name, email, pass) VALUES(default, :nombre, :email, :password)");
+    $stmt->bindValue(":nombre", $usuario->getUser());
     $stmt->bindValue(":email", $usuario->getEmail());
     $stmt->bindValue(":password", $usuario->getPassword());
 
@@ -51,7 +49,7 @@ class DbMysql extends Db
       $stmt->execute();
 
       $consulta = $stmt->fetch(PDO::FETCH_ASSOC);
-
+      //var_dump($consulta);
       if($consulta == false){
         return NULL;
       } else {

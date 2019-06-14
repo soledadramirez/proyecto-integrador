@@ -1,10 +1,13 @@
 <?php
 
+
+
+
 class Usuario
 {
 
 protected $id;
-protected $nombre;
+protected $user;
 protected $email;
 protected $password;
 
@@ -18,15 +21,14 @@ function __construct(Array $datos)
      $this->id = NULL;
      $this->password= password_hash($datos["pass"], PASSWORD_DEFAULT);
   }
-  $this->nombre= $datos["user"];
+  $this->user= $datos["name"];
   $this->email= $datos["email"];
-
 }
 public function getId(){
   return $this->id;
 }
-public function getNombre(){
-  return $this->nombre;
+public function getUser(){
+  return $this->user;
 }
 public function getEmail(){
   return $this->email;
@@ -34,8 +36,8 @@ public function getEmail(){
 public function getPassword(){
   return $this->password;
 }
-public function setNombre($name){
-  $this->nombre = $name;
+public function setUser($name){
+  $this->user = $name;
   return $this;
 }
 public function setEmail($email){

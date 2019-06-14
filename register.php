@@ -1,8 +1,9 @@
 <?php
 //require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
-
-include "classes/usuario.php";
+//include_once "classes/dbMysql.php";
+//include "classes/usuario.php";
 include "classes/validator.php";
+include "classes/auth.php";
 
 $errores = [];
 
@@ -11,24 +12,27 @@ $emailOk = "";
 
 if($_POST){
 
-  $errores = VALIDATOR::validarRegistro($_POST);
+  $errores = Validator::validarRegistro($_POST);
 
 //var_dump($_POST);exit;
-  $usuarioOk = trim($_POST["user"]);
+  $usuarioOk = trim($_POST["name"]);
   $emailOk = trim($_POST["email"]);
 
   //var_dump($errores);
-
   if(empty($errores)){
     //armar el usuario
-    $usuario = new Usuario($_POST);
-    var_dump($usuario, $_POST);
+    $usuario = new usuario($_POST);
     //guardarlo
     $dbMysql->guardarUsuario($usuario);
-
-    //loguearUsuario($_POST["email"]); // TODO: Método de auth.
+    $auth = new Auth();
+    //var_dump($usuario, $_POST, $_SESSION);exit;
+    $auth->loguearUsuario($_POST["email"]); // TODO: Método de auth.
     header("Location:home.php");
     exit; //importante tener el exit luego de la redirección.
+
+    if($auth->usuarioLogueado()){
+      header("Location:home.php");exit;
+    }
   }
 }
 
@@ -58,13 +62,13 @@ if($_POST){
         <form class="form-login"action="register.php" method="POST" enctype="multipart/form-data">
             <article class="datos">
               <h2>Crea una cuenta</h2>
-              <div class="user">
-                <label for="user"><i class="fas fa-user"></i></label>
-              <?php if(isset($errores["user"])):?>
-                <input class="campos-con-errores" id="user" type="text" name="user" value="<?= $usuarioOk ?>" placeholder="nombre de usuario">
-                <p class="errores"> <?= $errores["user"] ?></p>
+              <div class="name">
+                <label for="name"><i class="fas fa-user"></i></label>
+              <?php if(isset($errores["name"])):?>
+                <input class="campos-con-errores" id="name" type="text" name="name" value="<?= $usuarioOk ?>" placeholder="nombre de usuario">
+                <p class="errores"> <?= $errores["name"] ?></p>
               <?php else: ?>
-                <input id="user" type="text" name="user" value="<?= $usuarioOk ?>" placeholder="nombre de usuario">
+                <input id="name" type="text" name="name" value="<?= $usuarioOk ?>" placeholder="nombre de usuario">
               <?php endif ?>
               </div>
 

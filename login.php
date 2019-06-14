@@ -1,25 +1,33 @@
 <?php
 require_once "classes/validator.php";
-require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
+include_once "classes/auth.php";
+
+//require_once "funciones.php"; //session_start() está en funciones.php no hay que ponerlo otra vez;
 $errores = [];
 
 $emailOk = "";
 
 if($_POST){
-  $errores = VALIDATOR::validarLogin($_POST);
 
+  $errores = Validator::validarLogin($_POST);
   $emailOk = trim($_POST["email"]);
 
   //var_dump($errores); //  Colocar los errores en los placeholders igual que en register.php
 
   if (empty($errores)){
-    //logueamos
-    loguearUsuario($_POST["email"]);
+    $auth = new Auth();
+    
+    if($auth->usuarioLogueado()){
+      header("Location:home.php");
+    }
+
+    $auth->loguearUsuario($_POST["email"]);
     //redirigimos a home
     header("Location:home.php");
     exit; //importante tener el exit luego de la redirección.
+
   }
-  
+
 }
 
 
