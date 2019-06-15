@@ -991,4 +991,13 @@ hr{
   text-align: center;
 }
 
+/* estilos pagina carga de libros*/
+.cargarlibros{
+  margin-bottom: 30px;
+  padding: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
 }
