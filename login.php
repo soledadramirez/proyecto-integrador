@@ -16,15 +16,12 @@ if($_POST){
 
   if (empty($errores)){
     $auth = new Auth();
-    
-    if($auth->usuarioLogueado()){
-      header("Location:home.php");
-    }
 
     $auth->loguearUsuario($_POST["email"]);
     //redirigimos a home
     header("Location:home.php");
     exit; //importante tener el exit luego de la redirección.
+
 
   }
 
