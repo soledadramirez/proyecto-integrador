@@ -1,6 +1,6 @@
 <?php
-//include_once "validator.php";
-
+include_once "classes/auth.php";
+$auth = new Auth();
  ?>
 
 
