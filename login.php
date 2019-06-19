@@ -84,11 +84,11 @@ if($_POST){
               <button class="btn-login" type="submit" name="button">Login</button>
               <hr>
             </article>
-            <article class="datos-alt">
+            <!-- <article class="datos-alt">
               <h2>o logueate con</h2>
               <button class="face" type="submit" name="button">facebook</button>
               <button class="google" type="submit" name="button">google</button>
-            </article>
+            </article> -->
           <div class="recover">
             <p><a href="#">Olvidé mi usuario</a> // <a href="#">Olvidé mi contraseña</a></p>
             <p class="cuenta">¿No estás registrado? <a href="registracion.html">Crea una cuenta</a></p>
@@ -96,7 +96,7 @@ if($_POST){
         </form>
       </div>
         </div>
-        <footer>
+        <!-- <footer>
           <nav>
             <ul>
               <li> <a href="#">Sobre Nosotros</a></li>
@@ -104,6 +104,6 @@ if($_POST){
             </ul>
 
         </nav>
-      </footer>
+      </footer> -->
   </body>
 </html>

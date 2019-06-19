@@ -27,7 +27,6 @@ font-family: 'Poiret One', cursive;
 min-height: 100%;
 display: flex;
 flex-direction: column;
-
 }
 .container{
 background-color: #fff;
@@ -36,6 +35,9 @@ h2{
 margin: 0;
 font-size: 30px;
 font-weight: 900;
+}
+.header-login{
+  margin: 30px 0 50px;
 }
 header{
 width: 100%;
@@ -109,13 +111,14 @@ text-align: center;
 }
 form i{
 color: #188c7a;
+padding-left: 20px;
 }
 .datos input{
 font-size: 16px;
 background-color: #fff;
 display: inline-block;
 border-radius: 5px;
-margin: 0 0 20px;
+margin: 0 20px 0 0;
 padding-left: 10px;
 line-height: 50px;
 width: 85%;
@@ -299,7 +302,7 @@ line-height: 25px;
 }
 .fondo{
 min-height: 100px;
-background-image: url(../img/libros-prueba-5.png);
+background-image: url("../images/libros2.jpg");
 background-size: 100%;
 }
 .jumbotron {
@@ -395,7 +398,7 @@ text-align: center;
 }
 
 
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 768px){
 html.login-reg{
 font-size: 30px;
 }
@@ -448,7 +451,7 @@ hr{
 display: none;
 }
 
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 992px) {
 html.login{
 font-size: 20px;
 }
@@ -466,17 +469,15 @@ font-size: 18px;
 .cont-form{
 margin: 0 auto;
 width: 70%;
-background-image: url(../img/libros9.jpg);
+background-image: url("../images/libros2.jpg");
 background-size: cover;
 }
 .cont-reg{
-background-image: url(../img/libros3.jpg);
+background-image: url("../images/libros2.jpg");
 }
 form.form-login{
 border-radius: 0;
 background-color: rgba(255, 255, 255, 0.8);
-width: 45%;
-margin: 0 0 0 auto;
 border: 1px solid #c7c7c7;
 box-shadow: 5px 5px 10px #c7c7c7;
 }
@@ -610,6 +611,9 @@ header a{
   text-align: center;
   margin: 0px auto;
 }
+.panel-cont{
+  padding: 0;
+}
 form h2{
   margin: 10px 0 25px;
   padding: 0;
@@ -643,7 +647,6 @@ form i{
   background-color: #188c7a;
   box-shadow: 2px 2px 3px #a4a4a4;
   border-radius: 5px;
-  width: 70%;
   line-height: 55px;
   border: 0;
   font-family: 'Poiret One', cursive;
@@ -651,6 +654,7 @@ form i{
   font-size: 26px;
   margin: 15px auto;
   font-weight: bold;
+  padding: 10px;
 }
 .btn-login:hover{
   background-color: #424242;
@@ -792,7 +796,7 @@ align-items: flex-end;
 }
 .fondo{
   min-height: 100px;
-  background-image: url(../img/libros-prueba-5.png);
+  background-image: url("../images/libros2.jpg");
   background-size: 100%;
 }
 .jumbotron {
@@ -887,7 +891,7 @@ div.paso:first-child{
 }
 
 
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 768px){
     html.login-reg{
       font-size: 30px;
     }
@@ -939,7 +943,7 @@ div.paso:first-child{
     display: none;
     }
 
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 992px) {
   html.login{
     font-size: 20px;
   }
@@ -953,20 +957,23 @@ div.paso:first-child{
   header p{
     width: 40%;
     font-size: 18px;
+    text-align: center;
   }
   .cont-form{
     margin: 0 auto;
-    width: 70%;
-    background-image: url(../img/libros9.jpg);
+    background-image: url("../images/libros9.jpg");
     background-size: cover;
   }
   .cont-reg{
-   background-image: url(../img/libros3.jpg);
+   background-image: url("../images/libros2.jpg");
+  }
+  .panel{
+    width: 50%;
   }
   form.form-login{
     border-radius: 0;
     background-color: rgba(255, 255, 255, 0.8);
-    width: 45%;
+    width: 100%;
     margin: 0 0 0 auto;
     border: 1px solid #c7c7c7;
     box-shadow: 5px 5px 10px #c7c7c7;
@@ -997,5 +1004,38 @@ hr{
   font-weight: bold;
   text-align: center;
 }
+                /*estilos profile*/
+
+ .fondoProfile{
+   background-color: #e6e6e6;
+ }
+  .profileImage button{
+    margin: 20px auto;
+  }
+  .profileImage img{
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .reviews{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 96vh;
+  }
+  .librosInfo{
+    height: 80vh;
+    margin-left: 20px;
+  }
+  .librosInfo img{
+    display: block;
+    width: 120px;
+  }
+  .container.profile h1{
+    margin: 10px 0;
+  }
+  .container .profile{
+    background-image: url("../images/libros-prueba-1.jpeg");
+  }
+
 
 }

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home1');
+    return view('home');
 });
 
 Route::get('/home1', function () {
@@ -24,11 +24,10 @@ Route::get('/register', function (){
 
 });
 
-Route::get('/login', function (){
-  return view ('login');
-
-});
-
 Auth::routes();
 
 Route::get('/home1', 'HomeController@index')->name('home1');
+
+Route::get("/profile", function(){
+  return view("profile");
+});

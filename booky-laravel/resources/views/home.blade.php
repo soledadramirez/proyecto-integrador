@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 
 @extends('master')
 @section('main')
@@ -30,7 +28,7 @@
       </li>
       <?php if (isset($_SESSION["email"])): ?>
       <li class="nav-item">
-        <a class="nav-link" href="logout.php"><span class="fas fa-sign-in-alt"></span> Logout</a>
+        <a class="nav-link" href="/logout"><span class="fas fa-sign-in-alt"></span> Logout</a>
         <?php else: ?>
           <li class="nav-item">
             <a class="nav-link" href="/login"><span class="fas fa-sign-in-alt"></span> Login</a>
