@@ -31,11 +31,7 @@ flex-direction: column;
 .container{
 background-color: #fff;
 }
-h2{
-margin: 0;
-font-size: 30px;
-font-weight: 900;
-}
+
 .header-login{
   margin: 30px 0 50px;
 }
@@ -96,6 +92,9 @@ color: #fff;
 font-size: 50px;
 color: #188c7a;
 }
+.form-group{
+  padding: 0 20px;
+}
 .cont-form{
 width: 85%;
 color: #000;
@@ -111,18 +110,21 @@ text-align: center;
 }
 form i{
 color: #188c7a;
-padding-left: 20px;
+margin: 0 auto;
 }
 .datos input{
-font-size: 16px;
+font-size: 15px;
 background-color: #fff;
 display: inline-block;
 border-radius: 5px;
 margin: 0 20px 0 0;
 padding-left: 10px;
 line-height: 50px;
-width: 85%;
 font-family: 'Poiret One', cursive;
+}
+label i{
+  position: relative;
+  top: 10px;
 }
 .check input{
 font-size: 30px;
@@ -168,6 +170,7 @@ background-color: #424242;
 }
 .politica {
 font-size: 15px;
+text-align: center;
 }
 
 .login h2{
@@ -418,6 +421,7 @@ form.form-login{
 margin: 0px auto;
 border: 1px solid #c7c7c7;
 box-shadow: 5px 5px 10px #c7c7c7;
+padding: 20px 15px;
 }
 form h2{
 margin-bottom: 0;
@@ -472,8 +476,14 @@ width: 70%;
 background-image: url("../images/libros2.jpg");
 background-size: cover;
 }
-.cont-reg{
-background-image: url("../images/libros2.jpg");
+.cont-form-reg{
+background-image: url("../images/libros3.jpg");
+background-size: cover;
+width: 85%;
+margin: 0 auto;
+}
+.cont-form-reg input{
+  margin: 5px 0;
 }
 form.form-login{
 border-radius: 0;
@@ -622,6 +632,7 @@ form h2{
 }
 form i{
   color: #188c7a;
+
 }
 .datos input{
   font-size: 16px;
@@ -631,7 +642,7 @@ form i{
   margin: 0 0 20px;
   padding-left: 10px;
   line-height: 50px;
-  width: 85%;
+  width: 90%;
   font-family: 'Poiret One', cursive;
 }
 .check input{
@@ -655,6 +666,9 @@ form i{
   margin: 15px auto;
   font-weight: bold;
   padding: 10px;
+}
+.btn-register{
+  padding: 0;
 }
 .btn-login:hover{
   background-color: #424242;
@@ -977,6 +991,9 @@ div.paso:first-child{
     margin: 0 0 0 auto;
     border: 1px solid #c7c7c7;
     box-shadow: 5px 5px 10px #c7c7c7;
+  }
+  .form-control{
+    height: 50px;
   }
   form h2{
     margin-bottom: 0;

@@ -4,24 +4,22 @@
   <header class="header-login row">
      <nav class="cont-logo col-lg-7 col-md-6">
        <img src="img/logo-verde-g.png" alt="">
-       <h1 class="titulo"><a href="home.php">Booky</a></h1>
+       <h1 class="titulo"><a href="/home">Booky</a></h1>
       </nav>
-     <p class="col-lg-5 col-md-6">¿No estás registrado? <a href="/register"> Creá una cuenta</a></p>
+     <p class="col-lg-5 col-md-6">¿No estás registrado? <a href="/register"> Crea una cuenta</a></p>
   </header>
   <div class="container">
     <div class="row cont-form">
-        <div class="col-lg-12  col-md-12 col-sm-12 panel-cont">
+        <div class="col-sm-12 panel-cont">
             <div class="panel panel-defaut offset-lg-6">
-
                 <div class="panel-body">
                     <form class="form-horizontal form-login col-md-12" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
-                          <h2>Login</h2>
+                          <h2>Ingresa</h2>
+                        <div class="datos form-group row{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-form-label d-none d-md-block"><i class="fas fa-user"></i></label>
 
-                        <div class="datos form-group{{ $errors->has('email') ? ' has-error' : '' }} row">
-                            <label for="email" class="col-lg-1 col-md-1 col-sm-1 control-label"><i class="fas fa-user"></i></label>
-
-                            <div class="col-lg-11 col-md-11 col-sm-11">
+                            <div class="col-md-11 col-sm-12 pl-0 pr-0">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="ingresa tu email" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -34,11 +32,11 @@
                             </div>
                         </div>
 
-                        <div class="datos form-group{{ $errors->has('password') ? ' has-error' : '' }} row">
-                            <label for="password" class="col-lg-1 col-md-1 col-sm-1 control-label"><i class="fas fa-lock"></i></label>
+                        <div class="datos form-group row{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-form-label d-none d-md-block"><i class="fas fa-lock"></i></label>
 
-                            <div class="col-lg-11 col-md-11 col-sm-11">
-                                <input id="password" type="password" class="form-control" name="password" placeholder="ingresa tu contraseña"required>
+                            <div class="col-md-11 col-sm-12 pl-0 pr-0">
+                                <input id="password" type="password" class="form-control " name="password" placeholder="ingresa tu contraseña"required>
 
                                 @if ($errors->has('password'))
                                   <p class="">
@@ -63,7 +61,7 @@
                         <div class="form-group recover">
                             <div class="col-md-8 mx-auto">
                                 <button type="submit" class="btn btn-primary btn-login w-75">
-                                    Login
+                                    Ingresa
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
