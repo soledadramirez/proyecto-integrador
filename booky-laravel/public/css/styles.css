@@ -13,6 +13,11 @@ list-style-type: none;
 }
 a{
 text-decoration: none;
+color: #fff;
+}
+a:hover{
+  color: #fff;
+  text-decoration: none;
 }
 h1, h2{
 text-align: center;
@@ -183,7 +188,7 @@ margin: 10px;
 margin: 0;
 padding: 0 0 5px;
 }
-.datos-alt button{
+/* .datos-alt button{
 display: inline;
 color: #fff;
 border-radius: 5px;
@@ -203,7 +208,7 @@ background-color: #3b5998;
 }
 .google{
 background-color: #db4a39;
-}
+}*/
 .recover{
 padding-bottom: 15px;
 }
@@ -216,7 +221,7 @@ color: #000;
 .recover a{
 color: #188c7a;
 }
-.recover a:hover{
+a.a-reg:hover{
 color: #188c7a;
 font-weight: bold;
 }
@@ -243,7 +248,7 @@ font-weight: bold;
 }
           /*errores*/
 
-p.errores {
+.errores {
 color: red;
 margin-top: 0;
 font-size: 15px;
@@ -399,7 +404,40 @@ border: 0;
 width: 100%;
 text-align: center;
 }
-
+.container.header-profile{
+  background-color: #18867a;
+}
+ .profileImage button{
+   margin: 20px auto;
+   position: relative;
+   bottom: 60px;
+   left: 100px;
+ }
+ .circle{
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   margin: 0 auto;
+   background-color: #fff;
+   /* background-image: url(/images/fotoPerfil.jpg); */
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
+ }
+ .profileImage img{
+ display: inline-block;
+ width: auto;
+ height: 100%;
+ margin-left: -110px;
+ }
+ .profileImage.jumbotron{
+   margin-bottom: -75px;
+   background-color: transparent;
+   padding: 30px 0 30px;
+ }
+ .profile-header{
+   margin: 0 0 20px;
+ }
 
 @media only screen and (min-width: 768px){
 html.login-reg{
@@ -1023,17 +1061,7 @@ hr{
 }
                 /*estilos profile*/
 
- .fondoProfile{
-   background-color: #e6e6e6;
- }
-  .profileImage button{
-    margin: 20px auto;
-  }
-  .profileImage img{
-    display: block;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
+
   .reviews{
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1050,9 +1078,7 @@ hr{
   .container.profile h1{
     margin: 10px 0;
   }
-  .container .profile{
-    background-image: url("../images/libros-prueba-1.jpeg");
-  }
+
 
 
 }

@@ -4,9 +4,9 @@
   <header class="header-login row">
      <nav class="cont-logo col-lg-7 col-md-6">
        <img src="img/logo-verde-g.png" alt="">
-       <h1 class="titulo"><a href="/home">Booky</a></h1>
+       <h1 class="titulo"><a class="a-reg" href="/home">Booky</a></h1>
       </nav>
-     <p class="col-lg-5 col-md-6">¿Estás registrado? <a href="/login"> Ingresa</a></p>
+     <p class="col-lg-5 col-md-6">¿Estás registrado? <a class="a-reg" href="/login"> Ingresa</a></p>
   </header>
 <div class="container">
     <div class="row cont-form-reg">
@@ -24,7 +24,7 @@
 
                                 @if ($errors->has('name'))
                                   <p>
-                                    <span class="help-block">
+                                    <span class="help-block errores">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                     </p>
@@ -40,7 +40,7 @@
 
                                 @if ($errors->has('email'))
                                   <p>
-                                    <span class="help-block">
+                                    <span class="help-block errores">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                   </p>
@@ -56,7 +56,7 @@
 
                                 @if ($errors->has('password'))
                                   <p>
-                                    <span class="help-block">
+                                    <span class="help-block errores">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                   </p>
@@ -78,7 +78,7 @@
                         <div class="form-group">
                             <div class="col-md-8 mx-auto">
                                 <button type="submit" class="btn-login btn-register w-100">
-                                 <a href="/register/agregarUsuario"> Registrate </a>
+                                 <a href=""> Registrate </a>
                                 </button>
                             </div>
                         </div>

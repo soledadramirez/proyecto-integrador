@@ -4,9 +4,9 @@
   <header class="header-login row">
      <nav class="cont-logo col-lg-7 col-md-6">
        <img src="img/logo-verde-g.png" alt="">
-       <h1 class="titulo"><a href="/home">Booky</a></h1>
+       <h1 class="titulo"><a class="a-reg" href="/home">Booky</a></h1>
       </nav>
-     <p class="col-lg-5 col-md-6">¿No estás registrado? <a href="/register"> Crea una cuenta</a></p>
+     <p class="col-lg-5 col-md-6">¿No estás registrado? <a class="a-reg" href="/register"> Crea una cuenta</a></p>
   </header>
   <div class="container">
     <div class="row cont-form">
@@ -24,7 +24,7 @@
 
                                 @if ($errors->has('email'))
                                   <p>
-                                    <span class="help-block">
+                                    <span class="help-block errores">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                   </p>
@@ -40,7 +40,7 @@
 
                                 @if ($errors->has('password'))
                                   <p class="">
-                                    <span class="help-block">
+                                    <span class="help-block errores">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                     </p>
