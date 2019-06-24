@@ -31,3 +31,7 @@ Route::get('/home1', 'HomeController@index')->name('home1');
 Route::get("/profile", function(){
   return view("profile");
 });
+
+Route::get('/cargarlibros', function(){
+return view ('cargarlibros');
+});
