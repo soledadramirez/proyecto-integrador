@@ -407,15 +407,15 @@ text-align: center;
 .container.header-profile{
   background-color: #18867a;
 }
- .profileImage button{
+.agregImage{
    margin: 20px auto;
    position: relative;
    bottom: 60px;
-   left: 100px;
+   left: 70px;
  }
  .circle{
-   width: 200px;
-   height: 200px;
+   width: 230px;
+   height: 230px;
    border-radius: 50%;
    margin: 0 auto;
    background-color: #fff;
@@ -437,6 +437,47 @@ text-align: center;
  }
  .profile-header{
    margin: 0 0 20px;
+ }
+ .profile-info{
+   margin-bottom: 75px;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+ }
+ .edit{
+   padding: 0;
+   width: 80%;
+   margin: 0 0 0 auto;
+   color: #fff;
+ }
+ .user-info{
+   border-radius: 5px;
+ }
+ .user-data{
+  background-color: #fff;
+  color: #18867a;
+  border-radius: 5px;
+  padding: 10px 0;
+ }
+ .user-name{
+   padding: 10px 0;
+ }
+ .user-follow{
+margin-top: 20px;
+ }
+ .book-button{
+   margin-top: 20px;
+   padding: 10 10px;
+   background-color: transparent;
+ }
+ .book-button button{
+   padding: 10px 10px;
+   margin: 10px 10px;
+ }
+ h1.text-center{
+   margin-bottom: 15px;
+   padding: 15px;
  }
 
 @media only screen and (min-width: 768px){
@@ -491,6 +532,11 @@ font-size: 20px;
 }
 hr{
 display: none;
+}
+button.btn.edit{
+  padding: 0 15px;
+  width: 80%;
+  margin: 0 0 0 auto;
 }
 
 @media only screen and (min-width: 992px) {
@@ -941,7 +987,10 @@ div.paso:first-child{
   width: 100%;
   text-align: center;
 }
-
+.user-follow{
+  padding: 8px 0;
+  
+}
 
 @media only screen and (min-width: 768px){
     html.login-reg{
@@ -995,7 +1044,7 @@ div.paso:first-child{
     display: none;
     }
 
-@media only screen and (min-width: 992px) {
+@media   only screen and (min-width: 992px) {
   html.login{
     font-size: 20px;
   }
@@ -1063,12 +1112,10 @@ hr{
 
 
   .reviews{
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-right: 1px solid #ccc;
   height: 96vh;
   }
   .librosInfo{
-    height: 80vh;
     margin-left: 20px;
   }
   .librosInfo img{
