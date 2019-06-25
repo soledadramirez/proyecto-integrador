@@ -188,27 +188,6 @@ margin: 10px;
 margin: 0;
 padding: 0 0 5px;
 }
-/* .datos-alt button{
-display: inline;
-color: #fff;
-border-radius: 5px;
-border: 0;
-width: 50%;
-margin:10px auto;
-box-shadow: 2px 2px 3px #a4a4a4;
-line-height: 30px;
-font-size: 14px;
-
-}
-.datos-alt button:hover{
-font-weight: bold;
-}
-.face{
-background-color: #3b5998;
-}
-.google{
-background-color: #db4a39;
-}*/
 .recover{
 padding-bottom: 15px;
 }
@@ -453,6 +432,7 @@ text-align: center;
    width: 80%;
    margin: 0 0 0 auto;
    color: #fff;
+   margin-bottom: 15px;
  }
  .user-info{
    border-radius: 5px;
@@ -469,10 +449,9 @@ text-align: center;
    color: #fff;
    font-weight: 600;
    font-size: 28px;
-   margin-bottom: 30px;
  }
  .user-follow h4{
-margin-top: 20px;
+margin: 5px;
 color: #18867a;
 font-size: 18px;
  }
@@ -494,12 +473,6 @@ font-size: 18px;
  .book-image img{
    width: 100%;
  }
-
- }
- /* h1.text-center{
-   margin-bottom: 15px;
-   padding: 15px;
- } */
  .librosInfo{
    padding-bottom: 30px;
  }
@@ -1015,16 +988,6 @@ div.paso:first-child{
   width: 100%;
   text-align: center;
 }
-.user-follow{
- padding: 8px 0;
- background-color: transparent;
-}
-.user-follow h4{
-  background-color: #fff;
-  margin: 0 10px;
-  padding: 5px 0;
-  border-radius: 5px;
-}
 .text-center{
   margin-bottom: 0;
   padding-top: 20px;
@@ -1080,6 +1043,16 @@ div.paso:first-child{
     }
     hr{
     display: none;
+    }
+    .user-follow{
+     padding: 8px 0;
+     background-color: transparent;
+    }
+    .user-follow h4{
+      background-color: #fff;
+      margin: 0 10px;
+      padding: 5px 0;
+      border-radius: 5px;
     }
 
 @media   only screen and (min-width: 992px) {
