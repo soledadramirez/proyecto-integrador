@@ -37,3 +37,6 @@ Route::get("/profile", function(){
 Route::get('/cargarlibros', function(){
 return view ('cargarlibros');
 });
+
+Route::post("/agregarLibros", 'bookController@store');
+Route::get("/agregarLibros", 'bookController@show');
