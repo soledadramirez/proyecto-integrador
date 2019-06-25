@@ -428,7 +428,7 @@ text-align: center;
  display: inline-block;
  width: auto;
  height: 100%;
- margin-left: -110px;
+ margin-left: -125px;
  }
  .profileImage.jumbotron{
    margin-bottom: -75px;
@@ -445,6 +445,9 @@ text-align: center;
    flex-direction: column;
    justify-content: space-around;
  }
+ .review h1{
+   margin: 20px;
+ }
  .edit{
    padding: 0;
    width: 80%;
@@ -460,11 +463,18 @@ text-align: center;
   border-radius: 5px;
   padding: 10px 0;
  }
- .user-name{
+ .user-info h4{
    padding: 10px 0;
+   background-color: transparent;
+   color: #fff;
+   font-weight: 600;
+   font-size: 28px;
+   margin-bottom: 30px;
  }
- .user-follow{
+ .user-follow h4{
 margin-top: 20px;
+color: #18867a;
+font-size: 18px;
  }
  .book-button{
    margin-top: 20px;
@@ -475,10 +485,28 @@ margin-top: 20px;
    padding: 10px 10px;
    margin: 10px 10px;
  }
- h1.text-center{
+ .book-button a{
+   font-size: 22px;
+ }
+ .book-image{
+   margin: 5px auto;
+ }
+ .book-image img{
+   width: 100%;
+ }
+
+ }
+ /* h1.text-center{
    margin-bottom: 15px;
    padding: 15px;
+ } */
+ .librosInfo{
+   padding-bottom: 30px;
  }
+.librosInfo h1{
+  padding: 20px 0;
+}
+
 
 @media only screen and (min-width: 768px){
 html.login-reg{
@@ -988,8 +1016,18 @@ div.paso:first-child{
   text-align: center;
 }
 .user-follow{
-  padding: 8px 0;
-  
+ padding: 8px 0;
+ background-color: transparent;
+}
+.user-follow h4{
+  background-color: #fff;
+  margin: 0 10px;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+.text-center{
+  margin-bottom: 0;
+  padding-top: 20px;
 }
 
 @media only screen and (min-width: 768px){
@@ -1113,17 +1151,20 @@ hr{
 
   .reviews{
   border-right: 1px solid #ccc;
-  height: 96vh;
   }
+
+
   .librosInfo{
-    margin-left: 20px;
+    margin-left: 0;
   }
   .librosInfo img{
     display: block;
     width: 120px;
   }
-  .container.profile h1{
+  .book-title{
     margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
   }
 
 

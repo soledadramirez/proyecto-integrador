@@ -43,7 +43,7 @@
     <div class="circle">
       <img src="/images/fotoPerfil.jpg" alt="">
     </div>
-      <button type="button" class="btn btn-success agregImage">Agregar imagen</button>
+      <button type="button" class="btn btn-success agregImage"><i class="fas fa-pen-square"></i></button>
   </div>
   <div class="col-sm-6 profile-info">
     <div class="user-info">
@@ -52,13 +52,13 @@
       <button class="col-sm-5 btn btn-link edit text-left " type="submit" name="button">Editar perfil</button>
     </div>
      <div class="row user-data user-follow">
-      <h4 class="col-sm-6">Seguidores</h4>
-      <h4 class="col-sm-6 ">Seguidos</h4>
+      <h4 class="col-sm-5">Seguidores</h4>
+      <h4 class="col-sm-5 ">Seguidos</h4>
     </div>
       </div>
     <div class="row user-data book-button">
-    <button type="submit" name="button" class="col-sm-5 btn btn-success">Cargar libro</button>
-    <button type="submit" name="button" class="col-sm-5 btn btn-success">Pedir libro</button>
+    <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Cargar libro</a></button>
+    <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Pedir libro</a></button>
    </div>
   </div>
   </div>
@@ -75,24 +75,51 @@
         </div>
       </div>
       </div>
-      <div class="col-lg-8 col-md-6">
+      <div class="col-lg-8 col-md-6 col-sm-12">
         <div class="librosInfo row">
-          <div class="librosAPrestar">
-            <h1 class="text-center">Libros para prestar</h1>
-            <div class="col-lg-4 col-md-3">
+          <div class="librosAPrestar col-12 row">
+            <h1 class="text-center col-sm-12">Libros para prestar</h1>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
               <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
             </div>
           </div>
-          <div class="librosLeyendo">
-            <h1 class="text-center">Libros que pedí o estoy leyendo</h1>
-            <div class="col-lg-4 col-md-3 col-sm-12">
+          <div class="librosLeyendo col-12 row">
+            <h1 class="text-center col-sm-12">Son de mi interés</h1>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
               <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
             </div>
           </div>
-          <div class="librosPrestados">
-            <h1 class="text-center">Libros prestados</h1>
-            <div class="col-lg-4 col-md-3 col-sm-12">
-            <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+          <div class="librosPrestados col-12 row">
+            <h1 class="text-center col-sm-12">Libros prestados</h1>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
+            </div>
+            <div class="book-image col-md-6 col-lg-3">
+              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
             </div>
           </div>
         </div>
