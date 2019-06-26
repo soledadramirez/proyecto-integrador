@@ -20,7 +20,7 @@
                             <label for="email" class="col-form-label d-none d-md-block"><i class="fas fa-user"></i></label>
 
                             <div class="col-md-11 col-sm-12 pl-0 pr-0">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="ingresa tu email" required autofocus>
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="ingresa tu email" autofocus>
 
                                 @if ($errors->has('email'))
                                   <p>
@@ -36,7 +36,7 @@
                             <label for="password" class="col-form-label d-none d-md-block"><i class="fas fa-lock"></i></label>
 
                             <div class="col-md-11 col-sm-12 pl-0 pr-0">
-                                <input id="password" type="password" class="form-control " name="password" placeholder="ingresa tu contraseña"required>
+                                <input id="password" type="password" class="form-control " name="password" placeholder="ingresa tu contraseña">
 
                                 @if ($errors->has('password'))
                                   <p class="">
