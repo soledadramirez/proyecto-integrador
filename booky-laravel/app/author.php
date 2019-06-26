@@ -4,8 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class title extends Model
+class author extends Model
 {
-  public $guarded=[];
-   
+  public $guarded[];
 }
