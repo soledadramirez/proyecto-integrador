@@ -21,10 +21,6 @@ Route::get('/home1', function () {
     return view('home1');
 });
 
-Route::get('/register', function (){
-  return view ('register');
-
-});
 
 Auth::routes();
 

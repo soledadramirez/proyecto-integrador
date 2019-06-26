@@ -24,15 +24,16 @@
     </ul>
     <ul class="nav navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/register"><span class="fas fa-user"></span> Sign Up</a>
+        <a class="nav-link" href="{{ route('register') }}"><span class="fas fa-user"></span> Registrate</a>
       </li>
       <?php if (isset($_SESSION["email"])): ?>
       <li class="nav-item">
-        <a class="nav-link" href="/logout"><span class="fas fa-sign-in-alt"></span> Logout</a>
+        <a class="nav-link" href="{{ route('logout') }}"><span class="fas fa-sign-in-alt"></span> Cerrar sesión</a>
         <?php else: ?>
           <li class="nav-item">
-            <a class="nav-link" href="/login"><span class="fas fa-sign-in-alt"></span> Login</a>
-      <?php endif ?>
+            <a class="nav-link" href="{{ route('login') }}"><span class="fas fa-sign-in-alt"></span> Ingresa</a>
+      <?php endif?>
+
       </li>
     </ul>
   </div>

@@ -6,7 +6,7 @@
        <img src="img/logo-verde-g.png" alt="">
        <h1 class="titulo"><a class="a-reg" href="/home">Booky</a></h1>
       </nav>
-     <p class="col-lg-5 col-md-6">¿Estás registrado? <a class="a-reg" href="/login"> Ingresa</a></p>
+     <p class="col-lg-5 col-md-6">¿Estás registrado? <a class="a-reg" href="{{ route('login') }}"> Ingresa</a></p>
   </header>
 <div class="container">
     <div class="row cont-form-reg">
@@ -20,7 +20,7 @@
                             <label for="name" class="col-form-label d-none d-md-block"><i class="fas fa-user"></i></label>
 
                             <div class="col-md-11 col-sm-12 pl-0 pr-0 ml-2">
-                                <input id="name" type="text" class="form-control input-register" name="name" value="{{ old('name') }}" placeholder="ingresa tu nombre" required autofocus>
+                                <input id="name" type="text" class="form-control input-register" name="name" value="{{ old('name') }}" placeholder="ingresa tu nombre" autofocus>
 
                                 @if ($errors->has('name'))
                                   <p>
@@ -36,7 +36,7 @@
                             <label for="email" class="col-form-label d-none d-md-block"><i class="far fa-envelope-open"></i></label>
 
                             <div class="col-md-11 col-sm-12 pl-0 pr-0 ml-2">
-                                <input id="email" type="email" class="form-control input-register" name="email" value="{{ old('email') }}" placeholder="ingresa tu email" required>
+                                <input id="email" type="email" class="form-control input-register" name="email" value="{{ old('email') }}" placeholder="ingresa tu email">
 
                                 @if ($errors->has('email'))
                                   <p>
@@ -52,7 +52,7 @@
                             <label for="password" class="col-form-label d-none d-md-block"><i class="fas fa-lock"></i></label>
 
                             <div class="col-md-11 col-sm-12 pl-0 pr-0 ml-2">
-                                <input id="password" type="password" class="form-control input-register" name="password" placeholder="ingresa tu contraseña"required>
+                                <input id="password" type="password" class="form-control input-register" name="password" placeholder="ingresa tu contraseña">
 
                                 @if ($errors->has('password'))
                                   <p>
@@ -68,8 +68,8 @@
                             <label for="password-confirm" class="col-form-label d-none d-md-block"><i class="fas fa-lock"></i></label>
 
                             <div class="col-md-11 col-sm-12 pl-0 pr-0 ml-2">
-                                <input id="password-confirm" type="password" class="form-control input-register" name="password-confirm" placeholder="confirma tu contraseña" required>
-                            </div>
+                                <input id="password-confirm" type="password" class="form-control input-register" name="password-confirm" placeholder="confirma tu contraseña">
+                            </div>x
                         </div>
                         <div class="politica">
                           <p>Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la política de datos y la política de cookies.</p>
@@ -78,7 +78,7 @@
                         <div class="form-group">
                             <div class="col-md-8 mx-auto">
                                 <button type="submit" class="btn-login btn-register w-100">
-                                 <a href=""> Registrate </a>
+                                <a href="">Registrate</a>
                                 </button>
                             </div>
                         </div>

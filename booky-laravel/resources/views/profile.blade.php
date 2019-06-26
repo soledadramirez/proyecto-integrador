@@ -52,8 +52,8 @@
       <button class="col-sm-5 btn btn-link edit text-left " type="submit" name="button">Editar perfil</button>
     </div>
      <div class="row user-data user-follow">
-      <h4 class="col-sm-5">Seguidores</h4>
-      <h4 class="col-sm-5 ">Seguidos</h4>
+      <h4 class="col-sm-5"> 0 seguidores</h4>
+      <h4 class="col-sm-5 ">0 seguidos</h4>
     </div>
       </div>
     <div class="row user-data book-button">
@@ -77,7 +77,7 @@
       </div>
       <div class="col-lg-8 col-md-6 col-sm-12">
         <div class="librosInfo row">
-          <div class="librosAPrestar col-12 row">
+          <div class="librosAPrestar col-12 row w-100 mx-auto">
             <h1 class="text-center col-sm-12">Libros para prestar</h1>
             <div class="book-image col-md-6 col-lg-3">
               <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
@@ -92,9 +92,9 @@
               <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
             </div>
           </div>
-          <div class="librosLeyendo col-12 row">
+          <div class="librosLeyendo col-12 row w-100 mx-auto">
             <h1 class="text-center col-sm-12">Son de mi interés</h1>
-            <div class="book-image col-md-6 col-lg-3">
+            <div class="book-image col-md-6 col-lg-3 rounded mx-auto d-block">
               <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
             </div>
             <div class="book-image col-md-6 col-lg-3">
@@ -107,7 +107,7 @@
               <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
             </div>
           </div>
-          <div class="librosPrestados col-12 row">
+          <div class="librosPrestados col-12 row w-100 mx-auto">
             <h1 class="text-center col-sm-12">Libros prestados</h1>
             <div class="book-image col-md-6 col-lg-3">
               <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
