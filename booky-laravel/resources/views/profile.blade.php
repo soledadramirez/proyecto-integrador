@@ -3,7 +3,7 @@
 @section('main')
   <div class="fondo paral">
   <nav class="container navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/home"><!--<img src="img/logo-verde-g.png" width="120" height="60" alt="">--><h1>Booky</h1> </a>
+    <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,29 +11,27 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+
+        <li class="nav-item">
+          <a class="nav-link a-blanco" href="#">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">FAQ</a>
+          <a class="nav-link a-blanco" href="#">FAQ</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav ml-auto">
+      {{-- <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/register"><span class="fas fa-user"></span> Sign Up</a>
+          <a class="nav-link a-blanco" href="/register"><span class="fas fa-user"></span> Registrate</a>
         </li>
-        <?php if (isset($_SESSION["email"])): ?>
+        //if (isset($_SESSION["email"])): ?> agregar tag de php
         <li class="nav-item">
-          <a class="nav-link" href="/logout"><span class="fas fa-sign-in-alt"></span> Logout</a>
-          <?php else: ?>
+          <a class="nav-link a-blanco" href="/logout"><span class="fas fa-sign-in-alt"></span> Logout</a>
+          //else: ?> agregar tag de php
             <li class="nav-item">
-              <a class="nav-link" href="/login"><span class="fas fa-sign-in-alt"></span> Login</a>
-        <?php endif ?>
+              <a class="nav-link a-blanco" href="/login"><span class="fas fa-sign-in-alt"></span> Ingresa</a>
+        //<endif ?> agregar tag de php
         </li>
-      </ul>
+      </ul> --}}
     </div>
   </nav>
 <div class="fondoProfile">
@@ -48,7 +46,7 @@
   <div class="col-sm-6 profile-info">
     <div class="user-info">
     <div class="row">
-      <h4 class="col-sm-7 user-data">Nombre de Usuario</h4>
+      <h4 class="col-sm-7 user-data">{{ Auth::user()->name }}</h4>
       <button class="col-sm-5 btn btn-link edit text-left " type="submit" name="button">Editar perfil</button>
     </div>
      <div class="row user-data user-follow">
@@ -57,8 +55,8 @@
     </div>
       </div>
     <div class="row user-data book-button">
-    <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Cargar libro</a></button>
-    <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Pedir libro</a></button>
+    <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="/agregarLibros">Cargar libro</a></button>
+    {{-- <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Pedir libro</a></button> --}}
    </div>
   </div>
   </div>

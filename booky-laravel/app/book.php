@@ -4,22 +4,25 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class book extends Model
+class Book extends Model
 {
     public $guarded=[];
+    public $timestamps=false;
 
 
-    public function state(){
-      return $this->belongsTo("App/state","id_estado");
+    public function states(){
+      return $this->belongsToMany("App\State",'book_state','book_id', 'state_id');
     }
 
     public function title(){
-      return $this->belongsTo("App/Title","id_titulo");
+      return $this->belongsTo("App\Title","title_id");
     }
+
     public function author(){
-      return $this->belongsTo("App/Author","id_autor");
+      return $this->belongsTo("App\Author","author_id");
     }
-    public function user(){
-      return $this->belongsTo("App/User","id_usuario");
+
+    public function users(){
+      return $this->belongsToMany("App\User", 'book_user', 'book_id', "user_id");
     }
 }

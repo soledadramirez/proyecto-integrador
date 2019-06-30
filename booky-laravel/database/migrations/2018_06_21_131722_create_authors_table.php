@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Estado extends Migration
+class CreateAuthorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class Estado extends Migration
      */
     public function up()
     {
-      Schema::create('estado', function (Blueprint $table) {
-          $table->bigIncrements('id');
-          $table->string('name');
-          $table->timestamps();
-      });
+        Schema::create('authors', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+        });
     }
 
     /**
@@ -27,6 +26,6 @@ class Estado extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('authors');
     }
 }

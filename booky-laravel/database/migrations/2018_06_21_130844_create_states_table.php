@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Autor extends Migration
+class CreateStatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class Autor extends Migration
      */
     public function up()
     {
-      Schema::create('autor', function (Blueprint $table) {
-          $table->bigIncrements('id');
-          $table->string('name');
-          $table->string('last_name');
-          $table->timestamps();
-      });
-        //
+        Schema::create('states', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+        });
     }
 
     /**
@@ -29,6 +26,6 @@ class Autor extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('states');
     }
 }

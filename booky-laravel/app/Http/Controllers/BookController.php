@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\book;
+use App\Book;
+use App\Author;
+use App\Title;
+
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -34,24 +37,30 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $req)
+
     {
-       $libroNuevo= new book();
-       $libroNuevo->title=$req["name"];
-       $libroNuevo->author=$req["author"];
-       $libroNuevo->book_action["book_action"];
-       $libroNuevo->description["description"];
+      $nuevoTitulo = new Title();
+      $nuevoTitulo->name = $req['name'];
+      $nuevoTitulo->save();
+      //dd($nuevoTitulo);
+      $nuevoAutor = new Author();
+      $nuevoAutor->name = $req['author'];
+      $nuevoAutor->save();
 
-       $libroNuevo->id_estado=1;
-       $libroNuevo->id_titulo=1;
-       $libroNuevo->id_autor=1;
-       $libroNuevo->id_usuario=1;
-       $libroNuevo->image="asdf";
-       $libroNuevo->language="español";
-       $libroNuevo->edition=1993;
-       $libroNuevo->year=1233;
-       $libroNuevo->return_date="asdf";
 
-       $libroNuevo->save();
+      $libroNuevo = new Book();
+      //dd($libroNuevo);
+      $libroNuevo->title_id = $nuevoTitulo->id;
+      //dd($libroNuevo);
+      $libroNuevo->author_id = $nuevoAutor->id;
+      //dd($libroNuevo);
+      $libroNuevo->save();
+
+      // TODO: AGREGAR MODELO DE RESEÑAS
+      // TODO: INSERT EN TABLAS INTERMEDIAS ESTADO Y USER
+      // TODO:
+
+
 
        return redirect ("/home");
 

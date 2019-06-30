@@ -4,7 +4,21 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class author extends Model
+class Author extends Model
 {
-  public $guarded[];
+  public $guarded = [];
+  public $timestamps=false;
+
+public function books(){
+  return $this->hasMany('App\Book', 'author_id');
+}
+
+
+
+
+
+
+
+
+
 }

@@ -1,4 +1,4 @@
-/*reseteos*/
+/*-----------------------------reseteos*/
 
 *{
 box-sizing: border-box;
@@ -24,7 +24,7 @@ text-align: center;
 margin: 0;
 padding: 0;
 }
-/* estilos generales, register y login*/
+/* ----------------------estilos generales, register y login*/
 
 body{
 margin: 0 auto;
@@ -49,12 +49,6 @@ display: flex;
 flex-direction: row;
 justify-content: flex-start;
 align-items:flex-end;
-}
-header img{
-display: block;
-width: 50px;
-height: 50px;
-padding-top: 0px;
 }
 header h1{
 position: relative;
@@ -98,6 +92,9 @@ header a{
 color: #fff;
 font-size: 50px;
 color: #188c7a;
+}
+.cont-menu{
+  background-color: #18867a !important;
 }
 .form-group{
   padding: 0 20px;
@@ -227,7 +224,7 @@ font-size: 18px;
 footer a:hover{
 font-weight: bold;
 }
-          /*errores*/
+          /*-------------------------errores*/
 
 .errores {
 color: red;
@@ -251,10 +248,10 @@ input#pass.campos-con-errores{
 
 
 
-          /*estilos home*/
+          /*------------------------------estilos home*/
 
 .navbar{
-background-color: #18867a !important;
+background-color: #18867a;
 padding: 8px 10px;
 color: #fff;
 font-size: 18px;
@@ -267,7 +264,7 @@ display: block;
 width: 50px;
 height: 50px;
 }
-.navbar a{
+.navbar .a-blanco{
 color: #fff !important;
 }
 .container nav a{
@@ -870,9 +867,6 @@ align-items: flex-end;
   display: block;
   width: 50px;
   height: 50px;
-}
-.navbar a{
-  color: #18867a !important;
 }
 .container nav a{
   color: #000 !important;
