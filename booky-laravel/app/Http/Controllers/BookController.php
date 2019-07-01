@@ -49,11 +49,16 @@ class BookController extends Controller
 
 
       $libroNuevo = new Book();
+      $ruta = $req->file('book_cover')->store("public");
+      $nombreArchivo= basename($ruta);
       //dd($libroNuevo);
       $libroNuevo->title_id = $nuevoTitulo->id;
       //dd($libroNuevo);
       $libroNuevo->author_id = $nuevoAutor->id;
+
       //dd($libroNuevo);
+      $libroNuevo->image=$nombreArchivo;
+
       $libroNuevo->save();
 
       // TODO: AGREGAR MODELO DE RESEÑAS

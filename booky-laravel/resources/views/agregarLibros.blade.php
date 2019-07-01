@@ -44,20 +44,21 @@
       <div class="container-image">
         <div class="container-image-in">
 
+          <form action="/agregarLibros" method="post" enctype="multipart/form-data">
+            {{csrf_field()}}
 
         <img src="images/garcia-marquez.jpg" alt="IMG">
         </div>
         <div class="container-form-btn">
-          <button class="form-btn">
-            cargar portada
-          </button>
+          <input type="file" name="book_cover" value="">
+          
         </div>
 
       </div>
 
 
-      <form class="container-form" action="/agregarLibros" method="post">
-        {{csrf_field()}}
+      <div class="container-form">
+
         <span class="form-title">
           Datos del libro
         </span>
@@ -97,6 +98,7 @@
             Cargar al perfil
           </button>
         </div>
+      </div>
       </form>
     </div>
   </div>
