@@ -35,8 +35,6 @@ return view ('cargarlibros');
 });
 
 Route::post("/agregarLibros", 'bookController@store');
-Route::get("/agregarLibros", 'bookController@show');
+Route::get("/agregarLibros", 'bookController@showToAdd');
 
-Route::get("/agregarLibros", function(){
-  return view("agregarLibros");
-});
+Route::get("/bookPost/{id}", 'bookController@show');

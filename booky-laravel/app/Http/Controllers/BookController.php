@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Book;
 use App\Author;
 use App\Title;
+use App\State;
 
 use Illuminate\Http\Request;
 
@@ -27,7 +28,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -39,19 +40,27 @@ class BookController extends Controller
     public function store(Request $req)
 
     {
-      $nuevoTitulo = new Title();
-      $nuevoTitulo->name = $req['name'];
-      $nuevoTitulo->save();
-      //dd($nuevoTitulo);
-      $nuevoAutor = new Author();
-      $nuevoAutor->name = $req['author'];
-      $nuevoAutor->save();
+      $nuevoTitulo = Title::where('name', $req['name'])->first();
 
+      if (!$nuevoTitulo) {
+        $nuevoTitulo = new Title();
+        $nuevoTitulo->name = $req['name'];
+        $nuevoTitulo->save();
+      }
+      //dd($nuevoTitulo);
+      $nuevoAutor = Author::where('name', $req['author'])->first();
+
+      if (!$nuevoAutor) {
+        $nuevoAutor = new Author();
+        $nuevoAutor->name = $req['author'];
+        $nuevoAutor->save();
+      }
 
       $libroNuevo = new Book();
       $ruta = $req->file('book_cover')->store("public");
       $nombreArchivo= basename($ruta);
       //dd($libroNuevo);
+
       $libroNuevo->title_id = $nuevoTitulo->id;
       //dd($libroNuevo);
       $libroNuevo->author_id = $nuevoAutor->id;
@@ -60,6 +69,10 @@ class BookController extends Controller
       $libroNuevo->image=$nombreArchivo;
 
       $libroNuevo->save();
+
+      $libroNuevo->states()->attach($req["book_action"]);
+
+
 
       // TODO: AGREGAR MODELO DE RESEÑAS
       // TODO: INSERT EN TABLAS INTERMEDIAS ESTADO Y USER
@@ -77,10 +90,19 @@ class BookController extends Controller
      * @param  \App\book  $book
      * @return \Illuminate\Http\Response
      */
-    public function show(book $book)
+    public function showToAdd(book $book)
     {
-      return view ("agregarLibros");
+      $states = State::all();
+      return view ("agregarLibros", compact("states"));
         //
+    }
+    public function show($id)
+    {
+
+      $book=book::find($id);
+      $vac=compact("book");
+      return view("bookPost",$vac);
+
     }
 
     /**

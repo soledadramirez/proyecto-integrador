@@ -1,8 +1,11 @@
 @extends('master')
+@section('custom-style')
+<link rel="stylesheet" href="/css/agregarLibros.css">
+@endsection
 
 @section('main')
 
-<link rel="stylesheet" type="text/css" href="css/agregarLibros.css">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"><h1>Booky</h1> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,15 +46,7 @@
     <div class="wrap-container">
       <div class="container-image">
         <div class="container-image-in">
-
-          <form action="/agregarLibros" method="post" enctype="multipart/form-data">
-            {{csrf_field()}}
-
         <img src="images/garcia-marquez.jpg" alt="IMG">
-        </div>
-        <div class="container-form-btn">
-          <input type="file" name="book_cover" value="">
-
         </div>
 
       </div>
@@ -64,43 +59,40 @@
         </span>
 
         <div class="wrap-input">
-          <input class="input100" type="text" name="name" placeholder="Nombre del libro">
-          <span class="focus-input100"></span>
-          <span class="symbol-input100">
-            <i class="fas fa-book"></i>
-          </span>
+         <span>Titulo: {{$book->title->name}} </span>
+
         </div>
 
         <div class="wrap-input">
-          <input class="input100" type="text" name="author" placeholder="Nombre del autor">
-          <span class="focus-input100"></span>
-          <span class="symbol-input100">
-            <i class="fas fa-feather"></i>
-          </span>
+          <span>Autor:</span>
+        </div>
+
+        <div class="wrap-input">
+          <span>Fecha de publicación:</span>
+        </div>
+
+        <div class="wrap-input">
+          <span>Edición:</span>
+        </div>
+
+        <div class="wrap-input">
+          <span>Publicado por:</span>
         </div>
 
         <div class="wrap-input">
 
-          <select name="book_action" class="form-control select100" id="exampleFormControlSelect1">
-          <option>Disponible para:</option>
-          @foreach ($states as $state)
-            <option value="{{$state->id}}">{{$state->name}}</option>
-          @endforeach
-          </select>
+          <span>Disponible para: </span>
+
+
         </div>
 
         <div class="wrap-input validate-input">
-          <textarea class="input100" name="description" placeholder="Por qué lo recomiendas?"></textarea>
-          <span class="focus-input100"></span>
+        <span>Reseñas: </span>
         </div>
 
-        <div class="container-form-btn">
-          <button type="submit" class="form-btn">
-            Cargar al perfil
-          </button>
-        </div>
+
       </div>
-      </form>
+
     </div>
   </div>
 </div>
