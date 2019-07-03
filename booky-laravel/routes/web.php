@@ -38,3 +38,6 @@ Route::post("/agregarLibros", 'bookController@store');
 Route::get("/agregarLibros", 'bookController@showToAdd');
 
 Route::get("/bookPost/{id}", 'bookController@show');
+
+Route::get('/buscarLibros', 'bookController@buscarLibros');
+Route::post('/buscarLibros', 'bookController@buscarLibros');

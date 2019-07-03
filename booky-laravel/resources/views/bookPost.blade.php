@@ -22,7 +22,7 @@
         <a class="nav-link" href="#">Nosotros</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">FAQ</a>
+        <a class="nav-link" href="#">FAQs</a>
       </li>
     </ul>
     <ul class="nav navbar-nav ml-auto">
@@ -46,7 +46,7 @@
     <div class="wrap-container">
       <div class="container-image">
         <div class="container-image-in">
-        <img src="/storage/{{$book->image}}" alt="IMG">
+            {{-- <img src="/storage/{{$book->image}}" alt="IMG"> --}}
         </div>
 
       </div>

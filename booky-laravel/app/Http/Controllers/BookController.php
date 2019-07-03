@@ -40,27 +40,7 @@ class BookController extends Controller
     public function store(Request $req)
 
     {
-// //<<<<<<< HEAD
-//       $nuevoTitulo = new Title();
-//       $nuevoTitulo->name = $req['name'];
-//       $nuevoTitulo->save();
-//
-//       $nuevoAutor = new Author();
-//       $nuevoAutor->name = $req['author'];
-//       $nuevoAutor->save();
-//
-//       $nuevoEstado = new State();
-//       $nuevoEstado->name = $req['book_action'];
-//       //dd($nuevoEstado);
-//
-//       $nuevoLibro = new Book();
-//       $nuevoLibro->title_id = $nuevoTitulo->id;
-//       $nuevoLibro->author_id = $nuevoAutor->id;
-//       $nuevoLibro->state_id = $nuevoEstado->id;
-//       $nuevoLibro->save();
-//
-//
-// //=======
+
       $nuevoTitulo = Title::where('name', $req['name'])->first();
 
       if (!$nuevoTitulo) {
@@ -116,7 +96,7 @@ class BookController extends Controller
     public function show($id)
     {
 
-      $book=book::find($id);
+      $book=Book::find($id);
       $vac=compact("book");
       return view("bookPost",$vac);
 
@@ -155,4 +135,33 @@ class BookController extends Controller
     {
         //
     }
+
+    public function buscarLibros(){
+      $search = '%'.$_POST["search"].'%';
+
+      $tituloEncontrado = Title::where('name', 'like', $search)->get();
+      $vac = compact('tituloEncontrado');
+      $autorEncontrado = Author::where('name', 'like', $search)->get();
+      $vac = compact('autorEncontrado');
+      dd($autorEncontrado);
+      }
+
+      return view('/bookPost', $vac);
+    }
+
+
+
+
 }
+// public function index()
+//
+//
+//     public function search(){
+//       $stmt = Actor::where('first_name', 'like', '%'.$_GET["search"].'%')
+//       ->orwhere('last_name', 'like', '%'.$_GET["search"].'%')
+//       ->orderBy('last_name')
+//       ->paginate(5);
+//       $stmt->withPath('?search='.$_GET['search']);
+//       //dd($stmt);
+//       return view('actores')->with('actors', $stmt);
+//     }

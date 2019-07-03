@@ -63,9 +63,9 @@
 </nav>
 <div class="fondo paral">
 
-      <form class="form-group row" id="search" action="index.html" method="post">
-
-        <input class="form-control col-xl-5" type="text" placeholder="Busca tu libro">
+      <form class="form-group row" id="search" action="/buscarLibros" method="post">
+        {{csrf_field()}}
+        <input class="form-control col-xl-5" name="search" type="text" placeholder="Busca tu libro">
         <span><button type="submit" class="btn btn-success btn-lg">Buscar</button></span>
       </form>
 <div class="jumbotron jumbotron-fluid col-xl-9">
