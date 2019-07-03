@@ -47,12 +47,12 @@
           <form action="/agregarLibros" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
 
-        <img src="images/garcia-marquez.jpg" alt="IMG">
-        </div>
-        <div class="container-form-btn">
-          <input type="file" name="book_cover" value="">
-
-        </div>
+            <img src="images/agregarPortada.png" alt="IMG">
+          </div>
+          <div class="container-form-btn">
+            <input type="file" onchange="previewFile()"><br>
+           <img src="" height="200" alt="Agregar portada">
+          </div>
 
       </div>
 
@@ -105,6 +105,8 @@
   </div>
 </div>
 
+<script src="js/addImg.js">
 
+</script>
 
 @endsection
