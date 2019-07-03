@@ -41,3 +41,5 @@ Route::get("/bookPost/{id}", 'bookController@show');
 
 Route::get('/buscarLibros', 'bookController@buscarLibros');
 Route::post('/buscarLibros', 'bookController@buscarLibros');
+
+Route::get('/profile', 'bookController@showBooksOwnProfile');

@@ -118,8 +118,8 @@ class BookController extends Controller
     // public function showBooksOwnProfile()
     // {
     //   $usuarioLog=Auth::user();
-    //   $book=Book::where("id_user","==","$usuarioLog->id");
-    //   $vac=compact("book");
+    //   $ownBooks=Book::where("id_user","=","$usuarioLog->id");
+    //   $vac=compact("ownBooks");
     //   return view("profile",$vac);
     //
     // }

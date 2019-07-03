@@ -39,7 +39,7 @@
     </div>
      <div class="row user-data user-follow">
       <h4 class="col-sm-5"> 0 seguidores</h4>
-      <h4 class="col-sm-5 ">0 seguidos</h4>
+      <h4 class="col-sm-5 ">0 seguidos  </h4>
     </div>
       </div>
     <div class="row user-data book-button">
@@ -64,6 +64,7 @@
       <div class="">
         <div class="librosInfo row">
           <div class="librosAPrestar col-12 row w-100 mx-auto">
+              
             <h1 class="text-center col-sm-12">Libros para prestar</h1>
 
           {{-- @foreach (Auth::user() as $book)
