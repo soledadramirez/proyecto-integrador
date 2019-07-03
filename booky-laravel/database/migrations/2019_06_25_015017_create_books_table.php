@@ -19,6 +19,8 @@ class CreateBooksTable extends Migration
             $table->foreign('title_id')->references('id')->on('titles');
             $table->bigInteger('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('authors');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('image')->nullable();
 
         });
