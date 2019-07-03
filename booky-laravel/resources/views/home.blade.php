@@ -91,6 +91,8 @@
 </div>
 </div>
 </div>
+
+
 <div class="container">
 
 
@@ -102,23 +104,23 @@
 <div class="carousel-inner">
   <div class="carousel-item active">
     <div class="row libros-carouseles">
-      <div class="col-2 libros-carouseles"><a href="#"> <img src="img/libros/lynch.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles "> <a href="#"> <img src="img/libros/herzog.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/markson.jpg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/herzog2.jpg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/sapiens.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/sklar2.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"><a href="#"> <img src="images/libros/adorno.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/bartok.png" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images//libros/benjamin.png" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/chomsky.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/fundacion.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/doerr.jpg" class="d-block w-100" alt="..."> </a> </div>
 
 </div>
   </div>
   <div class="carousel-item">
     <div class="row">
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/1984.jpg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles "> <a href="#"> <img src="img/libros/detectives.jpg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/markson.jpg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/roth.jpg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/roth.jpg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="img/libros/roth.jpg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/benjamin2.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/benjamin3.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/hemingway.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/herzog.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/homo.jpg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/lolita.jpeg" class="d-block w-100" alt="..."> </a> </div>
       </div>
   </div>
 
@@ -137,7 +139,55 @@
 
 
   </div>
+
+
   <div class="container">
+
+
+  <div class="destacado">
+    <h2>Autores Latinoamericanos</h2>
+  </div>
+
+  <div id="carouselExampleControls2" class="carousel slide libros-carrusel" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row libros-carouseles">
+        <div class="col-2 libros-carouseles"><a href="#"> <img src="images/libros/garcia-marquez.jpg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/bogado.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/borges.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/ciempies.jpg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/detectives.jpg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/jazmin-paraguayo.jpeg" class="d-block w-100" alt="..."> </a> </div>
+
+  </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/levrero2.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/levrero3.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/pichiciegos.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/punk.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/sklar.jpg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/putas-asesinas.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        </div>
+    </div>
+
+
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+
+
+    </div>
+  <!-- <div class="container">
 
 
   <div class="destacado">
@@ -182,9 +232,9 @@
   </div>
 
 
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
 
 
     <div class="destacado">
@@ -230,7 +280,7 @@
   </div>
 
 
-      </div>
+      </div> -->
 
 
 
@@ -269,7 +319,7 @@
   <div class="img-conocenos col-xl-6">
       <div class="card">
         <div class="card-body">
-          <img src="img/libros-y-risas2.jpg" alt="">
+          <img src="images/libros-y-risas2.jpg" alt="">
         </div>
       </div>
   </div>
