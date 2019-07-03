@@ -46,7 +46,7 @@
     <div class="wrap-container">
       <div class="container-image">
         <div class="container-image-in">
-        <img src="images/garcia-marquez.jpg" alt="IMG">
+        <img src="/storage/{{$book->image}}" alt="IMG">
         </div>
 
       </div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="wrap-input">
-          <span>Autor:</span>
+          <span>Autor: {{$book->author->name}}</span>
         </div>
 
         <div class="wrap-input">
