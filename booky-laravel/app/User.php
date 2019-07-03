@@ -9,13 +9,14 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public $timestamps=false;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
      protected $fillable = [
-         'name', 'email', 'password',
+         'name', 'email', 'password','user_id'
      ];
 
     /**
@@ -28,7 +29,7 @@ class User extends Authenticatable
     ];
 
     public function books(){
-      return $this->belongsToMany('App\Book', 'book_user', 'user_id', 'book_id');
+      return $this->hasMany('App\Book', 'title_id');
     }
 
 }

@@ -6,6 +6,7 @@ use App\Book;
 use App\Author;
 use App\Title;
 use App\State;
+use Auth;
 
 use Illuminate\Http\Request;
 
@@ -77,6 +78,10 @@ class BookController extends Controller
         $nuevoAutor->save();
       }
 
+
+
+
+
       $libroNuevo = new Book();
       $ruta = $req->file('book_cover')->store("public");
       $nombreArchivo= basename($ruta);
@@ -86,7 +91,15 @@ class BookController extends Controller
       //dd($libroNuevo);
       $libroNuevo->author_id = $nuevoAutor->id;
 
+
+      $usuarioLog=Auth::user();
+
+      $libroNuevo->user_id =$usuarioLog->id;
+
       //dd($libroNuevo);
+
+
+
       $libroNuevo->image=$nombreArchivo;
 
       $libroNuevo->save();
