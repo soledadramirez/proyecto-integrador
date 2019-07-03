@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Book;
 use App\Author;
 use App\Title;
+use App\State;
 
 use Illuminate\Http\Request;
 
@@ -42,27 +43,28 @@ class BookController extends Controller
       $nuevoTitulo = new Title();
       $nuevoTitulo->name = $req['name'];
       $nuevoTitulo->save();
-      //dd($nuevoTitulo);
+
       $nuevoAutor = new Author();
       $nuevoAutor->name = $req['author'];
       $nuevoAutor->save();
 
+      $nuevoEstado = new State();
+      $nuevoEstado->name = $req['book_action'];
+      //dd($nuevoEstado);
 
-      $libroNuevo = new Book();
-      //dd($libroNuevo);
-      $libroNuevo->title_id = $nuevoTitulo->id;
-      //dd($libroNuevo);
-      $libroNuevo->author_id = $nuevoAutor->id;
-      //dd($libroNuevo);
-      $libroNuevo->save();
+      $nuevoLibro = new Book();
+      $nuevoLibro->title_id = $nuevoTitulo->id;
+      $nuevoLibro->author_id = $nuevoAutor->id;
+      $nuevoLibro->state_id = $nuevoEstado->id;
+      $nuevoLibro->save();
 
-      // TODO: AGREGAR MODELO DE RESEÑAS
+
       // TODO: INSERT EN TABLAS INTERMEDIAS ESTADO Y USER
       // TODO:
 
 
 
-       return redirect ("/home");
+       return redirect ("/profile");
 
     }
 

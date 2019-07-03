@@ -88,7 +88,7 @@
         </div>
 
         <div class="wrap-input validate-input">
-          <textarea class="input100" name="description" placeholder="Por qué lo recomiendas?"></textarea>
+          <textarea class="input100" name="description" placeholder="Agrega una reseña de este libro"></textarea>
           <span class="focus-input100"></span>
         </div>
 
