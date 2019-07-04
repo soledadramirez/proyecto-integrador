@@ -40,4 +40,9 @@ Route::get("/bookPost", function(){
 });
 //Route::get("/bookPost/{id}", 'bookController@show');
 
+
 Route::get('/buscarLibros', 'BookController@buscarLibros');
+
+
+
+Route::get('/profile', 'bookController@showBooksOwnProfile');

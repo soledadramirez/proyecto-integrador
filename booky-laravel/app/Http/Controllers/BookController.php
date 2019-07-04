@@ -61,6 +61,7 @@ class BookController extends Controller
 
       $libroNuevo = new Book();
       $ruta = $req->file('book_cover')->store("public");
+
       $nombreArchivo= basename($ruta);
 
       // agregamos clave foranea de titulo
@@ -112,6 +113,18 @@ class BookController extends Controller
 
     }
 
+    public function showBooksOwnProfile()
+    {
+      $usuarioLog=Auth::user();
+      $ownBooks=Book::where("user_id","=","$usuarioLog->id")->get();
+      $vac=compact("ownBooks");
+      // dd($ownBooks);
+      return view("profile",$vac);
+
+
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -141,24 +154,25 @@ class BookController extends Controller
      * @param  \App\book  $book
      * @return \Illuminate\Http\Response
      */
-    public function destroy(book $book)
+    // public function destroy(book $book)
     {
         //
     }
 
+
     public function buscarLibros(){
       $search = '%'.$_GET["search"].'%';
-
+        // armar variable search y buscar.
       $tituloEncontrado = Title::where('name', 'like', $search)->get();
-      $vacTitulo = compact('tituloEncontrado');
-      //dd($vacTitulo);
+      $vac = compact('tituloEncontrado');
       $autorEncontrado = Author::where('name', 'like', $search)->get();
-      $vacAutor = compact('autorEncontrado');
+      $vac = compact('autorEncontrado');
+      dd($autorEncontrado);
+      }
 
-
-
-      return view('/bookPost', $vacTitulo);
+      return view('/bookPost', $vac);
     }
+
 
 
 
