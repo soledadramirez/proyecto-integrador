@@ -38,6 +38,13 @@
   </div>
 </nav>
 
+<ul class="errores" style:"color:red">
+  <?php foreach ($errors->all() as $error): ?>
+    <li>
+      <?= $error?>
+    </li>
+  <?php endforeach; ?>
+</ul>
 <div class="container1" style="background-image: url('images/bg-01.jpg');">
   <div class="container2">
     <div class="wrap-container">
@@ -64,19 +71,22 @@
         </span>
 
         <div class="wrap-input">
-          <input class="input100" type="text" name="name" placeholder="Nombre del libro">
+          <input class="input100" type="text" name="name" placeholder="Nombre del libro" value="{{old("name")}}">
           <span class="focus-input100"></span>
           <span class="symbol-input100">
             <i class="fas fa-book"></i>
           </span>
+          <small>{{$errors->first('name')}}</small>
         </div>
 
         <div class="wrap-input">
-          <input class="input100" type="text" name="author" placeholder="Nombre del autor">
+          <input class="input100" type="text" name="author" placeholder="Nombre del autor" value="{{old("author")}}">
           <span class="focus-input100"></span>
           <span class="symbol-input100">
             <i class="fas fa-feather"></i>
           </span>
+          <small>{{$errors->first('author')}}</small>
+
         </div>
 
         <div class="wrap-input">
@@ -90,8 +100,10 @@
         </div>
 
         <div class="wrap-input validate-input">
-          <textarea class="input100" name="description" placeholder="Agrega una reseña de este libro"></textarea>
+          <textarea class="input100" name="description" placeholder="Agrega una reseña de este libro" value="{{old("description")}}"></textarea>
           <span class="focus-input100"></span>
+          <small>{{$errors->first('description')}}</small>
+
         </div>
 
         <div class="container-form-btn">

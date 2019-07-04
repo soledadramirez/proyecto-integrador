@@ -41,6 +41,24 @@ class BookController extends Controller
     public function store(Request $req)
 
     {
+      $reglas = [
+        "book_cover" => "file|image",
+        "name" => "string|min:3|required",
+        "author" => "string|min:3|required",
+        "description" => "string|min:20|max:1000"
+      ];
+
+      $mensajes = [
+        'image' => 'El campo :attribute debe ser una imagen',
+        'file' => 'El campo :attribute no se cargo correctamente',
+        'string' => 'El campo :attribute debe ser cadena de texto',
+        'min' => 'El campo :attribute debe ser mayor a :min',
+        'max' => 'El campo :attribute debe ser menor a :max',
+        'required' => 'El campo :attribute es obligatorio',
+
+      ];
+
+      $this->validate($req, $reglas, $mensajes);
 
       $nuevoTitulo = Title::where('name', $req['name'])->first();
 
@@ -155,26 +173,25 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
     // public function destroy(book $book)
-    {
-        //
-    }
+    // {
+    //     //
+    // }
 
 
-    public function buscarLibros(){
-      $search = '%'.$_GET["search"].'%';
-        // armar variable search y buscar.
-      $tituloEncontrado = Title::where('name', 'like', $search)->get();
-      $vac = compact('tituloEncontrado');
-      $autorEncontrado = Author::where('name', 'like', $search)->get();
-      $vac = compact('autorEncontrado');
-      dd($autorEncontrado);
-      }
-
-      return view('/bookPost', $vac);
-    }
-
-
-
-
-
-}
+//     public function buscarLibros(){
+//       $search = '%'.$_GET["search"].'%';
+//         // armar variable search y buscar.
+//       $tituloEncontrado = Title::where('name', 'like', $search)->get();
+//       $vac = compact('tituloEncontrado');
+//       $autorEncontrado = Author::where('name', 'like', $search)->get();
+//       $vac = compact('autorEncontrado');
+//       dd($autorEncontrado);
+//       }
+//
+//       return view('/bookPost', $vac);
+//     }
+//
+//
+//
+//
+ }

@@ -68,7 +68,7 @@
 
 
       <form class="form-group row" id="search" action="/buscarLibros" method="get">
-        {{csrf_field}}
+        {{csrf_field()}}
         <input class="form-control col-xl-5" name="search" type="text" placeholder="Busca tu libro">
         <span><button type="submit" class="btn btn-success btn-lg">Buscar</button></span>
       </form>
