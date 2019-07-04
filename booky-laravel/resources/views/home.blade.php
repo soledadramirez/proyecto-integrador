@@ -66,10 +66,15 @@
 
 
 
-
+  <h2 style="color:#fff">Busca tu libro</h2>
       <form class="form-group row" id="search" action="/buscarLibros" method="get">
-        {{csrf_field}}
-        <input class="form-control col-xl-5" name="search" type="text" placeholder="Busca tu libro">
+        <select class="custom-select col-md-8" name="busqueda">
+            <option selected>Buscar por...</option>
+            <option value="1">Título</option>
+            <option value="2">Autor</option>
+          </select>
+        <input class="form-control col-md-8" name="search" type="text">
+
         <span><button type="submit" class="btn btn-success btn-lg">Buscar</button></span>
       </form>
 <div class="jumbotron jumbotron-fluid col-xl-9">

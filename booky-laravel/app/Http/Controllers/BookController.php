@@ -155,22 +155,23 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
     // public function destroy(book $book)
-    {
-        //
-    }
+
 
 
     public function buscarLibros(){
       $search = '%'.$_GET["search"].'%';
         // armar variable search y buscar.
-      $tituloEncontrado = Title::where('name', 'like', $search)->get();
-      $vac = compact('tituloEncontrado');
+        if ($_GET["busqueda"] == 1) {
+          $tituloEncontrado = Title::where('name', 'like', $search)->get();
+          $vac = compact('tituloEncontrado');
+          dd($tituloEncontrado);
+        } else {
       $autorEncontrado = Author::where('name', 'like', $search)->get();
       $vac = compact('autorEncontrado');
       dd($autorEncontrado);
       }
 
-      return view('/bookPost', $vac);
+      //return view('/bookPost', $vac);
     }
 
 
