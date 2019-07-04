@@ -11,7 +11,7 @@ class Book extends Model
 
 
     public function states(){
-      return $this->belongsTo("App\State",'book_state','state_id');
+      return $this->belongsTo("App\State",'state_id');
     }
 
     public function title(){

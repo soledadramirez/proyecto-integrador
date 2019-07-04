@@ -106,21 +106,9 @@ class BookController extends Controller
     }
     public function show($id)
     {
-
       $book=Book::find($id);
       $vac=compact("book");
       return view("/bookPost",$vac);
-
-    }
-
-    public function showBooksOwnProfile()
-    {
-      $usuarioLog=Auth::user();
-      $ownBooks=Book::where("user_id","=","$usuarioLog->id")->get();
-      $vac=compact("ownBooks");
-      // dd($ownBooks);
-      return view("profile",$vac);
-
 
     }
 
@@ -172,6 +160,14 @@ class BookController extends Controller
       }
 
       //return view('/bookPost', $vac);
+    }
+
+    public function confirm($id){
+      $book = Book::find($id);
+      $book->state_id = 3;
+
+      $book->save();
+      return redirect('/bookPost/$'.$id);
     }
 
 

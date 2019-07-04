@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Book;
 
 class UserController extends Controller
 {
@@ -13,7 +15,12 @@ class UserController extends Controller
      */
     public function index()
     {
-      return view("/login");
+      $usuarioLog=Auth::user();
+      $myBooks=Book::where("user_id","=","$usuarioLog->id")->get();
+      $vac=compact("myBooks");
+      // dd($myBooks);
+      return view("profile",$vac);
+
     }
 
     /**
@@ -34,7 +41,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-      
+
     }
 
     /**
@@ -83,9 +90,6 @@ class UserController extends Controller
         //
     }
 
-    public function buscarUser(){
-
-    }
 
 
 
