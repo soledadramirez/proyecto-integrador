@@ -37,14 +37,6 @@
     </ul>
   </div>
 </nav>
-
-<ul class="errores" style:"color:red">
-  <?php foreach ($errors->all() as $error): ?>
-    <li>
-      <?= $error?>
-    </li>
-  <?php endforeach; ?>
-</ul>
 <div class="container1" style="background-image: url('images/bg-01.jpg');">
   <div class="container2">
     <div class="wrap-container">
