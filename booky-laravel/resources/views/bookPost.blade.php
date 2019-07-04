@@ -44,54 +44,41 @@
 <div class="container1" style="background-image: url('images/bg-01.jpg');">
   <div class="container2">
     <div class="wrap-container">
+
       <div class="container-image">
         <div class="container-image-in">
-            {{-- <img src="/storage/{{$book->image}}" alt="IMG"> --}}
+            {{-- <img src="/storage/{{$tituloEncontrado->books()->image}}" alt="IMG"> --}} <?php // TODO:  ?>
         </div>
 
       </div>
 
 
       <div class="container-form">
+        <span class="form-title">Datos del libro</span>
 
-        <span class="form-title">
-          Datos del libro
-        </span>
-
+        {{-- si existe un titulo resultado, falta si existe un autor resultado --}}
         <div class="wrap-input">
-         <span>Titulo: {{$book->title->name}} </span>
-
+         <span>Titulo: </span>
         </div>
-
         <div class="wrap-input">
-          <span>Autor: {{$book->author->name}}</span>
+          <span>Autor: </span> <?php // TODO:  ?>
         </div>
-
         <div class="wrap-input">
           <span>Fecha de publicación:</span>
         </div>
-
         <div class="wrap-input">
           <span>Edición:</span>
         </div>
-
         <div class="wrap-input">
           <span>Publicado por:</span>
         </div>
-
         <div class="wrap-input">
-
           <span>Disponible para: </span>
-
-
         </div>
-
         <div class="wrap-input validate-input">
         <span>Reseñas: </span>
         </div>
-
-
-      </div>
+    </div>
 
     </div>
   </div>

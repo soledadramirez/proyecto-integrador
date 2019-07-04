@@ -17,9 +17,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
-Route::get('/home1', function () {
-    return view('home1');
-});
+
 
 
 Auth::routes();
@@ -37,7 +35,9 @@ return view ('cargarlibros');
 Route::post("/agregarLibros", 'bookController@store');
 Route::get("/agregarLibros", 'bookController@showToAdd');
 
-Route::get("/bookPost/{id}", 'bookController@show');
+Route::get("/bookPost", function(){
+  return view("bookPost");
+});
+//Route::get("/bookPost/{id}", 'bookController@show');
 
-Route::get('/buscarLibros', 'bookController@buscarLibros');
-Route::post('/buscarLibros', 'bookController@buscarLibros');
+Route::get('/buscarLibros', 'BookController@buscarLibros');

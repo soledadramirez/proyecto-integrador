@@ -63,8 +63,8 @@
 </nav>
 <div class="fondo paral">
 
-      <form class="form-group row" id="search" action="/buscarLibros" method="post">
-        {{csrf_field()}}
+      <form class="form-group row" id="search" action="/bookPost" method="get">
+        
         <input class="form-control col-xl-5" name="search" type="text" placeholder="Busca tu libro">
         <span><button type="submit" class="btn btn-success btn-lg">Buscar</button></span>
       </form>

@@ -10,6 +10,6 @@ class State extends Model
     public $timestamps=false;
 
     public function books(){
-      return $this->belongsToMany("App\Book",'book_state', "state_id", 'book_id');
+      return $this->belongsTo("App\Book",'book_state', "state_id");
     }
 }

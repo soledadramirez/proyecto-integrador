@@ -59,22 +59,19 @@ class BookController extends Controller
       }
 
 
-
-
-
       $libroNuevo = new Book();
       $ruta = $req->file('book_cover')->store("public");
       $nombreArchivo= basename($ruta);
-      //dd($libroNuevo);
 
+      // agregamos clave foranea de titulo
       $libroNuevo->title_id = $nuevoTitulo->id;
-      //dd($libroNuevo);
+      //agregamos clave foranea de autor
       $libroNuevo->author_id = $nuevoAutor->id;
-
-
+      // aregamos id del user que carga el libro
       $usuarioLog=Auth::user();
-
       $libroNuevo->user_id =$usuarioLog->id;
+      //agregamos el estado del libro
+      $libroNuevo->state_id = $req["book_action"];
 
       //dd($libroNuevo);
 
@@ -84,13 +81,13 @@ class BookController extends Controller
 
       $libroNuevo->save();
 
-      $libroNuevo->states()->attach($req["book_action"]);
+      //$libroNuevo->states()->attach($req["book_action"]);
 
 
 
 
 
-       return redirect ("/profile");
+       return redirect ("/bookPost");
 
     }
 
@@ -111,7 +108,7 @@ class BookController extends Controller
 
       $book=Book::find($id);
       $vac=compact("book");
-      return view("bookPost",$vac);
+      return view("/bookPost",$vac);
 
     }
 
@@ -150,31 +147,20 @@ class BookController extends Controller
     }
 
     public function buscarLibros(){
-      $search = '%'.$_POST["search"].'%';
+      $search = '%'.$_GET["search"].'%';
 
       $tituloEncontrado = Title::where('name', 'like', $search)->get();
-      $vac = compact('tituloEncontrado');
+      $vacTitulo = compact('tituloEncontrado');
+      //dd($vacTitulo);
       $autorEncontrado = Author::where('name', 'like', $search)->get();
-      $vac = compact('autorEncontrado');
-      dd($autorEncontrado);
-      }
+      $vacAutor = compact('autorEncontrado');
 
-      return view('/bookPost', $vac);
+
+
+      return view('/bookPost', $vacTitulo);
     }
 
 
 
 
 }
-// public function index()
-//
-//
-//     public function search(){
-//       $stmt = Actor::where('first_name', 'like', '%'.$_GET["search"].'%')
-//       ->orwhere('last_name', 'like', '%'.$_GET["search"].'%')
-//       ->orderBy('last_name')
-//       ->paginate(5);
-//       $stmt->withPath('?search='.$_GET['search']);
-//       //dd($stmt);
-//       return view('actores')->with('actors', $stmt);
-//     }
