@@ -64,6 +64,7 @@ class BookController extends Controller
 
       $libroNuevo = new Book();
       $ruta = $req->file('book_cover')->store("public");
+
       $nombreArchivo= basename($ruta);
       //dd($libroNuevo);
 
@@ -115,14 +116,16 @@ class BookController extends Controller
 
     }
 
-    // public function showBooksOwnProfile()
-    // {
-    //   $usuarioLog=Auth::user();
-    //   $ownBooks=Book::where("id_user","=","$usuarioLog->id");
-    //   $vac=compact("ownBooks");
-    //   return view("profile",$vac);
-    //
-    // }
+    public function showBooksOwnProfile()
+    {
+      $usuarioLog=Auth::user();
+      $ownBooks=Book::where("user_id","=","$usuarioLog->id")->get();
+      $vac=compact("ownBooks");
+      // dd($ownBooks);
+      return view("profile",$vac);
+
+
+    }
 
 
     /**
@@ -158,10 +161,10 @@ class BookController extends Controller
     {
         //
     }
-
-    // public function buscarLibros(){
-    //   $search = '%'.$_POST["search"].'%';
     //
+    // public function buscarLibros(){
+    //   $search = '%'.$_GET["search"].'%';
+    //     // armar variable search y buscar.
     //   $tituloEncontrado = Title::where('name', 'like', $search)->get();
     //   $vac = compact('tituloEncontrado');
     //   $autorEncontrado = Author::where('name', 'like', $search)->get();

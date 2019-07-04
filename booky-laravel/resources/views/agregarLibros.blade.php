@@ -50,7 +50,7 @@
             <img src="images/agregarPortada.png" alt="IMG">
           </div>
           <div class="container-form-btn">
-            <input type="file" onchange="previewFile()"><br>
+            <input type="file" onchange="previewFile()" name="book_cover"><br>
            <img src="" height="200" alt="Agregar portada">
           </div>
 
