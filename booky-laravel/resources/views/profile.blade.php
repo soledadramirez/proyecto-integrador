@@ -64,7 +64,7 @@
       <div class="">
         <div class="librosInfo row">
           <div class="librosAPrestar col-12 row w-100 mx-auto">
-              
+
             <h1 class="text-center col-sm-12">Libros para prestar</h1>
 
           {{-- @foreach (Auth::user() as $book)
@@ -80,18 +80,16 @@
             </div>
           @endforeach --}}
 
-            <div class="book-image col-md-6 col-lg-3">
-              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
-            </div>
-            <div class="book-image col-md-6 col-lg-3">
-              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
-            </div>
-            <div class="book-image col-md-6 col-lg-3">
-              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
-            </div>
-            <div class="book-image col-md-6 col-lg-3">
-              <img class="rounded mx-auto d-block" src="/images/garcia-marquez.jpg" alt="">
-            </div>
+            @forelse ($myBooks as $book)
+              <div class="book-image col-md-6 col-lg-3">
+                <a href="/bookPost/{{$book->id}}">
+                 <img class="rounded mx-auto d-block" src="/storage/{{$book->image}}" alt="">
+                </a>
+              </div>
+            @empty
+              <p>Por el momento no ha libros cargados</p>
+            @endforelse
+
           </div>
           <div class="librosLeyendo col-12 row w-100 mx-auto">
             <h1 class="text-center col-sm-12">Son de mi interés</h1>

@@ -19,30 +19,24 @@ Route::get('/home', function () {
 });
 
 
-
 Auth::routes();
 
-Route::get('/home1', 'HomeController@index')->name('home1');
+// Route::get('/home1', 'HomeController@index')->name('home1');
 
-Route::get("/profile", function(){
-  return view("profile");
-});
+Route::get("/profile", 'UserController@index');
+
 
 Route::get('/cargarlibros', function(){
 return view ('cargarlibros');
 });
 
-Route::post("/agregarLibros", 'bookController@store');
-Route::get("/agregarLibros", 'bookController@showToAdd');
+Route::post("/agregarLibros", 'BookController@store');
+Route::get("/agregarLibros", 'BookController@showToAdd');
 
-Route::get("/bookPost", function(){
-  return view("bookPost");
-});
-//Route::get("/bookPost/{id}", 'bookController@show');
+
+
+Route::get("/bookPost/{id}", 'BookController@show');
+Route::get('/confirm/{id}', 'BookController@confirm');
 
 
 Route::get('/buscarLibros', 'BookController@buscarLibros');
-
-
-
-Route::get('/profile', 'bookController@showBooksOwnProfile');

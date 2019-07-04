@@ -47,7 +47,7 @@
 
       <div class="container-image">
         <div class="container-image-in">
-            {{-- <img src="/storage/{{$tituloEncontrado->books()->image}}" alt="IMG"> --}} <?php // TODO:  ?>
+            <img src="/storage/{{$book->image}}" alt="IMG">
         </div>
 
       </div>
@@ -58,7 +58,7 @@
 
         {{-- si existe un titulo resultado, falta si existe un autor resultado --}}
         <div class="wrap-input">
-         <span>Titulo: </span>
+         <span>Titulo:{{$book->title->name}} </span>
         </div>
         <div class="wrap-input">
           <span>Autor: </span> <?php // TODO:  ?>
@@ -78,6 +78,17 @@
         <div class="wrap-input validate-input">
         <span>Reseñas: </span>
         </div>
+
+        @unless (Auth::User()->id == $book->user_id)
+            <a href="#">Solicitar</a>
+        @endunless
+        @if ($book->state_id == 2)
+            <a href="/confirm/{{$book->id}}">Confirmar préstamo</a>
+        @endif
+        @if ($book->state_id == 3)
+            <a href="#">Confirmar devolución</a>
+        @endif
+
     </div>
 
     </div>
