@@ -45,7 +45,7 @@ class BookController extends Controller
         "book_cover" => "file|image",
         "name" => "string|min:3|required",
         "author" => "string|min:3|required",
-        "description" => "string|min:20|max:1000"
+        "description" => "string|min:2|max:1000"
       ];
 
       $mensajes = [
@@ -106,7 +106,7 @@ class BookController extends Controller
 
 
 
-       return redirect ("/bookPost");
+       return redirect ("/profile");
 
     }
 
@@ -126,7 +126,7 @@ class BookController extends Controller
     {
       $book=Book::find($id);
       $vac=compact("book");
-      return view("/bookPost",$vac);
+      return view("bookPost",$vac);
 
     }
 
