@@ -47,7 +47,7 @@
 
       <div class="container-image">
         <div class="container-image-in">
-            <img src="/storage/{{$book->image}}" alt="IMG">
+            <img src="storage/{{$book->image}}" alt="IMG">
         </div>
 
       </div>

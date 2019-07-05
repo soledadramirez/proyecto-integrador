@@ -24,6 +24,7 @@ Auth::routes();
 // Route::get('/home1', 'HomeController@index')->name('home1');
 
 Route::get("/profile", 'UserController@index');
+Route::get("/normalProfile/{id}", 'UserController@show');
 
 
 Route::get('/cargarlibros', function(){
