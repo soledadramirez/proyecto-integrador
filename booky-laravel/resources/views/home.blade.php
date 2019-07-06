@@ -4,22 +4,29 @@
 @section('main')
 
 <div class="fondo paral">
-
-
-
-
-  <h2 style="color:#fff">Busca tu libro</h2>
-      <form class="form-group row" id="search" action="/buscarLibros" method="get">
-        <select class="custom-select col-md-8" name="busqueda">
+      <form class="form-group row my-0 p-0" id="search" action="/buscarLibros" method="get">
+        {{-- <select class="custom-select col-md-8" name="busqueda">
             <option selected>Buscar por...</option>
             <option value="1">Título</option>
             <option value="2">Autor</option>
           </select>
-        <input class="form-control col-md-8" name="search" type="text">
-
-        <span><button type="submit" class="btn btn-success btn-lg">Buscar</button></span>
+        <input class="form-control col-md-8" name="search" type="text"> --}}
+        <div class="col-lg-8">
+          <input class="form-control col-md-10 mx-auto mt-3" name="search" type="text" placeholder="Busca tu libro">
+        </div>
+        <div class="btn-group btn-group-toggle col-5 row mx-auto" data-toggle="buttons">
+            <label class="btn btn-secondary active my-1">
+              <input type="radio" class="col-3 d-block" name="busqueda" id="option1" value="1" autocomplete="off" checked> Por título
+            </label>
+            <label class="btn btn-secondary my-1">
+              <input type="radio" class="col-3 d-block" name="busqueda" id="option2" value="2" autocomplete="off"> Por autor
+            </label>
+        </div>
+        <div class="mx-auto col-12 text-center">
+            <span><button type="submit" class="btn btn-success btn-lg">Buscar</button></span>
+        </div>
       </form>
-<div class="jumbotron jumbotron-fluid col-xl-9">
+<div class="jumbotron jumbotron-fluid col-xl-9 mt-4">
     <h1 class="display-4">Somos una comunidad lectora</h1>
     <p class="lead">¿Tenés libros que amaste leer apilados en tu casa? En Booky creemos que ese libro quiere ser compartido con muchas personas más. Dejalo ir y que se sume a nuestra comunidad de libros viajeros!</p>
 </div>

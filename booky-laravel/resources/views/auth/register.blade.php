@@ -1,13 +1,13 @@
 @extends('../master')
 
 @section('main')
-  <header class="header-login row">
+  {{-- <header class="header-login row">
      <nav class="cont-logo col-lg-7 col-md-6">
        <img src="img/logo-verde-g.png" alt="">
        <h1 class="titulo"><a class="a-reg" href="/home">Booky</a></h1>
       </nav>
      <p class="col-lg-5 col-md-6">¿Estás registrado? <a class="a-reg" href="{{ route('login') }}"> Ingresa</a></p>
-  </header>
+  </header> --}}
 <div class="container">
     <div class="row cont-form-reg">
         <div class="col-sm-12 panel-cont">

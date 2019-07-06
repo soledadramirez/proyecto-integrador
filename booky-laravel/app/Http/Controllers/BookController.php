@@ -167,44 +167,33 @@ class BookController extends Controller
     public function buscarLibros(){
       $search = '%'.$_GET["search"].'%';
         // armar variable search y buscar.
-        if ($_GET["busqueda"] == 1) {
+      if ($_GET["busqueda"] == 1) {
           $titulos = Title::where('name', 'like', $search)->get();
-          $libros =[];
+          $librosFiltrados = [];
           foreach ($titulos as $titulo) {
-            //dd($titulo);
-            $librosFilter = [];
-            $librosFilter[]= Book::where('title_id', $titulo->id)->get();
-            foreach ($librosFilter as $libro[]) {
-              $libros[] = $libro[];
-            }
+            //dd($titulo); desde aca
+            $librosFiltrados[]= Book::where('title_id', $titulo->id)->get();
+            //dd($librosFilter);
           }
           //dd($libros);
-          //$libros = Book::all();
-          $vacTitulo = compact('titulos');
-          $vacLibro = compact('libros');
-
-          return view('/resultadoLibros', $vacTitulo, $vacLibro);
-
-      } else {
-
-      $autores = Author::where('name', 'like', $search)->get();
-      $autores = [];
-      //dd($autores);
-      foreach ($autores as $autor) {
-        $librosFilter = [];
-        $librosFilter = Book::where('author_id', $autor->id)->get();
-        //dd($libros)
-        foreach ($librosFilter as $libro) {
-          $libros[] = $libro[0];
+      } elseif ($_GET["busqueda"] == 2){
+        $autores = Author::where('name', 'like', $search)->get();
+        $librosFiltrados = [];
+        //dd($autores);
+        foreach ($autores as $autor) {
+        $librosFiltrados[] = Book::where('author_id', $autor->id)->get();
+        //dd($librosFilter);
+      }
+      }
+      $librosFinales =[];
+      foreach ($librosFiltrados as $librosArray) {
+        foreach ($librosArray as $libros) {
+          $librosFinales[] = $libros;
         }
-      }     // TODO: terminar buscador, agregar foreach para libro para titulos y actores
-
-      }
-        $vacAutores = compact('autores');
-        $vacLibro = compact('libros');
-
-        return view('/resultadoLibros', $vacLibro, $vacAutores);
-      }
+       }
+       $vacTitulo = compact('titulos');
+       $vacLibro = compact('librosFinales');
+       return view('/resultadoLibros', $vacTitulo, $vacLibro);
       //dd($libros);
     }
 
