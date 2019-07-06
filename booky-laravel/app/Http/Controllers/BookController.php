@@ -216,6 +216,18 @@ class BookController extends Controller
       return redirect('/bookPost/$'.$id);
     }
 
+    public function devolver($id) {
+      $book = Book::find($id);
+      $book->state_id = 0;
+
+      $book->save();
+      return redirect('/profile');
+    }
+
+    // public function pedir($id) {
+    //
+    // }
+
 
 
 
