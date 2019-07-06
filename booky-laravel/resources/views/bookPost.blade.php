@@ -6,41 +6,6 @@
 @section('main')
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/home"><h1>Booky</h1> </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Nosotros</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">FAQs</a>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/register"><span class="fas fa-user"></span> Sign Up</a>
-      </li>
-      <?php if (isset($_SESSION["email"])): ?>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout"><span class="fas fa-sign-in-alt"></span> Logout</a>
-        <?php else: ?>
-          <li class="nav-item">
-            <a class="nav-link" href="/login"><span class="fas fa-sign-in-alt"></span> Login</a>
-      <?php endif ?>
-      </li>
-    </ul>
-  </div>
-</nav>
-
 <div class="container1" style="background-image: url('images/bg-01.jpg');">
   <div class="container2">
     <div class="wrap-container">

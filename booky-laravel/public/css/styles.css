@@ -383,7 +383,7 @@ width: 100%;
 text-align: center;
 }
 .container.header-profile{
-  background-color: #18867a;
+  background-color: #e6e6e6;
 }
 .agregImage{
    margin: 20px auto;
@@ -430,7 +430,7 @@ text-align: center;
    padding: 0;
    width: 80%;
    margin: 0 0 0 auto;
-   color: #fff;
+   color: #18867a;
    margin-bottom: 15px;
  }
  .user-info{

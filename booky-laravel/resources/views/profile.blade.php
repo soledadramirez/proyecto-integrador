@@ -2,7 +2,7 @@
 
 @section('main')
   <div class="fondo paral">
-  <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+  {{-- <nav class="container navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
       </ul>
 
     </div>
-  </nav>
+  </nav> --}}
 <div class="fondoProfile">
   <div class="container header-profile">
   <div class="row profileImage jumbotron">
@@ -34,8 +34,8 @@
   <div class="col-sm-6 profile-info">
     <div class="user-info">
     <div class="row">
-      <h4 class="col-sm-7 user-data">{{ Auth::user()->name }}</h4>
-      <button class="col-sm-5 btn btn-link edit text-left " type="submit" name="button">Editar perfil</button>
+      {{-- <h4 class="col-sm-7 user-data">{{ Auth::user()->name }}</h4> --}}
+
     </div>
      <div class="row user-data user-follow">
       <h4 class="col-sm-5"> 0 seguidores</h4>
@@ -45,40 +45,18 @@
     <div class="row user-data book-button">
     <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="/agregarLibros">Cargar libro</a></button>
     {{-- <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Pedir libro</a></button> --}}
+    <button class="col-sm-5 btn btn-link edit text-left " type="submit" name="button">Editar perfil</button>
    </div>
   </div>
   </div>
     {{-- <div class="container profile"> --}}
       <div class="container profile">
       <div class="row py-2">
-        <div class=""> {{--"col-lg-4 col-md-4 col-sm-12 d-sm-block paso">--}}
-      {{-- <h1 class="text-center">Mis reseñas</h1>
-      <div class="card mx-auto" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Una reseña</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <button type="button" class="btn btn-link">Me gusta</button>
-        </div>
-      </div>
-      </div> --}}
       <div class="">
         <div class="librosInfo row">
           <div class="librosAPrestar col-12 row w-100 mx-auto">
 
             <h1 class="text-center col-sm-12">Libros para prestar</h1>
-
-          {{-- @foreach (Auth::user() as $book)
-            <div class="card">
-              @if ($book->image != null)
-              <img class="card-img-top" src="{{$book->image}}" alt="Imagen">
-              @endif
-              <div class="card-body">
-                <h5 class="card-title">{{$book->title->name}}</h5>
-                {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
-                {{-- <a href="#" class="btn btn-primary">Ver detalle</a>
-              </div>
-            </div>
-          @endforeach --}}
 
             @forelse ($myBooks as $book)
               <div class="book-image col-md-6 col-lg-3">
@@ -87,7 +65,7 @@
                 </a>
               </div>
             @empty
-              <p>Por el momento no ha libros cargados</p>
+              <p>Por el momento no hay libros cargados</p>
             @endforelse
 
           </div>

@@ -168,16 +168,44 @@ class BookController extends Controller
       $search = '%'.$_GET["search"].'%';
         // armar variable search y buscar.
         if ($_GET["busqueda"] == 1) {
-          $tituloEncontrado = Title::where('name', 'like', $search)->get();
-          $vac = compact('tituloEncontrado');
-          dd($tituloEncontrado);
-        } else {
-      $autorEncontrado = Author::where('name', 'like', $search)->get();
-      $vac = compact('autorEncontrado');
-      dd($autorEncontrado);
-      }
+          $titulos = Title::where('name', 'like', $search)->get();
+          $libros =[];
+          foreach ($titulos as $titulo) {
+            //dd($titulo);
+            $librosFilter = [];
+            $librosFilter[]= Book::where('title_id', $titulo->id)->get();
+            foreach ($librosFilter as $libro[]) {
+              $libros[] = $libro[];
+            }
+          }
+          //dd($libros);
+          //$libros = Book::all();
+          $vacTitulo = compact('titulos');
+          $vacLibro = compact('libros');
 
-      //return view('/bookPost', $vac);
+          return view('/resultadoLibros', $vacTitulo, $vacLibro);
+
+      } else {
+
+      $autores = Author::where('name', 'like', $search)->get();
+      $autores = [];
+      //dd($autores);
+      foreach ($autores as $autor) {
+        $librosFilter = [];
+        $librosFilter = Book::where('author_id', $autor->id)->get();
+        //dd($libros)
+        foreach ($librosFilter as $libro) {
+          $libros[] = $libro[0];
+        }
+      }     // TODO: terminar buscador, agregar foreach para libro para titulos y actores
+
+      }
+        $vacAutores = compact('autores');
+        $vacLibro = compact('libros');
+
+        return view('/resultadoLibros', $vacLibro, $vacAutores);
+      }
+      //dd($libros);
     }
 
     public function confirm($id){
