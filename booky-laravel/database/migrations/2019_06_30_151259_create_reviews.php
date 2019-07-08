@@ -13,7 +13,7 @@ class CreateReviews extends Migration
      */
     public function up()
     {
-        //
+        
     }
 
     /**

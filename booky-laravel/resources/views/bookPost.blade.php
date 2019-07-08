@@ -16,7 +16,7 @@
             <div class="card my-4">
               <div class="card-body">
                 <h5 class="card-title">{{$book->title->name}}</h5>
-                <p class="card-text">Se reúnen en FICCIONES dos libros de Jorge Luis Borges fechados en 1941 y 1944. «El jardín de senderos que se bifurcan» incluye ocho relatos, entre los que cabe destacar dos breves narraciones de excepcional calidad: «Pierre Menard, autor del Quijote» y «La Biblioteca de Babel». «Artificios» lo forman nueve cuentos, entre ellos «La muerte y la brújula» (historia de una tortuosa venganza), «Funes el memorioso» (una larga metáfora del insomnio) y «El Sur» («acaso mi mejor cuento» en palabras del autor).</p>
+                <p class="card-text">{{$book->review}}</p>
                 <ul class="list-group list-group-flush">
                  <li class="list-group-item">Compartido por: {{$book->user->name}}</li>
                  <li class="list-group-item">Estado del libro: {{$book->state->name}}</li>

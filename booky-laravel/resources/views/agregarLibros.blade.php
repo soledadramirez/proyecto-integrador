@@ -43,7 +43,7 @@
           </div>
 
           <div class="form-group">
-            <textarea class="form-control" name="review" placeholder="Agrega una reseña de este libro "rows="4" value="{{old("description")}}"></textarea>
+            <textarea class="form-control" name="review" placeholder="Agrega un comentario sobre este libro "rows="4" value="{{old("description")}}"></textarea>
             <small>{{$errors->first('description')}}</small>
           </div>
           <div class="container-form-btn">

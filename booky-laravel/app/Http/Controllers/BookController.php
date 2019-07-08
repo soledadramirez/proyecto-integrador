@@ -92,6 +92,8 @@ class BookController extends Controller
       //agregamos el estado del libro
       $libroNuevo->state_id = $req["book_action"];
 
+      $libroNuevo->review = $req['review'];
+
       //dd($libroNuevo);
 
 

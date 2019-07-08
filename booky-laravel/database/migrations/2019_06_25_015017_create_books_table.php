@@ -30,6 +30,8 @@ class CreateBooksTable extends Migration
             $table->bigInteger('state_id')->unsigned();
             $table->foreign('state_id')->references('id')->on('states');
 
+            $table->string('review');
+
         });
     }
 
