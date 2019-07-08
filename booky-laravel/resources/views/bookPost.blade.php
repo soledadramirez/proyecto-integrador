@@ -18,7 +18,7 @@
                 <h5 class="card-title">{{$book->title->name}}</h5>
                 <p class="card-text">{{$book->review}}</p>
                 <ul class="list-group list-group-flush">
-                 <li class="list-group-item">Compartido por: {{$book->user->name}}</li>
+                 <li class="list-group-item">Compartido por:<a style="color:black; font-weight:bolder ;font-family:initial"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a> </li>
                  <li class="list-group-item">Estado del libro: {{$book->state->name}}</li>
                  @unless (Auth::User()->id == $book->user_id)
                      <li class="pl-3"> ¡Disponible! <a href="#" class="btn btn-success m-2">Solicitar</a></li>
