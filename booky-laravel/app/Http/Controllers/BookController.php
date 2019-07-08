@@ -95,7 +95,6 @@ class BookController extends Controller
       //dd($libroNuevo);
 
 
-
       $libroNuevo->image=$nombreArchivo;
 
       $libroNuevo->save();
@@ -106,7 +105,7 @@ class BookController extends Controller
 
 
 
-       return redirect ("/profile");
+       return redirect ("/profile",$vac);
 
     }
 
@@ -125,7 +124,10 @@ class BookController extends Controller
     public function show($id)
     {
       $book=Book::find($id);
-      $vac=compact("book");
+      $usuarioLog=Auth::user();
+
+      $vac=compact("book","usuarioLog");
+
       return view("bookPost",$vac);
 
     }
