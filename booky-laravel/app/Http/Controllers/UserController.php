@@ -54,9 +54,10 @@ class UserController extends Controller
     public function show($id)
     {
    $user = User::find($id);
+   
    $userBooks = Book::where('user_id', '=', $id)->get();
    $vac=compact("userBooks");
-   
+
    return view("normalProfile",$vac);
 
 

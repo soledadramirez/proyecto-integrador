@@ -13,7 +13,7 @@
             </div>
             <ul class="col-lg-9">
               <h5>{{$libro->title->name}}</h5>
-              <li class="list-group-item">Autor: {{$libro->author->name}}</li>
+              <li class="list-group-item">  Autor: {{$libro->author->name}} </li>
               <li class="list-group-item">Estado de este ejemplar: {{$libro->state->name}}</li>
               <a href="/bookPost/{{$libro->id}}" class="btn btn-success mt-3">Ver más</a>
             </ul>
