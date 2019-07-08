@@ -59,11 +59,18 @@
             <h1 class="text-center col-sm-12">Libros para prestar</h1>
 
             @forelse ($myBooks as $book)
-              <div class="book-image col-md-6 col-lg-3">
-                <a href="/bookPost/{{$book->id}}">
-                 <img class="rounded mx-auto d-block" src="/storage/{{$book->image}}" alt="">
-                </a>
+              <div class="card col-md-3 mx-auto text-center" style="width: 18rem;">
+              <img class="card-img-top mx-auto mt-1" src="/storage/{{$book->image}}" alt="Imagen del libro">
+              <div class="card-body">
+                <h5 class="card-title">{{$book->title->name}}</h5>
+                <a href="/bookPost/{{$book->id}}" class="btn btn-success">Ver detalle</a>
               </div>
+            </div>
+                {{-- <div class="book-image col-md-6 col-lg-3">
+                  <a href="/bookPost/{{$book->id}}">
+                   <img class="rounded mx-auto d-block" src="/storage/{{$book->image}}" alt="">
+                  </a>
+                </div> --}}
             @empty
               <p>Por el momento no hay libros cargados</p>
             @endforelse

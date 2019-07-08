@@ -3,53 +3,30 @@
 @section('main')
 <div class="fondo paral">
 <div class="container">
-  <h2>Encontramos estos libros</h2>
-  <div class="">
-    <ul>
-
-      @if ($_GET['busqueda'] == 1)
+<div class="row p-4">
+      <h2 class="col-12 form-title pb-4">Encontramos estos libros</h2>
       @forelse ($librosFinales as $libro)
-        <li>{{$libro->title->name}}</li>
-        <li>{{$libro->author->name}}</li>
-        @empty
-          No hay libros disponibles
-      @endforelse
-    @elseif ($_GET['busqueda'] == 2)
-      @forelse ($librosFinales as $libro)
-        <li>{{$libro->title->name}}</li>
-        <li>{{$libro->author->name}}</li>
+        <div class="card col-lg-8 p-4 my-3 mx-auto">
+          <div class="card-body row">
+            <div class="col-lg-3 miniatura">
+              <img src="/storage/{{$libro->image}}" alt="" class="img-thumbnail">
+            </div>
+            <ul class="col-lg-9">
+              <h5>{{$libro->title->name}}</h5>
+              <li class="list-group-item">Autor: {{$libro->author->name}}</li>
+              <li class="list-group-item">Estado de este ejemplar: {{$libro->state->name}}</li>
+              <a href="/bookPost/{{$libro->id}}" class="btn btn-success mt-3">Ver más</a>
+            </ul>
+          </div>
+        </div>
       @empty
-        No hay libros disponibles
+          <div class="altura minima">
+            No hay libros disponibles
+          </div>
       @endforelse
-    @endif
 
-    </ul>
-  </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 @endsection

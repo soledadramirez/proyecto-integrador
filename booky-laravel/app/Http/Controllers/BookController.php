@@ -178,9 +178,9 @@ class BookController extends Controller
           //dd($libros);
       } elseif ($_GET["busqueda"] == 2){
         $autores = Author::where('name', 'like', $search)->get();
-        $librosFiltrados = [];
-        //dd($autores);
-        foreach ($autores as $autor) {
+    $librosFiltrados = [];
+      //dd($autores);
+      foreach ($autores as $autor) {
         $librosFiltrados[] = Book::where('author_id', $autor->id)->get();
         //dd($librosFilter);
       }
@@ -193,6 +193,7 @@ class BookController extends Controller
        }
        $vacTitulo = compact('titulos');
        $vacLibro = compact('librosFinales');
+
        return view('/resultadoLibros', $vacTitulo, $vacLibro);
       //dd($libros);
     }

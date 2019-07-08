@@ -10,7 +10,7 @@ class Book extends Model
     public $timestamps=false;
 
 
-    public function states(){
+    public function state(){
       return $this->belongsTo("App\State",'state_id');
     }
 

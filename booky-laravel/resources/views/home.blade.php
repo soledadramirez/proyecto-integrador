@@ -12,7 +12,7 @@
           </select>
         <input class="form-control col-md-8" name="search" type="text"> --}}
         <div class="col-lg-8">
-          <input class="form-control col-md-10 mx-auto mt-3" name="search" type="text" placeholder="Busca tu libro">
+          <input class="form-control col-md-10 mx-auto mt-3" name="search" type="text" placeholder="Busca tu libro" required>
         </div>
         <div class="btn-group btn-group-toggle col-5 row mx-auto" data-toggle="buttons">
             <label class="btn btn-secondary active my-1">
@@ -241,36 +241,12 @@
       </div> -->
 
 
-
-<div id="carouselContent" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active text-center p-4">
-           <p>"Que otros se enorgullezcan por lo que han escrito, yo me enorgullezco por lo que he leído"<br> Jorge Luis Borges</p>
-      </div>
-      <div class="carousel-item text-center p-4">
-          <p>"Un libro debe ser el hacha que rompa el mar helado que hay dentro de nosotros" <br>Franz Kafka</p>
-      </div>
-      <div class="carousel-item text-center p-4">
-          <p>"El que lee mucho y anda mucho, ve mucho y sabe mucho" <br>Miguel de Cervantes Saavedra</p>
-      </div>
-  </div>
-    <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-
-  <div class="conocenos row">
+  <div class="conocenos row mt-4">
     <div class="text-conocenos col-xl-6">
-      <div class="card">
-        <div class="card-body">
+      <div class="card conocenos">
+        <div class="card-body conocenos">
           <h1 class="card-title">Conocenos</h1>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="card-text conocenos">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
     </div>
@@ -282,6 +258,27 @@
       </div>
   </div>
   </div>
+  <div id="carouselContent" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active text-center p-4">
+             <p>"Que otros se enorgullezcan por lo que han escrito, yo me enorgullezco por lo que he leído"<br> Jorge Luis Borges</p>
+        </div>
+        <div class="carousel-item text-center p-4">
+            <p>"Un libro debe ser el hacha que rompa el mar helado que hay dentro de nosotros" <br>Franz Kafka</p>
+        </div>
+        <div class="carousel-item text-center p-4">
+            <p>"El que lee mucho y anda mucho, ve mucho y sabe mucho" <br>Miguel de Cervantes Saavedra</p>
+        </div>
+    </div>
+      <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   <footer class="col-lg-12 footer-home">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
