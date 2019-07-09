@@ -32,4 +32,12 @@ class User extends Authenticatable
       return $this->hasMany('App\Book', 'title_id');
     }
 
+    public function follows() {
+        return $this->hasMany(Follow::class);
+    }
+    public function isFollowing($target_id)
+    {
+        return (bool)$this->follows()->where('target_id', $target_id)->first(['id']);
+    }
+
 }
