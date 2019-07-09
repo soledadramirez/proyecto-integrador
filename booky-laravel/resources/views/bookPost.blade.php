@@ -18,25 +18,30 @@
                 <h5 class="card-title">{{$book->title->name}}</h5>
                 <p class="card-text">{{$book->review}}</p>
                 <ul class="list-group list-group-flush">
+
                   @if($usuarioLog->id!=$book->user_id)
                  <li class="list-group-item">Compartido por:<a style="color:black; font-weight:bolder"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a> </li>
                  @else
                   <li class="list-group-item">Compartido por:<a style="color:black; font-weight:bolder"  href="/profile"> {{$book->user->name}} </a> </li>
                  @endif
-                 <li class="list-group-item">Estado del libro: {{$book->state->name}}</li>
-                 @unless (Auth::User()->id == $book->user_id)
-                     <li class="pl-3"> ¡Disponible! <a href="#" class="btn btn-success m-2">Solicitar</a></li>
-                 @endunless
-                 @if (Auth::User()->id !== $book->user_id && $book->state_id == 1)
-                   <li>Libro para prestar</li>
-                 @endif
-               @if ($book->state_id == 2)
-                   <li><a href="/confirm/{{$book->id}}" class="btn btn-success m-2">Confirmar préstamo</a></li>
-               @endif
-               @if ($book->state_id == 3)
-                   <li><a href="#" class="btn btn-success m-2">Confirmar devolución</a></li>
-               @endif
 
+            @if (Auth::User()->id !== $book->user_id)
+                @if ($book->state_id == 1)
+                <li class="list-group-item"> ¡Disponible! <a href="/solicitar/{{$book->id}}" class="btn btn-success m-2">Solicitar</a></li>
+                @elseif ($book->state_id == 2)
+                <li class="list-group-item"><a href="#" class="btn btn-success m-2">Solicitado</a></li>
+                @elseif ($book->state_id == 3)
+                <li class="list-group-item3"><a href="#" class="btn btn-success m-2">Prestado</a></li>
+                @endif
+            @else
+                @if ($book->state_id == 1)
+                <li class="list-group-item">Disponible para prestar</li>
+                @elseif ($book->state_id == 2)
+                <li class="list-group-item">¡Tu libro fue solicitado! <a href="/confirmar/{{$book->id}}" class="btn btn-success m-2">Confirmar préstamo</a></li>
+                @elseif ($book->state_id == 3)
+                <li class="list-group-item"><a href="/devolver/{{$book->id}}" class="btn btn-success m-2">Confirmar devolución</a></li>
+                @endif
+            @endif
                </ul>
               </div>
             </div>

@@ -493,6 +493,9 @@ font-size: 18px;
 .miniatura img{
   height: : 100%;
 }
+.userName{
+  color: #18867a !important;
+}
 
 @media only screen and (min-width: 768px){
 html.login-reg{

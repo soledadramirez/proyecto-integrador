@@ -87,10 +87,7 @@ class BookController extends Controller
       //$libroNuevo->states()->attach($req["book_action"]);
 
 
-
-
-
-       return redirect ("/profile", $vac);
+       return redirect ("/profile");
 
     }
 
@@ -191,7 +188,7 @@ class BookController extends Controller
     $book->state_id = 2;
 
     $book->save();
-    return redirect('/bookPost/$'.$id);
+    return redirect('/bookPost/'.$id);
   }
 
     public function confirmar($id){
@@ -199,15 +196,15 @@ class BookController extends Controller
       $book->state_id = 3;
 
       $book->save();
-      return redirect('/bookPost/$'.$id);
+      return redirect('/bookPost/'.$id);
     }
 
     public function devolver($id) {
       $book = Book::find($id);
-      $book->state_id = 0;
+      $book->state_id = 1;
 
       $book->save();
-      return redirect('/bookPost/$'.$id);
+      return redirect('/bookPost/'.$id);
     }
 
 

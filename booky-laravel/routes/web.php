@@ -37,8 +37,10 @@ Route::get("/agregarLibros", 'BookController@showToAdd');
 
 Route::get("/notifications", 'BookController@ListaDeLibros');
 Route::get("/bookPost/{id}", 'BookController@show');
-Route::get('/confirm/{id}', 'BookController@confirm');
 
+Route::get('/solicitar/{id}', 'BookController@solicitar');
+Route::get('/confirmar/{id}', 'BookController@confirmar');
+Route::get('/devolver/{id}', 'BookController@devolver');
 
 Route::get('/buscarLibros', 'BookController@buscarLibros');
 
