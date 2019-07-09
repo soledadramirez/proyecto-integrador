@@ -20,6 +20,30 @@
      <div class="row user-data user-follow">
       <h4 class="col-sm-5 p-2"> 0 seguidores</h4>
       <h4 class="col-sm-5 p-2">0 seguidos  </h4>
+
+          @if (Auth::User()->isFollowing($user->id))
+
+<form action="{{url('unfollow/' . $user->id)}}" method="POST">
+{{ csrf_field() }}
+{{ method_field('DELETE') }}
+
+<button type="submit" id="delete-follow-{{ $user->target_id }}" class="btn btn-danger">
+<i class="fa fa-btn fa-trash"></i>Unfollow
+</button>
+</form>
+
+@else
+<
+<form action="{{url('follow/' . $user->id)}}" method="POST">
+{{ csrf_field() }}
+
+<button type="submit" id="follow-user-{{ $user->id }}" class="btn btn-success">
+<i class="fa fa-btn fa-user"></i>Follow
+</button>
+</form>
+
+@endif
+
     </div>
       </div>
     <div class="row user-data book-button">
