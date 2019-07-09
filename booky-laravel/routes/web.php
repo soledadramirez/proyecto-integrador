@@ -41,6 +41,7 @@ Route::get('/confirm/{id}', 'BookController@confirm');
 
 
 Route::get('/buscarLibros', 'BookController@buscarLibros');
+
 Route::get('/resultadoLibros', function(){
   return view('resultadoLibros');
 });
