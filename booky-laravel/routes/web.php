@@ -18,6 +18,13 @@ Route::get('/home', function () {
     return view('home');
 });
 
+// Route::group(['middleware' => ['auth']], function () {
+    
+    Route::get('/users', 'FollowController@index');
+    Route::post('/follow/{user}', 'FollowController@follow');
+    Route::delete('/unfollow/{user}', 'FollowController@unfollow');
+// });
+
 
 Auth::routes();
 
