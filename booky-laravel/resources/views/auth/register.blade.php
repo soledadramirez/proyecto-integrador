@@ -8,7 +8,7 @@
             <div class="panel panel-default offset-lg-6">
                 <div class="panel-body">
                     <form class="form-horizontal form-login col-md-12" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
+                      {{csrf_field()}}
                         <h2>Crea una cuenta</h2>
                         <div class="form-group row{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-form-label d-none d-md-block"><i class="fas fa-user"></i></label>

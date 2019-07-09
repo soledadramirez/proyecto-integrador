@@ -14,6 +14,7 @@
   <div class="col-sm-6 profile-info">
     <div class="user-info">
     <div class="row">
+      {{-- <h4 class="col-sm-7 user-data">{{ Auth::user()->name }}</h4> --}}
 
     </div>
      <div class="row user-data user-follow">

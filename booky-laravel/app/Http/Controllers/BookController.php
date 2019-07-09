@@ -85,7 +85,13 @@ class BookController extends Controller
       $libroNuevo->image=$nombreArchivo;
       $libroNuevo->save();
       //$libroNuevo->states()->attach($req["book_action"]);
-       return redirect ("/profile");
+
+
+
+
+
+       return redirect ("/profile", $vac);
+
     }
 
     /**
@@ -103,7 +109,10 @@ class BookController extends Controller
     public function show($id)
     {
       $book=Book::find($id);
-      $vac=compact("book");
+      $usuarioLog=Auth::user();
+
+      $vac=compact("book","usuarioLog");
+
       return view("bookPost",$vac);
 
     }
@@ -176,7 +185,16 @@ class BookController extends Controller
       //dd($libros);
     }
 
-    public function confirm($id){
+
+    public function solicitar($id) {
+    $book = Book::find($id);
+    $book->state_id = 2;
+
+    $book->save();
+    return redirect('/bookPost/$'.$id);
+  }
+
+    public function confirmar($id){
       $book = Book::find($id);
       $book->state_id = 3;
 
@@ -189,12 +207,31 @@ class BookController extends Controller
       $book->state_id = 0;
 
       $book->save();
-      return redirect('/profile');
+      return redirect('/bookPost/$'.$id);
     }
 
-    // public function pedir($id) {
-    //
-    // }
+
+
+
+
+    public function ListaDeLibros()
+        {
+          // var_dump("Estoy en index()");
+          // exit;
+          //dd("estoy en index() desde un dd");
+          // $peliculas = [
+          //     "Avengers Age of Ultron",
+          //     "Avengers End Game",
+          //     "Captain Marvel",
+          //     "The Mule",
+          //   ];
+            $books = Book::orderBy("id", "desc")->get();
+            $vac = compact('books');
+            return view('notifications',$vac);
+        }
+    public function api() {
+      return Book::all();
+  }
 
 
 

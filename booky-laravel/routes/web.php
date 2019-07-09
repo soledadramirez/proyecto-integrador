@@ -35,12 +35,13 @@ Route::post("/agregarLibros", 'BookController@store');
 Route::get("/agregarLibros", 'BookController@showToAdd');
 
 
-
+Route::get("/notifications", 'BookController@ListaDeLibros');
 Route::get("/bookPost/{id}", 'BookController@show');
 Route::get('/confirm/{id}', 'BookController@confirm');
 
 
 Route::get('/buscarLibros', 'BookController@buscarLibros');
+
 Route::get('/resultadoLibros', function(){
   return view('resultadoLibros');
 });
