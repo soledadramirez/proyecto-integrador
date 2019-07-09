@@ -2,27 +2,7 @@
 
 @section('main')
   <div class="fondo paral">
-  {{-- <nav class="container navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <ul class="navbar-nav mr-auto">
-
-        <li class="nav-item">
-          <a class="nav-link a-blanco" href="#">Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link a-blanco" href="#">FAQ</a>
-        </li>
-      </ul>
-
-    </div>
-  </nav> --}}
-<div class="fondoProfile">
+ <div class="fondoProfile">
   <div class="container header-profile">
   <div class="row profileImage jumbotron">
   <div class="col-sm-6">
@@ -34,7 +14,6 @@
   <div class="col-sm-6 profile-info">
     <div class="user-info">
     <div class="row">
-      {{-- <h4 class="col-sm-7 user-data">{{ Auth::user()->name }}</h4> --}}
 
     </div>
      <div class="row user-data user-follow">

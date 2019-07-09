@@ -39,7 +39,6 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $req)
-
     {
       $reglas = [
         "book_cover" => "file|image",
@@ -47,7 +46,6 @@ class BookController extends Controller
         "author" => "string|min:3|required",
         "description" => "string|min:2|max:1000"
       ];
-
       $mensajes = [
         'image' => 'El campo :attribute debe ser una imagen',
         'file' => 'El campo :attribute no se cargo correctamente',
@@ -55,13 +53,11 @@ class BookController extends Controller
         'min' => 'El campo :attribute debe ser mayor a :min',
         'max' => 'El campo :attribute debe ser menor a :max',
         'required' => 'El campo :attribute es obligatorio',
-
       ];
 
       $this->validate($req, $reglas, $mensajes);
 
       $nuevoTitulo = Title::where('name', $req['name'])->first();
-
       if (!$nuevoTitulo) {
         $nuevoTitulo = new Title();
         $nuevoTitulo->name = $req['name'];
@@ -69,47 +65,27 @@ class BookController extends Controller
       }
       //dd($nuevoTitulo);
       $nuevoAutor = Author::where('name', $req['author'])->first();
-
       if (!$nuevoAutor) {
         $nuevoAutor = new Author();
         $nuevoAutor->name = $req['author'];
         $nuevoAutor->save();
       }
 
-
       $libroNuevo = new Book();
       $ruta = $req->file('book_cover')->store("public");
-
       $nombreArchivo= basename($ruta);
 
-      // agregamos clave foranea de titulo
       $libroNuevo->title_id = $nuevoTitulo->id;
-      //agregamos clave foranea de autor
       $libroNuevo->author_id = $nuevoAutor->id;
-      // aregamos id del user que carga el libro
       $usuarioLog=Auth::user();
       $libroNuevo->user_id =$usuarioLog->id;
-      //agregamos el estado del libro
       $libroNuevo->state_id = $req["book_action"];
-
       $libroNuevo->review = $req['review'];
-
       //dd($libroNuevo);
-
-
-
       $libroNuevo->image=$nombreArchivo;
-
       $libroNuevo->save();
-
       //$libroNuevo->states()->attach($req["book_action"]);
-
-
-
-
-
        return redirect ("/profile");
-
     }
 
     /**

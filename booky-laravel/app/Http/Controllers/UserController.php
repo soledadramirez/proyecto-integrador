@@ -19,9 +19,7 @@ class UserController extends Controller
       $usuarioLog=Auth::user();
       $myBooks=Book::where("user_id","=","$usuarioLog->id")->get();
       $vac=compact("myBooks");
-
       return view("profile",$vac);
-
     }
 
     /**
@@ -54,7 +52,7 @@ class UserController extends Controller
     public function show($id)
     {
    $user = User::find($id);
-   
+
    $userBooks = Book::where('user_id', '=', $id)->get();
    $vac=compact("userBooks");
 
