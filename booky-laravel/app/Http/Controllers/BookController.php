@@ -105,7 +105,7 @@ class BookController extends Controller
 
 
 
-       return redirect ("/profile",$vac);
+       return redirect ("/profile");
 
     }
 
