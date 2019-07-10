@@ -1,5 +1,7 @@
 @extends('master')
-
+@section('custom-style')
+  <link rel="stylesheet" href="/css/follow.css">
+@endsection
 @section('main')
   <div class="fondo paral">
  <div class="fondoProfile">
@@ -17,8 +19,50 @@
 
     </div>
      <div class="row user-data user-follow">
-       <h4 class="col-sm-5 p-2"> {{count($follow)}} seguidores</h4>
-       <h4 class="col-sm-5 p-2">{{count($following)}} seguidos  </h4>
+
+       <button id="myBtn" style="border-radius:5px;color:#18867a;background-color:white"> <span  class="col-sm-5 p-2"> {{count($follow)}} seguidores</span> </button>
+
+
+       <div id="myModal" class="modal">
+
+
+         <div class="modal-content">
+           <span class="close">&times;</span>
+           <h1>Lista de seguidores</h1>
+
+           @forelse ($follow as $follower)
+
+           <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$follower->user->id}}">{{$follower->user->name}}</a></p>
+
+           @empty
+           <p> No tienes ningún seguidor</p>
+           @endforelse
+         </div>
+
+       </div>
+
+       <button id="myBtn1" style="border-radius:5px;color:#18867a;background-color:white;margin-left:5%">      <span  class="col-sm-5 p-2">{{count($following)}} seguidos  </span></button>
+
+
+<div id="myModal1" class="modal1">
+
+ <div class="modal-content1">
+   <span class="close1">&times;</span>
+   <h1>lista de seguidos</h1>
+
+   @forelse ($following as $following_user)
+
+   <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$following_user->user->id}}">{{$following_user->user->name}}</a></p>
+
+   @empty
+   <p> No sigues a nadie</p>
+   @endforelse
+ </div>
+
+</div>
+
+
+
     </div>
       </div>
     <div class="row user-data book-button">
@@ -108,4 +152,7 @@
     </li>
   </ul>
 </footer>
+<script src="/js/follow.js">
+
+</script>
 @endsection

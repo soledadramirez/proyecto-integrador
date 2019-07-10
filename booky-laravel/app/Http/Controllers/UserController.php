@@ -58,8 +58,10 @@ class UserController extends Controller
       $follow=Follow::where("target_id","=",$user->id)->get();
       $following=Follow::where("id","=","$id")->get();
       $userBooks = Book::where('user_id', '=', $id)->get();
+      $usuarioLog=Auth::user();
+
       $vacLibros=compact("userBooks");
-      $vacUser = compact('user', 'follow','following');
+      $vacUser = compact('user', 'follow','following','usuarioLog');
       $vacFollow = compact('follow');
       return view("/normalProfile", $vacLibros, $vacUser);
     }
@@ -78,7 +80,7 @@ class UserController extends Controller
 
 
       $vacLibros=compact("userBooks");
-      $vacUser = compact('user', 'follow','following','myBooks');
+      $vacUser = compact('user', 'follow','following','myBooks','usuarioLog');
 
       return view("/profile", $vacLibros, $vacUser);
     }
