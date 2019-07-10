@@ -21,33 +21,34 @@
       <h4 class="col-sm-5 p-2"> {{count($follow)}} seguidores</h4>
       <h4 class="col-sm-5 p-2">{{count($following)}} seguidos  </h4>
 
-          @if (Auth::User()->isFollowing($user->id))
 
-<form action="{{url('unfollow/' . $user->id)}}" method="POST">
+
+    </div>
+    @if (Auth::User()->isFollowing($user->id))
+
+<form action="{{url('unfollow/' . $user->id)}}" method="POST" style="text-align:left;margin-top:5%">
 {{ csrf_field() }}
 {{ method_field('DELETE') }}
 
 <button type="submit" id="delete-follow-{{ $user->target_id }}" class="btn btn-danger">
-<i class="fa fa-btn fa-trash"></i>Unfollow
+<i class="fa fa-btn fa-trash"></i>Dejar de seguir
 </button>
 </form>
 
 @else
-<
-<form action="{{url('follow/' . $user->id)}}" method="POST">
+
+<form action="{{url('follow/' . $user->id)}}" method="POST" style="text-align:left;margin-top:5%">
 {{ csrf_field() }}
 
 <button type="submit" id="follow-user-{{ $user->id }}" class="btn btn-success">
-<i class="fa fa-btn fa-user"></i>Follow
+<i class="fa fa-btn fa-user"></i>Seguir
 </button>
 </form>
 
 @endif
-
-    </div>
       </div>
     <div class="row user-data book-button">
-    <button type="submit" name="button" class="col-sm-4 btn btn-success p-1"><a href="/agregarLibros">Seguir</a></button>
+    <!-- <button type="submit" name="button" class="col-sm-4 btn btn-success p-1"><a href="/agregarLibros">Seguir</a></button> -->
     {{-- <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Pedir libro</a></button> --}}
 
    </div>
