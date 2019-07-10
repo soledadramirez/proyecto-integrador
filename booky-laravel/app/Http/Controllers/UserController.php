@@ -50,18 +50,37 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showNormalProfile($id)
     {
       $usuarioLog=Auth::user();
 
       $user = User::find($id);
       $follow=Follow::where("target_id","=",$user->id)->get();
-
+      $following=Follow::where("id","=","$id")->get();
       $userBooks = Book::where('user_id', '=', $id)->get();
       $vacLibros=compact("userBooks");
-      $vacUser = compact('user', 'follow');
+      $vacUser = compact('user', 'follow','following');
       $vacFollow = compact('follow');
       return view("/normalProfile", $vacLibros, $vacUser);
+    }
+
+
+    public function showOwnProfile()
+    {
+      $usuarioLog=Auth::user();
+
+      $user = User::find($usuarioLog->id);
+      $follow=Follow::where("target_id","=",$usuarioLog["id"] )->get();
+      $following=Follow::where("user_id","=",$usuarioLog["id"] )->get();
+      $userBooks = Book::where('user_id', '=', $usuarioLog["id"])->get();
+      $usuarioLog=Auth::user();
+      $myBooks=Book::where("user_id","=","$usuarioLog->id")->get();
+
+
+      $vacLibros=compact("userBooks");
+      $vacUser = compact('user', 'follow','following','myBooks');
+
+      return view("/profile", $vacLibros, $vacUser);
     }
 
     /**

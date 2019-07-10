@@ -19,7 +19,7 @@ Route::get('/home', function () {
 });
 
 // Route::group(['middleware' => ['auth']], function () {
-    
+
     Route::get('/users', 'FollowController@index');
     Route::post('/follow/{user}', 'FollowController@follow');
     Route::delete('/unfollow/{user}', 'FollowController@unfollow');
@@ -30,8 +30,9 @@ Auth::routes();
 
 // Route::get('/home1', 'HomeController@index')->name('home1');
 
-Route::get("/profile", 'UserController@index');
-Route::get("/normalProfile/{id}", 'UserController@show');
+Route::get("/profile", 'UserController@showOwnProfile');
+Route::get("/normalProfile/{id}", 'UserController@showNormalProfile');
+
 
 
 Route::get('/cargarlibros', function(){

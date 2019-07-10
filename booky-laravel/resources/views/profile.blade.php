@@ -17,8 +17,8 @@
 
     </div>
      <div class="row user-data user-follow">
-      <h4 class="col-sm-5"> 0 seguidores</h4>
-      <h4 class="col-sm-5 ">0 seguidos  </h4>
+       <h4 class="col-sm-5 p-2"> {{count($follow)}} seguidores</h4>
+       <h4 class="col-sm-5 p-2">{{count($following)}} seguidos  </h4>
     </div>
       </div>
     <div class="row user-data book-button">
