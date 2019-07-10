@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
+            $table->bigInteger('interested_id');
+            $table->string('image')->nullable();
         });
     }
 

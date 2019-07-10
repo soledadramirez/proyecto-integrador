@@ -13,7 +13,7 @@
           <div class="row p-0 col-sm-4 mx-auto">
                 <h6 class="my-2 mx-auto text-center">Agregá la imagen del libro</h6>
                 <div class="mx-auto py-4 mb-1">
-                  <img class="img-fluid miniatura" src="images/agregarPortada.png" alt="IMG">
+                  <img class="img-fluid miniatura img-thumbnail" src="images/libros-prueba-1.jpeg" alt="IMG">
                 </div>
                 <div class="form-group text-center mb-3">
                   <input type="file" onchange="previewFile()" name="book_cover" class="form-control-file mx-auto"  style="font-size:15px">

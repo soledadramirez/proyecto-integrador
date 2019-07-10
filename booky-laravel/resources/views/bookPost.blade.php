@@ -8,7 +8,7 @@
 
 <div class="container1" style="background-image: url('images/bg-01.jpg');">
   <div class="container2 fondo paral altura-minima">
-    <div class="wrap-container container">
+    <div class="wrap-container container altura-minima">
         <div class="row p-4">
         <h2 class="form-title col-12">Detalle de este libro</h2>{{-- si existe un titulo resultado, falta si existe un autor resultado --}}
         <div class="row col-12 mx-auto">
@@ -20,9 +20,9 @@
                 <ul class="list-group list-group-flush">
 
                   @if($usuarioLog->id!=$book->user_id)
-                 <li class="list-group-item">Compartido por:<a style="color:black; font-weight:bolder"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a> </li>
+                 <li class="list-group-item">Compartido por:<a style="color:#18867a; font-weight:bolder"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a> </li>
                  @else
-                  <li class="list-group-item">Compartido por:<a style="color:black; font-weight:bolder"  href="/profile"> {{$book->user->name}} </a> </li>
+                  <li class="list-group-item">Compartido por:<a style="color:#18867a; font-weight:bolder"  href="/profile"> {{$book->user->name}} </a> </li>
                  @endif
 
             @if (Auth::User()->id !== $book->user_id)

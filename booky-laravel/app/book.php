@@ -21,8 +21,10 @@ class Book extends Model
     public function author(){
       return $this->belongsTo("App\Author","author_id");
     }
-
     public function user(){
       return $this->belongsTo("App\User","user_id");
+    }
+    public function post(){
+      return $this->hasMany('App\Post', 'book_id');
     }
 }
