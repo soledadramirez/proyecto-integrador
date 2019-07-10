@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Book;
 use App\User;
+use App\Follow;
 
 class UserController extends Controller
 {
@@ -54,10 +55,12 @@ class UserController extends Controller
       $usuarioLog=Auth::user();
 
       $user = User::find($id);
-      //dd($user);
+      $follow=Follow::where("target_id","=",$user->id)->get();
+
       $userBooks = Book::where('user_id', '=', $id)->get();
       $vacLibros=compact("userBooks");
-      $vacUser = compact('user');
+      $vacUser = compact('user', 'follow');
+      $vacFollow = compact('follow');
       return view("/normalProfile", $vacLibros, $vacUser);
     }
 

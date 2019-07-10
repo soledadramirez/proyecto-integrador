@@ -18,7 +18,7 @@
       <h4 class="userName">{{$user->name}}</h4>
     </div>
      <div class="row user-data user-follow">
-      <h4 class="col-sm-5 p-2"> 0 seguidores</h4>
+      <h4 class="col-sm-5 p-2"> {{count($follow)}} seguidores</h4>
       <h4 class="col-sm-5 p-2">0 seguidos  </h4>
 
           @if (Auth::User()->isFollowing($user->id))
