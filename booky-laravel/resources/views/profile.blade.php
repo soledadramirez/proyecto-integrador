@@ -27,8 +27,7 @@
 
 
          <div class="modal-content">
-           <span class="close">&times;</span>
-           <h1>Lista de seguidores</h1>
+           <h1> <span class="close">&times;</span> Lista de seguidores</h1>
 
            @forelse ($follow as $follower)
 
