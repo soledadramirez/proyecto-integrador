@@ -29,7 +29,7 @@ class User extends Authenticatable
     ];
 
     public function books(){
-      return $this->hasMany('App\Book', 'title_id');
+      return $this->hasMany('App\Book', 'book_id');
     }
 
     public function follows() {
@@ -39,11 +39,9 @@ class User extends Authenticatable
     {
         return (bool)$this->follows()->where('target_id', $target_id)->first(['id']);
     }
-    public function postsUser(){
+    public function posts(){
       return $this->hasMany('App\Post', 'user_id');
     }
-    public function postInterested(){
-      return $this->hasMany('App\Post', 'interested_id');
-    }
+
 
 }

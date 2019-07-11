@@ -36,9 +36,9 @@
           <div class="form-group">
             <select name="book_action" class="form-control select100" id="exampleFormControlSelect1">
             <option>Disponible para:</option>
-            @foreach ($states as $state)
-              <option value="{{$state->id}}">{{$state->name}}</option>
-            @endforeach
+
+              <option value="1">Prestar</option>
+
             </select>
           </div>
 

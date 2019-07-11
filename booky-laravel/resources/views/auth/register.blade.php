@@ -63,7 +63,7 @@
 
                             <div class="col-md-11 col-sm-12 pl-0 pr-0 ml-2">
                                 <input id="password-confirm" type="password" class="form-control input-register" name="password-confirm" placeholder="confirma tu contraseña">
-                            </div>x
+                            </div>
                         </div>
                         <div class="politica">
                           <p>Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la política de datos y la política de cookies.</p>

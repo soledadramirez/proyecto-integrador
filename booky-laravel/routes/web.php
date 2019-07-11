@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/index', 'BookController@armarPost');
 
 // Route::group(['middleware' => ['auth']], function () {
 

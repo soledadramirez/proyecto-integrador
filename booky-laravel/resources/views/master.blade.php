@@ -16,7 +16,12 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light shadow-sm">
-      <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
+      @guest
+        <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1></a>
+        @else
+        <a class="navbar-brand a-blanco" href="/index"><h1>Booky</h1> </a>
+      @endguest
+        
       <div class="container cont-menu">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">

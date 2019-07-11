@@ -7,6 +7,7 @@ use App\Author;
 use App\Title;
 use App\State;
 use Auth;
+use App\Post;
 
 use Illuminate\Http\Request;
 
@@ -17,9 +18,13 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function index()
     {
-        //
+
     }
 
     /**
@@ -77,9 +82,9 @@ class BookController extends Controller
 
       $libroNuevo->title_id = $nuevoTitulo->id;
       $libroNuevo->author_id = $nuevoAutor->id;
-      $usuarioLog=Auth::user();
+      $usuarioLog= Auth::user();
       $libroNuevo->user_id =$usuarioLog->id;
-      $libroNuevo->state_id = $req["book_action"];
+      $libroNuevo->state_id = 1;
       $libroNuevo->review = $req['review'];
       //dd($libroNuevo);
       $libroNuevo->image=$nombreArchivo;
@@ -91,6 +96,13 @@ class BookController extends Controller
 
     }
 
+    function armarPost(){
+
+      $books = Book::where('state_id', 1)->get();
+      $vac = compact('books');
+      return view('/index', $vac);
+
+    }
     /**
      * Display the specified resource.
      *
@@ -213,18 +225,11 @@ class BookController extends Controller
 
     public function ListaDeLibros()
         {
-          // var_dump("Estoy en index()");
-          // exit;
-          //dd("estoy en index() desde un dd");
-          // $peliculas = [
-          //     "Avengers Age of Ultron",
-          //     "Avengers End Game",
-          //     "Captain Marvel",
-          //     "The Mule",
-          //   ];
+
             $books = Book::orderBy("id", "desc")->get();
             $vac = compact('books');
             return view('notifications',$vac);
+            
         }
     public function api() {
       return Book::all();
