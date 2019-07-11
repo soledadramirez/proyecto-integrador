@@ -21,7 +21,7 @@
         @else
         <a class="navbar-brand a-blanco" href="/index"><h1>Booky</h1> </a>
       @endguest
-        
+
       <div class="container cont-menu">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -31,7 +31,7 @@
             <a class="nav-link a-blanco" href="#">FAQ</a>
           </li>
         </ul>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="" id="navbarSupportedContent">
               <!-- Left Side Of Navbar -->
               <ul class="navbar-nav mr-auto">
 
