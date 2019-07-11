@@ -100,7 +100,7 @@ class BookController extends Controller
 
       $books = Book::where('state_id', 1)->get();
       $vac = compact('books');
-      return view('/index', $vac);
+      return view('/home', $vac);
 
     }
     /**
@@ -229,7 +229,7 @@ class BookController extends Controller
             $books = Book::orderBy("id", "desc")->get();
             $vac = compact('books');
             return view('notifications',$vac);
-            
+
         }
     public function api() {
       return Book::all();

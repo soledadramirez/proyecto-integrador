@@ -22,144 +22,37 @@
       </div>
     </form>
   @endif
-<div class="jumbotron jumbotron-fluid col-xl-9 mt-4">
-    <h1 class="display-4">Somos una comunidad lectora</h1>
-    <p class="lead">¿Tenés libros que amaste leer apilados en tu casa? En Booky creemos que ese libro quiere ser compartido con muchas personas más. Dejalo ir y que se sume a nuestra comunidad de libros viajeros!</p>
-</div>
-  <div class="container">
-  <div class="row pasos">
-    <div class="col-lg-4 col-md-4 col-sm-12 d-sm-block paso">
-      <h3 class="pasos">Paso 1</h3>
-      <p class="text-center">¿Qué libros querés compartir? Agregalos en tu perfil</p>
-      <hr>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 d-sm-block paso">
-      <h3 class="pasos">Paso 2</h3>
-      <p class="text-center">Recibí pedidos de lectores de la comunidad, compartilos y sumá puntos!</p>
-      <hr>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 d-sm-block paso">
-      <h3 class="pasos">Paso 3</h3>
-      <p class="text-center">Buscá los libros que vos querés leer, pedilos y hacé nuevos amigos!</p>
-    </div>
-  </div>
-  </div>
-</div>
+<div class="">
+  <div class="card col-lg-8 p-4 m-3 mx-auto">
+    <h2 class="mb-2">Libros disponibles</h2>
+    @forelse ($books as $book)
+      <div class="card col-lg-10 mx-auto row pt-2 pb-4 my-2 post">
+        <div class="card-body col-12 row pb-3">
+          <div class="col-lg-3 miniatura mx-auto">
+            <img src="/storage/{{$book->image}}" alt="" class="img-thumbnail img-fluid">
+          </div>
+          <ul class="col-lg-9">
+            <h5 class="card-title col-12 m-4">¡Nuevo libro disponible!</h5>
+            <li class="card-text pt-4 list-group-item"> <a href="/normalProfile/{{$book->user->id}}">{{$book->user->name}}</a> agregó
+               "<a href="/bookPost/{{$book->id}}">{{$book->title->name}}</a>"</li>
+            @if (Auth::user()->id !== $book->user->id)
+                <li class="list-group-item"> ¿Te interesa? <a href="/solicitar/{{$book->id}}" class="btn btn-success m-4">¡Solicitalo!</a> </li>
+            @else
+                <li class="list-group-item">Gracias por compartir este libro!</li>
+            @endif
 
-
-<div class="container">
-
-
-<div class="destacado">
-  <h2>Libros destacados</h2>
-</div>
-
-<div id="carouselExampleControls" class="carousel slide libros-carrusel" data-ride="carousel">
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <div class="row libros-carouseles">
-      <div class="col-2 libros-carouseles"><a href="#"> <img src="images/libros/adorno.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/bartok.png" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images//libros/benjamin.png" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/chomsky.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/fundacion.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/doerr.jpg" class="d-block w-100" alt="..."> </a> </div>
-
-</div>
-  </div>
-  <div class="carousel-item">
-    <div class="row">
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/benjamin2.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/benjamin3.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/hemingway.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/herzog.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/homo.jpg" class="d-block w-100" alt="..."> </a> </div>
-      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/lolita.jpeg" class="d-block w-100" alt="..."> </a> </div>
-      </div>
-  </div>
-
-
-
-</div>
-<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
-</a>
-</div>
-
-
-  </div>
-
-
-  <div class="container">
-
-
-  <div class="destacado">
-    <h2>Autores Latinoamericanos</h2>
-  </div>
-
-  <div id="carouselExampleControls2" class="carousel slide libros-carrusel" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="row libros-carouseles">
-        <div class="col-2 libros-carouseles"><a href="#"> <img src="images/libros/garcia-marquez.jpg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/bogado.jpeg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/borges.jpeg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/ciempies.jpg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/detectives.jpg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/jazmin-paraguayo.jpeg" class="d-block w-100" alt="..."> </a> </div>
-
-  </div>
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/levrero2.jpeg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/levrero3.jpeg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/pichiciegos.jpeg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/punk.jpeg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/sklar.jpg" class="d-block w-100" alt="..."> </a> </div>
-        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/putas-asesinas.jpeg" class="d-block w-100" alt="..."> </a> </div>
-        </div>
-    </div>
-
-
-
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  </div>
-
-
-    </div>
-@if (!Auth::user())
-  <div class="conocenos row mt-4">
-    <div class="text-conocenos col-xl-6">
-      <div class="card conocenos">
-        <div class="card-body conocenos">
-          <h1 class="card-title">Conocenos</h1>
-          <p class="card-text conocenos">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </ul>
         </div>
       </div>
-    </div>
-  <div class="img-conocenos col-xl-6">
-      <div class="card">
-        <div class="card-body">
-          <img src="images/libros-y-risas2.jpg" alt="">
+    @empty
+        <div class="altura minima">
+          No hay libros disponibles
         </div>
-      </div>
+    @endforelse
   </div>
-  </div>
-@endif
+</div>
+
+</div>
 
   <div id="carouselContent" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">

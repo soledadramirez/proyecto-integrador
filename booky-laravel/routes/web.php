@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home_general');
 });
 Route::get('/home', function () {
-    return view('home');
+    return view('home_general');
 });
-Route::get('/index', 'BookController@armarPost');
+Route::get('/home', 'BookController@armarPost');
 
 // Route::group(['middleware' => ['auth']], function () {
 
