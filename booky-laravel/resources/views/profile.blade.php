@@ -88,7 +88,7 @@
               </div>
                 @endif
               @empty
-                <p>Por el momento no hay libros cargados</p>
+                <p class="pl-3">Por el momento no hay libros cargados</p>
               @endforelse
           </div>
           <div class="librosLeyendo col-12 row w-100 mx-auto">
@@ -104,7 +104,7 @@
               </div>
               @endif
               @empty
-                <p>Por el momento no hay libros cargados</p>
+                <p class="pl-3">Por el momento no hay libros cargados</p>
               @endforelse
           </div>
           <div class="librosPrestados col-12 row w-100 mx-auto">
@@ -120,7 +120,7 @@
               </div>
               @endif
               @empty
-                <p>Por el momento no hay libros cargados</p>
+                <p class="pl-3">Por el momento no hay libros cargados</p>
               @endforelse
           </div>
         </div>
