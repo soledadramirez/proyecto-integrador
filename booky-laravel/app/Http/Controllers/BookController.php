@@ -225,18 +225,11 @@ class BookController extends Controller
 
     public function ListaDeLibros()
         {
-          // var_dump("Estoy en index()");
-          // exit;
-          //dd("estoy en index() desde un dd");
-          // $peliculas = [
-          //     "Avengers Age of Ultron",
-          //     "Avengers End Game",
-          //     "Captain Marvel",
-          //     "The Mule",
-          //   ];
+
             $books = Book::orderBy("id", "desc")->get();
             $vac = compact('books');
             return view('notifications',$vac);
+            
         }
     public function api() {
       return Book::all();
