@@ -12,7 +12,7 @@
     <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
         {{csrf_field()}}
           <input type="file" onchange="previewFile()" name="image" class="form-control-file mx-auto">
-        
+
           <div class="circle">
             <img src="/storage/{{$usuarioLog->image}}" alt="">
           </div>
@@ -39,9 +39,7 @@
            <h1> <span class="close">&times;</span> Lista de seguidores</h1>
 
            @forelse ($follow as $follower)
-
-           <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$follower->user->id}}">{{$follower->user->name}}</a></p>
-
+         <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$follower->user->id}}">{{$follower->user->name}}</a></p>
            @empty
            <p> No tienes ningún seguidor</p>
            @endforelse
@@ -58,9 +56,9 @@
    <span class="close1">&times;</span>
    <h1>lista de seguidos</h1>
 
-   @forelse ($following as $following_user)
+   @forelse ($follow as $follower)
 
-   <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$following_user->user->id}}">{{$follower->user->name}}</a></p>
+   <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$follower->user->id}}">{{$follower->user->name}}</a></p>
 
    @empty
    <p> No sigues a nadie</p>

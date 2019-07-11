@@ -10,7 +10,7 @@
   <div class="row profileImage jumbotron">
   <div class="col-sm-6">
     <div class="circle">
-      <img src="/images/fotoPerfil.jpg" alt="">
+      <img src="/storage/{{$usuarioLog->image}}" alt="">
     </div>
       <button type="button" class="btn btn-success agregImage"><i class="fas fa-pen-square"></i></button>
   </div>
