@@ -31,8 +31,10 @@ Auth::routes();
 
 // Route::get('/home1', 'HomeController@index')->name('home1');
 
-Route::get("/profile", 'UserController@showOwnProfile');
+Route::get('/profile', ['middleware' => 'auth', 'uses' => 'UserController@showOwnProfile']);
+
 Route::get("/normalProfile/{id}", 'UserController@showNormalProfile');
+Route::post("/profile", 'UserController@store');
 
 
 
@@ -41,8 +43,8 @@ return view ('cargarlibros');
 });
 
 Route::post("/agregarLibros", 'BookController@store');
-Route::get("/agregarLibros", 'BookController@showToAdd');
 
+Route::get('/agregarLibros', ['middleware' => 'auth', 'uses' => 'BookController@showToAdd']);
 
 Route::get("/notifications", 'BookController@ListaDeLibros');
 Route::get("/bookPost/{id}", 'BookController@show');
@@ -56,3 +58,10 @@ Route::get('/buscarLibros', 'BookController@buscarLibros');
 Route::get('/resultadoLibros', function(){
   return view('resultadoLibros');
 });
+
+// Route::get('/install', function(){
+//     Artisan::call("storage:link"),
+//     Artisan::call("migrate")
+// });
+//PARA EL ACCESO DIRECTO A STORAGE LINK
+//UTILIZARLA UNA VEZ Y DESPUES COMENTARLA

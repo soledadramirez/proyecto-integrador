@@ -8,11 +8,20 @@
   <div class="container header-profile">
   <div class="row profileImage jumbotron">
   <div class="col-sm-6">
-    <div class="circle">
-      <img src="/images/fotoPerfil.jpg" alt="">
-    </div>
-      <button type="button" class="btn btn-success agregImage"><i class="fas fa-pen-square"></i></button>
-  </div>
+
+    <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
+        {{csrf_field()}}
+          <input type="file" onchange="previewFile()" name="image" class="form-control-file mx-auto">
+        
+          <div class="circle">
+            <img src="/storage/{{$usuarioLog->image}}" alt="">
+          </div>
+
+            <button type="submit" class="btn btn-success agregImage"><i class="fas fa-pen-square"></i></button>
+        </div>
+      </form>
+
+
   <div class="col-sm-6 profile-info">
     <div class="user-info">
     <div class="row">
