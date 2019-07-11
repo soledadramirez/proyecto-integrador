@@ -10,13 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/home', ['middleware' => 'auth', 'uses' => 'HomeController@index' ]);
 
-Route::get('/', function () {
+Route::get('/', function(){
     return view('home_general');
 });
-Route::get('/home', function () {
-    return view('home_general');
-});
+
 Route::get('/home', 'BookController@armarPost');
 
 // Route::group(['middleware' => ['auth']], function () {

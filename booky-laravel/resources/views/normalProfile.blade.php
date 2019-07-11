@@ -13,11 +13,12 @@
 
     @if($user->image)
     <div class="circle">
+      @php var_dump($usuarioLog->image); @endphp
       <img src="/storage/{{$usuarioLog->image}}" alt="">
     </div>
     @else
     <div class="circle">
-      <img src="images/fotoPerfil.jpg" alt="">
+      <img src="/images/fotoPerfil.jpg" alt="">
     </div>
     @endif
 
