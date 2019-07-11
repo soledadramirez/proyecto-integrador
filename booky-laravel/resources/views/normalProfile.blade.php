@@ -9,15 +9,18 @@
   <div class="container header-profile">
   <div class="row profileImage jumbotron">
   <div class="col-sm-6">
-    @if(Auth::user()->image)
+
+
+    @if($user->image)
     <div class="circle">
       <img src="/storage/{{$usuarioLog->image}}" alt="">
     </div>
-    @elseif
+    @else
     <div class="circle">
       <img src="/public/images/fotoPerfil.jpg" alt="">
     </div>
     @endif
+
       <button type="button" class="btn btn-success agregImage"><i class="fas fa-pen-square"></i></button>
   </div>
   <div class="col-sm-6 profile-info">

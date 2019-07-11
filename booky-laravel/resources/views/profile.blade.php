@@ -13,9 +13,15 @@
         {{csrf_field()}}
           <input type="file" onchange="previewFile()" name="image" class="form-control-file mx-auto">
 
+          @if(Auth::user()->image)
           <div class="circle">
             <img src="/storage/{{$usuarioLog->image}}" alt="">
           </div>
+          @else
+          <div class="circle">
+            <img src="/public/images/fotoPerfil.jpg" alt="">
+          </div>
+          @endif
 
             <button type="submit" class="btn btn-success agregImage"><i class="fas fa-pen-square"></i></button>
         </div>
