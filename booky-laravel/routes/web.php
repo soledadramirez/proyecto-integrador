@@ -34,6 +34,7 @@ Auth::routes();
 Route::get('/profile', ['middleware' => 'auth', 'uses' => 'UserController@showOwnProfile']);
 
 Route::get("/normalProfile/{id}", 'UserController@showNormalProfile');
+Route::post("/profile", 'UserController@store');
 
 
 
