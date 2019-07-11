@@ -39,9 +39,26 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
+      $reglas = [
+        'image' => 'file|image',
+      ];
 
+      $mensajes = [
+        'image' => 'El campo :attribute debe ser una imagen',
+        'file' => 'El campo :attribute no se cargo correctamente',
+
+      ];
+
+      $this->validate($req, $reglas, $mensajes);
+
+      $user=Auth::user();
+      $ruta = $req->file('image')->store('public');
+      $nombreArchivo = basename($ruta);
+      $user->image=$nombreArchivo;
+      $user->save();
+      return redirect("/profile");
     }
 
     /**

@@ -32,6 +32,7 @@ Auth::routes();
 
 Route::get("/profile", 'UserController@showOwnProfile');
 Route::get("/normalProfile/{id}", 'UserController@showNormalProfile');
+Route::post("/profile", 'UserController@store');
 
 
 
