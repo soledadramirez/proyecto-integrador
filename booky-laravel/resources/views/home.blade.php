@@ -36,7 +36,7 @@
             <li class="card-text pt-4 list-group-item"> <a href="/normalProfile/{{$book->user->id}}">{{$book->user->name}}</a> agregó
                "<a href="/bookPost/{{$book->id}}">{{$book->title->name}}</a>"</li>
             @if (Auth::user()->id !== $book->user->id)
-                <li class="list-group-item"> ¿Te interesa? <a href="/solicitar/{{$book->id}}" class="btn btn-success m-4">¡Solicitalo!</a> </li>
+                <li class="list-group-item"> ¿Te interesa? <a href="/solicitar/{{$book->id}}" class="btn btn-success m-4 solicitar">¡Solicitalo!</a> </li>
             @else
                 <li class="list-group-item">Gracias por compartir este libro!</li>
             @endif

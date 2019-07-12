@@ -12,10 +12,10 @@
     <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
         {{csrf_field()}}
           <input type="file" onchange="previewFile()" name="image" class="form-control-file mx-auto">
-          
+
           @if(Auth::user()->image)
           <div class="circle">
-            <img src="/storage/{{$usuarioLog->image}}" alt="">
+            <img src="/storage/{{$usuarioLog->image}}" alt="" class="">
           </div>
           @else
           <div class="circle">
@@ -104,10 +104,10 @@
                 <p class="pl-3">Por el momento no hay libros cargados</p>
               @endforelse
           </div>
-          <div class="librosLeyendo col-12 row w-100 mx-auto">
-            <h1 class="text-center col-sm-12">Son de mi interés</h1>
+          <div class="librosAPrestar col-12 row w-100 mx-auto">
+            <h1 class="text-center col-sm-12">Libros solicitados</h1>
             @forelse ($myBooks as $book)
-              @if ($book->state_id == 2)
+                @if ($book->state_id == 2)
                 <div class="card col-md-3 mx-auto text-center" style="width: 18rem;">
                 <img class="card-img-top mx-auto mt-1" src="/storage/{{$book->image}}" alt="Imagen del libro">
                 <div class="card-body">
@@ -115,9 +115,9 @@
                   <a href="/bookPost/{{$book->id}}" class="btn btn-success">Ver detalle</a>
                 </div>
               </div>
-              @endif
+                @endif
               @empty
-                <p class="pl-3">Por el momento no hay libros cargados</p>
+                <p class="pl-3">Por el momento no hay libros solcitados</p>
               @endforelse
           </div>
           <div class="librosPrestados col-12 row w-100 mx-auto">
@@ -133,7 +133,7 @@
               </div>
               @endif
               @empty
-                <p class="pl-3">Por el momento no hay libros cargados</p>
+                <p class="pl-3">Por el momento no hay libros prestados</p>
               @endforelse
           </div>
         </div>
