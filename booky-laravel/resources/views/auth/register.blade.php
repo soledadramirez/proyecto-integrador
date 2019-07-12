@@ -7,6 +7,7 @@
         <div class="col-sm-12 panel-cont">
             <div class="panel panel-default offset-lg-6">
                 <div class="panel-body">
+
                     <form class="form-horizontal form-login col-md-12" method="POST" action="{{ route('register') }}">
                       {{csrf_field()}}
                         <h2>Crea una cuenta</h2>
@@ -72,11 +73,12 @@
                         <div class="form-group">
                             <div class="col-md-8 mx-auto">
                                 <button type="submit" class="btn-login btn-register w-100">
-                                <a href="">Registrate</a>
+                                Registrate
                                 </button>
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
