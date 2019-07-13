@@ -1,14 +1,14 @@
-@extends('master');
+@extends('master')
 @section('custom-style')
   <link rel="stylesheet" href="/css/follow.css">
 @endsection
 @section('main')
 <div class="fondo paral">
-<div class="container">
+<div class="container" style="background-color:rgba(255,255,255,0.5)">
 <div class="row p-4">
       <h2 class="col-12 form-title pb-4">Encontramos estos libros</h2>
       @forelse ($librosFinales as $libro)
-        <div class="card col-lg-8 p-4 my-3 mx-auto">
+        <div class="card col-lg-8 p-4 my-3 mx-auto post" >
           <div class="card-body row">
             <div class="col-lg-3 miniatura mx-auto">
               <img src="/storage/{{$libro->image}}" alt="" class="img-thumbnail">

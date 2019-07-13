@@ -16,6 +16,10 @@ Route::get('/', function(){
     return view('home_general');
 });
 
+Route::get('/home_general', function(){
+    return view('home_general');
+});
+
 Route::get('/home', 'BookController@armarPost');
 
 // Route::group(['middleware' => ['auth']], function () {

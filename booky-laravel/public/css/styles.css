@@ -34,6 +34,7 @@ min-height: 100%;
 display: flex;
 flex-direction: column;
 }
+
 .container{
 background-color: #fff;
 }
@@ -497,6 +498,9 @@ font-size: 18px;
 .post a{
   color: #18867a;
   font-weight: 900;
+}
+.post {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 
