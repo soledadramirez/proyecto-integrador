@@ -1,6 +1,5 @@
 
 
-
 @extends('master')
 @section('main')
 
@@ -49,7 +48,7 @@
 <div class="container">
 
 
-<div class="destacado" id="libros-recomendados" class="libros-recomendados">
+<div class="destacado">
   <h2>Libros destacados</h2>
 </div>
 
@@ -181,7 +180,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  {{-- <footer class="col-lg-12 footer-home">
+  <footer class="col-lg-12 footer-home">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
@@ -196,7 +195,7 @@
 
 
 
-  </footer> --}}
+  </footer>
 
 
   @endsection

@@ -30,9 +30,9 @@
                 @if ($book->state_id == 1)
                 <li class="list-group-item"> ¡Disponible! <a href="/solicitar/{{$book->id}}" class="btn btn-success m-2">Solicitar</a></li>
                 @elseif ($book->state_id == 2)
-                <li class="list-group-item">Solicitado</li>
+                <li class="list-group-item"><a href="#" class="btn btn-success m-2">Solicitado</a></li>
                 @elseif ($book->state_id == 3)
-                <li class="list-group-item3">Prestado</li>
+                <li class="list-group-item3"><a href="#" class="btn btn-success m-2">Prestado</a></li>
                 @endif
             @else
                 @if ($book->state_id == 1)

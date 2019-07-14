@@ -11,19 +11,11 @@
 
     <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
         {{csrf_field()}}
-
-          <input type="file" onchange="previewFile()" name="image" class="form-control-file mx-auto">
-
-          @if(Auth::user()->image)
-          <div class="circle">
-            <img src="/storage/{{$usuarioLog->image}}" alt="" class="">
-
           <input type="file" onchange="previewFile()" name="image" class="image_select form-control-file mx-auto" style="color:red">
 
-          {{-- @if(Auth::user()->image)
+          @if(Auth::user()->image)
           <div class="circle" style="display:flex;justify-content:flex-end">
-            <img src="/storage/{{$usuarioLog->image}}" width=  "100%";> --}}
-
+            <img src="/storage/{{$usuarioLog->image}}" width=  "100%";>
           </div>
 
           @else
@@ -113,10 +105,10 @@
                 <p class="pl-3">Por el momento no hay libros cargados</p>
               @endforelse
           </div>
-          <div class="librosAPrestar col-12 row w-100 mx-auto">
-            <h1 class="text-center col-sm-12">Libros solicitados</h1>
+          <div class="librosLeyendo col-12 row w-100 mx-auto">
+            <h1 class="text-center col-sm-12">Son de mi interés</h1>
             @forelse ($myBooks as $book)
-                @if ($book->state_id == 2)
+              @if ($book->state_id == 2)
                 <div class="card col-md-3 mx-auto text-center" style="width: 18rem;">
                 <img class="card-img-top mx-auto mt-1" src="/storage/{{$book->image}}" alt="Imagen del libro">
                 <div class="card-body">
@@ -124,9 +116,9 @@
                   <a href="/bookPost/{{$book->id}}" class="btn btn-success">Ver detalle</a>
                 </div>
               </div>
-                @endif
+              @endif
               @empty
-                <p class="pl-3">Por el momento no hay libros solcitados</p>
+                <p class="pl-3">Por el momento no hay libros cargados</p>
               @endforelse
           </div>
           <div class="librosPrestados col-12 row w-100 mx-auto">
@@ -142,7 +134,7 @@
               </div>
               @endif
               @empty
-                <p class="pl-3">Por el momento no hay libros prestados</p>
+                <p class="pl-3">Por el momento no hay libros cargados</p>
               @endforelse
           </div>
         </div>
@@ -160,7 +152,19 @@
   </div>
 </div>
 </div>
-
+<footer class="col-lg-12 footer-home">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Nosotros</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">FAQ</a>
+    </li>
+  </ul>
+</footer>
 <script src="/js/follow.js">
 
 </script>

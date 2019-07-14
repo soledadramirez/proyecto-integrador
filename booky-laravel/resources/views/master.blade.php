@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="/css/owl.carousel.css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/productSlider.css">
-
-    {{-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> --}}
     @yield('custom-style')
     <title>@yield('title')</title>
   </head>
@@ -25,18 +23,14 @@
       @endguest
 
       <div class="container cont-menu">
-          <ul class="navbar-nav mr-auto">
-            @if (!Auth::user())
-            <li class="nav-item">
-              <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link a-blanco" href="#libros-recomendados" class="libros-recomendados">Libros recomendados</a>
-            </li>
-            @endif
-          </ul>
-
-
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link a-blanco" href="#">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link a-blanco" href="#">FAQ</a>
+          </li>
+        </ul>
           <div class="" id="navbarSupportedContent">
               <!-- Left Side Of Navbar -->
               <ul class="navbar-nav mr-auto">
@@ -87,28 +81,7 @@
     @yield ('main')
 
 
-    <footer class="col-lg-12 footer-home pt-4">
-      <ul class="navbar-nav pt-4 m-0 text-center">
-        <li class="nav-item active">
-          @guest
-            <a class="navbar-brand a-blanco" href="/home_general"><h1>Booky</h1></a>
-            @else
-            <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
-          @endguest
-        </li>
-        <ul class="navbar-nav text-center">
-          @if (!Auth::user())
-          <li class="nav-item">
-            <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link a-blanco" href="#libros-recomendados" class="libros-recomendados">Libros recomendados</a>
-          </li>
-          @endif
-          <li>Digital House - 2019</li>
-        </ul>
-      </ul>
-    </footer>
+
 
 
     @yield('jsextra')
