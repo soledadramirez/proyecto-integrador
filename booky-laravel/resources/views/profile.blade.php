@@ -19,7 +19,7 @@
           </div>
           @else
           <div class="circle">
-            <img src="/public/images/fotoPerfil.jpg" alt="">
+            <img src="/images/fotoPerfil.jpg" alt="">
           </div>
           @endif
 
