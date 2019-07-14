@@ -12,10 +12,10 @@
     <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
         {{csrf_field()}}
           <input type="file" onchange="previewFile()" name="image" class="form-control-file mx-auto">
-          
+
           @if(Auth::user()->image)
-          <div class="circle">
-            <img src="/storage/{{$usuarioLog->image}}" alt="">
+          <div class="circle" style="display:flex;justify-content:flex-end">
+            <img src="/storage/{{$usuarioLog->image}}" style="width:100%;" alt="">
           </div>
           @else
           <div class="circle">
