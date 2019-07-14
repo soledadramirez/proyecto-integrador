@@ -1,9 +1,10 @@
 
 
+
 @extends('master')
 @section('main')
 
-<class="fondo paral">
+<div class="fondo paral">
     <form class="form-group row my-0 p-0" id="search" action="/buscarLibros" method="get">
       <div class="col-lg-8">
         <input class="form-control col-md-10 mx-auto mt-3" name="search" type="text" placeholder="Busca tu libro" required>
@@ -48,13 +49,11 @@
 <div class="container">
 
 
-<div class="destacado">
-
-
-  <h2 name="libros-recomendados" id="libros-recomendados">Libros destacados</h2>
+<div class="destacado" id="libros-recomendados" class="libros-recomendados">
+  <h2>Libros destacados</h2>
 </div>
 
-<div id="carouselExampleControls" name="carouselExampleControls" class="carousel slide libros-carrusel" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide libros-carrusel" data-ride="carousel">
 <div class="carousel-inner">
   <div class="carousel-item active">
     <div class="row libros-carouseles">
@@ -102,7 +101,7 @@
     <h2>Autores Latinoamericanos</h2>
   </div>
 
-  <div id="carouselExampleControls2" name="carouselExampleControls2" class="carousel slide libros-carrusel" data-ride="carousel">
+  <div id="carouselExampleControls2" class="carousel slide libros-carrusel" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="row libros-carouseles">
@@ -142,11 +141,11 @@
 
     </div>
 @if (!Auth::user())
-  <div class="conocenos row mt-4" id="conocenos" name>
+  <div class="conocenos row mt-4">
     <div class="text-conocenos col-xl-6">
       <div class="card conocenos">
         <div class="card-body conocenos">
-          <h1 class="card-title">Un poco sobre nosotros</h1>
+          <h1 class="card-title">Conocenos</h1>
           <p class="card-text conocenos">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>

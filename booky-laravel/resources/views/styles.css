@@ -288,7 +288,7 @@ line-height: 25px;
 }
 .fondo{
 min-height: 100px;
-background-image: url("../images/libros2.jpg");
+background-image: url("../images/prueba/prueba13.jpg");
 background-size: 100%;
 }
 .jumbotron {
@@ -1056,8 +1056,14 @@ hr{
   }
   .fondo{
     min-height: 100px;
-    background-image: url("../images/libros2.jpg");
+    background-image: url("../images/prueba/prueba13.jpg");
     background-size: 100%;
+  }
+  .fondoProfile{
+    min-height: 100px;
+    background-image: url("../images/prueba/prueba12.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
   }
   .jumbotron {
     line-height: 50px;
