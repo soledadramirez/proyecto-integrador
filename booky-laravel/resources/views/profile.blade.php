@@ -5,7 +5,7 @@
 @section('main')
   <div class="fondo paral">
  <div class="fondoProfile">
-  <div class="container header-profile">
+  <div class="container header-profile" style="background-color:rgba(245,245,245,0.7)">
   <div class="row profileImage jumbotron">
   <div class="col-sm-6">
 
