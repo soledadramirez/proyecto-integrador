@@ -4,7 +4,7 @@
 
 
   <div class="container1 fondo paral altura-minima">
-    <div class="wrap-container container altura-minima mx-auto">
+    <div class="wrap-container container altura-minima mx-auto" style="background-color:rgba(245,245,245,0.8)">
       <div class="row py-4 mx-auto">
       <h2 class="col-12 my-4 mx-auto">Datos del libro</h2>
       <form class="" action="/agregarLibros" method="post" enctype="multipart/form-data" class="">

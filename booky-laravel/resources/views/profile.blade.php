@@ -85,7 +85,7 @@
    </div>
   </div>
   </div>
-      <div class="container profile">
+      <div class="container profile" style="background-color:rgba(245,245,245,0.8)">
       <div class="row py-2">
       <div class="">
         <div class="librosInfo row">
