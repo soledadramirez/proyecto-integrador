@@ -23,7 +23,7 @@
           </div>
           @endif
 
-            <button type="submit" class="btn btn-success agregImage"><i class="fas fa-pen-square"></i></button>
+            <button type="submit" class="btn btn-success agregImage">Confirmar imagen</button>
         </div>
       </form>
 
