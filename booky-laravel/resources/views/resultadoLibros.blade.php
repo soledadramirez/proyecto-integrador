@@ -30,7 +30,7 @@
 
 
                   <h1> <span class="close2">&times;</span> Para ver los detalles del libro debes estar logueado.</h1>
-                  <h3>Haz click <a style="color: blue" href="/login">aquí </a> si tienes una cuenta o <a style="color: blue" href="/register"> aquí</a>  para registrarte</h3>
+                  <h3>Haz click <a style="color: #18867a" href="/login">aquí </a> si tienes una cuenta o <a style="color: #18867a" href="/register"> aquí</a>  para registrarte</h3>
 
 
               </div>

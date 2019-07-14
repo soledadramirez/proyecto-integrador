@@ -2,7 +2,7 @@
 
 @section('main')
 
-  <div class="container">
+  <div class="container altura-minima">
       <div class="row cont-form-reg mt-4">
           <div class="col-sm-12 panel-cont">
               <div class="panel panel-default offset-lg-6">
