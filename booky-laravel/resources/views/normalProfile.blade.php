@@ -6,15 +6,15 @@
 @section('main')
   <div class="fondo paral">
  <div class="fondoProfile">
-  <div class="container header-profile">
+  <div class="container header-profile" style="background-color:rgba(245,245,245,0.7)">
   <div class="row profileImage jumbotron">
   <div class="col-sm-6">
 
 
     @if($user->image)
-    <div class="circle">
-      @php var_dump($usuarioLog->image); @endphp
-      <img src="/storage/{{$usuarioLog->image}}" alt="">
+    <div class="circle" style="display:flex;justify-content:flex-end">
+
+      <img src="/storage/{{$usuarioLog->image}}" width= "100%";>
     </div>
     @else
     <div class="circle">
@@ -109,7 +109,7 @@
    </div>
   </div>
   </div>
-      <div class="container profile">
+      <div class="container profile" style="background-color:rgba(245,245,245,0.8)">
       <div class="row py-2">
       <div class="">
         <div class="librosInfo row">

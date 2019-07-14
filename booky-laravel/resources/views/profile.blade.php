@@ -5,25 +5,34 @@
 @section('main')
   <div class="fondo paral">
  <div class="fondoProfile">
-  <div class="container header-profile">
+  <div class="container header-profile" style="background-color:rgba(245,245,245,0.7)">
   <div class="row profileImage jumbotron">
   <div class="col-sm-6">
 
     <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
         {{csrf_field()}}
+<<<<<<< HEAD
           <input type="file" onchange="previewFile()" name="image" class="form-control-file mx-auto">
 
           @if(Auth::user()->image)
           <div class="circle">
             <img src="/storage/{{$usuarioLog->image}}" alt="" class="">
+=======
+          <input type="file" onchange="previewFile()" name="image" class="image_select form-control-file mx-auto" style="color:red">
+
+          @if(Auth::user()->image)
+          <div class="circle" style="display:flex;justify-content:flex-end">
+            <img src="/storage/{{$usuarioLog->image}}" width=  "100%";>
+>>>>>>> 2f4c55da43171fdfd1e8397f3c4a31135de8310b
           </div>
+
           @else
           <div class="circle">
-            <img src="/public/images/fotoPerfil.jpg" alt="">
+            <img src="/images/fotoPerfil.jpg" alt="">
           </div>
           @endif
 
-            <button type="submit" class="btn btn-success agregImage"><i class="fas fa-pen-square"></i></button>
+            <button style="display:none" type="submit" class="btn btn-success agregImage confirm_image">Confirmar imagen</button>
         </div>
       </form>
 
@@ -80,11 +89,11 @@
     <div class="row user-data book-button">
     <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="/agregarLibros">Cargar libro</a></button>
     {{-- <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Pedir libro</a></button> --}}
-    <button class="col-sm-5 btn btn-link edit text-left " type="submit" name="button">Editar perfil</button>
+    <a class= "col-sm-5 btn btn-link edit text-center" href="/editProfile" style="margin:auto"> Editar perfil</a>
    </div>
   </div>
   </div>
-      <div class="container profile">
+      <div class="container profile" style="background-color:rgba(245,245,245,0.8)">
       <div class="row py-2">
       <div class="">
         <div class="librosInfo row">

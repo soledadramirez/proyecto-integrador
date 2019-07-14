@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/css/owl.carousel.css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/productSlider.css">
+
+    {{-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> --}}
     @yield('custom-style')
     <title>@yield('title')</title>
   </head>
@@ -25,10 +27,10 @@
       <div class="container cont-menu">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link a-blanco" href="#">Nosotros</a>
+            <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link a-blanco" href="#">FAQ</a>
+            <a class="nav-link a-blanco" href="#libros-recomendados" class="libros-recomendados">Libros recomendados</a>
           </li>
         </ul>
           <div class="" id="navbarSupportedContent">

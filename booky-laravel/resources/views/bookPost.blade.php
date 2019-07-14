@@ -8,7 +8,8 @@
 
 <div class="container1" style="background-image: url('images/bg-01.jpg');">
   <div class="container2 fondo paral altura-minima">
-    <div class="wrap-container container altura-minima">
+    <div class="wrap-container container altura-minima" style="
+    background-color: rgba(245,245,245,0.8)">
         <div class="row p-4">
         <h2 class="form-title col-12">Detalle de este libro</h2>{{-- si existe un titulo resultado, falta si existe un autor resultado --}}
         <div class="row col-12 mx-auto">

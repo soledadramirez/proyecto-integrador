@@ -34,6 +34,7 @@ min-height: 100%;
 display: flex;
 flex-direction: column;
 }
+
 .container{
 background-color: #fff;
 }
@@ -288,7 +289,7 @@ line-height: 25px;
 }
 .fondo{
 min-height: 100px;
-background-image: url("../images/libros2.jpg");
+background-image: url("../images/prueba/prueba13.jpg");
 background-size: 100%;
 }
 .jumbotron {
@@ -407,7 +408,7 @@ text-align: center;
  }
  .profileImage img{
  display: inline-block;
- width: auto;
+
  height: 100%;
  margin-left: -125px;
  }
@@ -498,8 +499,13 @@ font-size: 18px;
   color: #18867a;
   font-weight: 900;
 }
+<<<<<<< HEAD
 a.solicitar{
   color: #fff;
+=======
+.post {
+  background: rgba(255, 255, 255, 0.8);
+>>>>>>> 2f4c55da43171fdfd1e8397f3c4a31135de8310b
 }
 
 
@@ -699,7 +705,7 @@ hr{
   }
   .librosInfo img{
     display: block;
-    width: 120px;
+    width: 180px;
   }
   .book-title{
     margin: 10px 0;
@@ -1056,8 +1062,14 @@ hr{
   }
   .fondo{
     min-height: 100px;
-    background-image: url("../images/libros2.jpg");
+    background-image: url("../images/prueba/prueba13.jpg");
     background-size: 100%;
+  }
+  .fondoProfile{
+    min-height: 100px;
+    background-image: url("../images/prueba/prueba12.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
   }
   .jumbotron {
     line-height: 50px;
