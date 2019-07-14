@@ -81,7 +81,7 @@
     <div class="row user-data book-button">
     <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="/agregarLibros">Cargar libro</a></button>
     {{-- <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Pedir libro</a></button> --}}
-    <a class= "col-sm-5 btn btn-link edit text-left" href="/editProfile"> Editar perfil</a> 
+    <a class= "col-sm-5 btn btn-link edit text-center" href="/editProfile" style="margin:auto"> Editar perfil</a>
    </div>
   </div>
   </div>
