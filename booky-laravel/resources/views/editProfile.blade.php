@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('master')
 
 @section('main')
@@ -61,8 +60,8 @@
 
 
 
-=======
-@extends('../master')
+
+{{-- @extends('../master')
 
 @section('main')
 
@@ -145,6 +144,6 @@
             </div>
         </div>
     </div>
-</div>
->>>>>>> 2f4c55da43171fdfd1e8397f3c4a31135de8310b
+</div> --}}
+
 @endsection

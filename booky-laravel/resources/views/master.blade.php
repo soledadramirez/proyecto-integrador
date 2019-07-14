@@ -25,14 +25,18 @@
       @endguest
 
       <div class="container cont-menu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link a-blanco" href="#libros-recomendados" class="libros-recomendados">Libros recomendados</a>
-          </li>
-        </ul>
+          <ul class="navbar-nav mr-auto">
+            @if (!Auth::user())
+            <li class="nav-item">
+              <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-blanco" href="#libros-recomendados" class="libros-recomendados">Libros recomendados</a>
+            </li>
+            @endif
+          </ul>
+
+
           <div class="" id="navbarSupportedContent">
               <!-- Left Side Of Navbar -->
               <ul class="navbar-nav mr-auto">

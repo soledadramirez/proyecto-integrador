@@ -11,19 +11,19 @@
 
     <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
         {{csrf_field()}}
-<<<<<<< HEAD
+
           <input type="file" onchange="previewFile()" name="image" class="form-control-file mx-auto">
 
           @if(Auth::user()->image)
           <div class="circle">
             <img src="/storage/{{$usuarioLog->image}}" alt="" class="">
-=======
+
           <input type="file" onchange="previewFile()" name="image" class="image_select form-control-file mx-auto" style="color:red">
 
-          @if(Auth::user()->image)
+          {{-- @if(Auth::user()->image)
           <div class="circle" style="display:flex;justify-content:flex-end">
-            <img src="/storage/{{$usuarioLog->image}}" width=  "100%";>
->>>>>>> 2f4c55da43171fdfd1e8397f3c4a31135de8310b
+            <img src="/storage/{{$usuarioLog->image}}" width=  "100%";> --}}
+
           </div>
 
           @else
