@@ -14,7 +14,7 @@
     @if($user->image)
     <div class="circle" style="display:flex;justify-content:flex-end">
 
-      <img src="/storage/{{$usuarioLog->image}}">
+      <img src="/storage/{{$usuarioLog->image}}" width= "100%";>
     </div>
     @else
     <div class="circle">

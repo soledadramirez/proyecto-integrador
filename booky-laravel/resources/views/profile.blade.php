@@ -15,7 +15,7 @@
 
           @if(Auth::user()->image)
           <div class="circle" style="display:flex;justify-content:flex-end">
-            <img src="/storage/{{$usuarioLog->image}}" style="width:100%;" alt="">
+            <img src="/storage/{{$usuarioLog->image}}" width=  "100%";>
           </div>
 
           @else

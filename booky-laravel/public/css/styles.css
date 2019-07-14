@@ -408,7 +408,7 @@ text-align: center;
  }
  .profileImage img{
  display: inline-block;
- width: 100%;
+
  height: 100%;
  margin-left: -125px;
  }
@@ -700,7 +700,7 @@ hr{
   }
   .librosInfo img{
     display: block;
-    width: 120px;
+    width: 180px;
   }
   .book-title{
     margin: 10px 0;
