@@ -38,3 +38,10 @@ window.onclick = function(event) {
     modal1.style.display = "none";
   }
 }
+
+var image_select=document.querySelector(".image_select");
+var confirm_image=document.querySelector(".confirm_image");
+
+image_select.onclick = function(){
+confirm_image.style.display="inline-block";
+}
