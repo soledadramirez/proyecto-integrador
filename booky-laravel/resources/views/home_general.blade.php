@@ -168,7 +168,7 @@
       <div class="card conocenos">
         <div class="card-body conocenos">
           <h1 class="card-title" id="conocenos">Conocenos</h1>
-          <p class="card-text conocenos">Seguramente te haya pasado mil veces, terminaste de leer un libro que te encantó y tuviste unas ganas irresistibles de compartirlo con alguien. A nosotros nos pasó también, y por eso creamos esta comunidad. Tal vez 1984 de Orwell te haya volado la cabeza, o el último de Harry Potter. Sea cual sea tu libro, alguien lo quiere leer. Y alguien tiene el libro que vos buscás. Sumate!</p>
+          <p class="card-text conocenos">Seguramente te pasó mil veces: terminaste de leer un libro que te encantó y tuviste unas ganas irresistibles de compartirlo con alguien, ¡pero no sabías con quien! A nosotros nos pasó también, y por eso creamos esta comunidad. Tal vez 1984 de Orwell te haya volado la cabeza, o el último de Harry Potter. Sea cual sea tu libro, alguien lo quiere leer. Y alguien tiene el libro que vos buscás. Sumate!</p>
         </div>
       </div>
     </div>
