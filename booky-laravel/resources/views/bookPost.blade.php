@@ -18,6 +18,9 @@
               <div class="card-body">
                 <h5 class="card-title">{{$book->title->name}}</h5>
                 <p class="card-text">{{$book->review}}</p>
+                  
+
+
                 <ul class="list-group list-group-flush">
 
                   @if($usuarioLog->id!=$book->user_id)
@@ -44,6 +47,13 @@
                 @endif
             @endif
                </ul>
+               @if (Auth::User()->id == $book->user_id)
+               <form  class="" action="/borrarPost" method="post" style="float:right">
+             {{csrf_field()}}
+               <input type="hidden" name="id" value="{{$book->id}}">
+               <input type="submit" name="" value="Eliminar publicación" style="color:red">
+               </form>
+               @endif
               </div>
             </div>
           </div>

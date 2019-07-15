@@ -46,7 +46,7 @@ class BookController extends Controller
     public function store(Request $req)
     {
       $reglas = [
-        "book_cover" => "file|image",
+        "book_cover" => "file|image|required",
         "name" => "string|min:3|required",
         "author" => "string|min:3|required",
         "description" => "string|min:2|max:1000"
@@ -158,7 +158,13 @@ class BookController extends Controller
      */
     // public function destroy(book $book)
 
+    public function borrarPost(Request $req){
+      $id = $req["id"];
+      $book=Book::find($id);
+      $book->delete();
+      return redirect("/profile");
 
+    }
 
     public function buscarLibros(){
       $search = '%'.$_GET["search"].'%';

@@ -51,6 +51,7 @@ Route::get('/agregarLibros', ['middleware' => 'auth', 'uses' => 'BookController@
 
 Route::get("/notifications", 'BookController@ListaDeLibros');
 Route::get("/bookPost/{id}", 'BookController@show');
+Route::post("/borrarPost", "BookController@borrarPost");
 
 Route::get('/solicitar/{id}', 'BookController@solicitar');
 Route::get('/confirmar/{id}', 'BookController@confirmar');
@@ -66,6 +67,7 @@ Route::get('/editProfile',  function(){
 return view ('editProfile');
 });
 Route::post('/editProfile', 'userController@edit');
+
 
 // Route::get('/install', function(){
 //     Artisan::call("storage:link"),

@@ -246,7 +246,9 @@ input#email.campos-con-errores{
 input#pass.campos-con-errores{
   margin-bottom: 0;
 }
-
+small{
+  color:red
+}
 
 
           /*------------------------------estilos home*/

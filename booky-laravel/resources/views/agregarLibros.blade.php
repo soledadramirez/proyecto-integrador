@@ -17,6 +17,7 @@
                 </div>
                 <div class="form-group text-center mb-3">
                   <input type="file" onchange="previewFile()" name="book_cover" class="form-control-file mx-auto"  style="font-size:15px">
+                <small>{{$errors->first('book_cover')}}</small>
                 </div>
           </div>
           {{-- <div class="container-form-btn">

@@ -21,10 +21,10 @@
         @else
         <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
       @endguest
-
+     <?php $host =$_SERVER['REQUEST_URI'];?>
       <div class="container cont-menu ml-0">
           <ul class="navbar-nav mr-auto">
-            @if (!Auth::user())
+            @if ($host=="/home_general")
             <li class="nav-item">
               <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>
             </li>
@@ -85,7 +85,7 @@
     @yield ('main')
 
 
-    
+
 
 
     @yield('jsextra')

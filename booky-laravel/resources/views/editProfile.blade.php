@@ -3,7 +3,7 @@
 @section('main')
 
 <div class="fondo paral">
-    <div class="row container mx-auto transparent">
+    <div class="row container mx-auto transparent" style="min-height:52vw">
         <div class="col-sm-10 panel-cont mx-auto">
             <div class="panel panel-default offset-lg-6 mx-auto">
                 <div class="panel-body">
