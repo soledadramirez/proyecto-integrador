@@ -1,0 +1,10 @@
+<div class="row profileImage jumbotron">
+    <div class="container-form-btn">
+      <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
+        {{csrf_field()}}
+          <input type="file" onchange="previewFile()" name="foto_perfil" class="form-control-file mx-auto">
+      </form>
+      <button type="submit" class="form-btn btn btn-success ml-4 px-4">
+        Cargar al perfil
+      </button>
+    </div>
