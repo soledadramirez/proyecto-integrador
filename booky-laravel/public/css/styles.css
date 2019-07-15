@@ -502,6 +502,14 @@ font-size: 18px;
 .post {
   background: rgba(255, 255, 255, 0.8);
 }
+#myBtn{
+  border-radius: 5px;
+  color:#18867a;
+  background-color:white;
+}
+.user-data{
+  background-color: transparent;
+}
 
 
 
@@ -1054,12 +1062,12 @@ button.btn.edit{
     background-image: url("../images/prueba/prueba13.jpg");
     background-size: 100%;
   }
-  .fondoProfile{
+  /* .fondoProfile{
     min-height: 100px;
-    background-image: url("../images/prueba/prueba12.jpg");
+    background-image: url("../images/prueba/prueba13.jpg");
     background-size: 100%;
     background-attachment: fixed;
-  }
+  } */
   .jumbotron {
     line-height: 50px;
     width: 100%;

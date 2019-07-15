@@ -30,13 +30,11 @@
 
 
   <div class="col-sm-6 profile-info">
-    <div class="user-info">
-    <div class="row">
+    <div class="user-info text-center">
 
-    </div>
      <div class="row user-data user-follow">
 
-       <button id="myBtn" style="border-radius:5px;color:#18867a;background-color:white"> <span  class="col-sm-5 p-2"> {{count($follow)}} seguidores</span> </button>
+       <button id="myBtn"> <span  class="p-2"> {{count($follow)}} seguidores</span> </button>
 
 
        <div id="myModal" class="modal">
@@ -106,7 +104,7 @@
               @endforelse
           </div>
           <div class="librosLeyendo col-12 row w-100 mx-auto">
-            <h1 class="text-center col-sm-12">Son de mi interés</h1>
+            <h1 class="text-center col-sm-12">Libros solicitados</h1>
             @forelse ($myBooks as $book)
               @if ($book->state_id == 2)
                 <div class="card col-md-3 mx-auto text-center" style="width: 18rem;">
@@ -153,16 +151,25 @@
 </div>
 </div>
 <footer class="col-lg-12 footer-home">
-  <ul class="navbar-nav mr-auto">
+  <ul class="navbar-nav pt-4 m-0 text-center">
     <li class="nav-item active">
-      <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      @guest
+        <a class="navbar-brand a-blanco" href="/home_general"><h1>Booky</h1></a>
+        @else
+        <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
+      @endguest
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Nosotros</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">FAQ</a>
-    </li>
+    <ul class="navbar-nav text-center mb-1">
+      @if (!Auth::user())
+      <li class="nav-item">
+        <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link a-blanco" href="#libros-recomendados" class="libros-recomendados">Libros recomendados</a>
+      </li>
+      @endif
+      <li>Digital House - 2019</li>
+    </ul>
   </ul>
 </footer>
 <script src="/js/follow.js">

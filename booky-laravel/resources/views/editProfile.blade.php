@@ -8,7 +8,7 @@
             <div class="panel panel-default offset-lg-6">
                 <div class="panel-body">
 
-                    <form class="form-horizontal form-login col-md-12" method="POST" action="{{ route('register') }}">
+                    <form class="form-horizontal form-login col-md-12" method="POST" action="/editProfile">
                       {{csrf_field()}}
                         <h2>Ingresa tus nuevos datos</h2>
                         <div class="form-group row{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -27,7 +27,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('email') ? ' has-error' : '' }}">
+                        {{-- <div class="form-group row{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-form-label d-none d-md-block"><i class="far fa-envelope-open"></i></label>
 
                             <div class="col-md-11 col-sm-12 pl-0 pr-0 ml-2">
@@ -41,7 +41,7 @@
                                   </p>
                                 @endif
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group row{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-form-label d-none d-md-block"><i class="fas fa-lock"></i></label>
