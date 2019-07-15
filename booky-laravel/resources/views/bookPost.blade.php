@@ -23,27 +23,24 @@
 
                 <ul class="list-group list-group-flush">
 
-                  @if($usuarioLog->id!=$book->user_id)
-                 <li class="list-group-item">Compartido por:<a style="color:#18867a; font-weight:bolder"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a> </li>
-                 @else
+                  @if($usuarioLog->id=$book->user_id)
                   <li class="list-group-item">Compartido por:<a style="color:#18867a; font-weight:bolder"  href="/profile"> {{$book->user->name}} </a> </li>
-                 @endif
-
+                @endif
             @if (Auth::User()->id !== $book->user_id)
                 @if ($book->state_id == 1)
-                <li class="list-group-item"> ¡Disponible! <a href="/solicitar/{{$book->id}}" class="btn btn-success m-2">Solicitar</a></li>
+                <li class="list-group-item"> ¡Disponible! <a href="/solicitar/{{$book->id}}" class="btn btn-success m-2">Solicitar</a> a <a style="color:#18867a; font-weight:bolder"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a></li>
                 @elseif ($book->state_id == 2)
-                <li class="list-group-item pl-4">Solicitaste este libro</li>
+                <li class="list-group-item pl-4">Solicitaste este libro, aguardá a que <a style="color:#18867a; font-weight:bolder"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a> confirme el préstamo</li>
                 @elseif ($book->state_id == 3)
-                <li class="list-group-item3 pl-4">Te prestaron este libro</li>
+                <li class="list-group-item3 pl-4"> ¡<a style="color:#18867a; font-weight:bolder"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a> te prestó este ejemplar!</li>
                 @endif
             @else
                 @if ($book->state_id == 1)
                 <li class="list-group-item pl-4">Disponible para prestar</li>
                 @elseif ($book->state_id == 2)
-                <li class="list-group-item">Tu libro fue solicitado por <a style="color:#18867a" href="/normalProfile/{{$userInteresado->id}}">{{$userInteresado->name}}</a>,   mirá su <a style="color:#18867a" href="/profile/{{$userInteresado->id}}"> perfil</a> <a href="/confirmar/{{$book->id}}" class="btn btn-success m-2">Confirmar préstamo</a></li>
+                <li class="list-group-item">Tu libro fue solicitado por <a style="color:#18867a" href="/normalProfile/{{$userInteresado->id}}">{{$userInteresado->name}}</a><a href="/confirmar/{{$book->id}}" class="btn btn-success m-2">Confirmar préstamo</a></li>
                 @elseif ($book->state_id == 3)
-                <li class="list-group-item"><a href="/devolver/{{$book->id}}" class="btn btn-success m-2">Confirmar devolución</a></li>
+                <li class="list-group-item">¿<a style="color:#18867a" href="/normalProfile/{{$userInteresado->id}}">{{$userInteresado->name}}</a> te devolvió el libro? <a href="/devolver/{{$book->id}}" class="btn btn-success m-2">Confirmar devolución</a></li>
                 @endif
             @endif
                </ul>
