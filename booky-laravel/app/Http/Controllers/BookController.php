@@ -8,6 +8,7 @@ use App\Title;
 use App\State;
 use Auth;
 use App\Post;
+use App\User;
 
 use Illuminate\Http\Request;
 
@@ -88,6 +89,7 @@ class BookController extends Controller
       
       $libroNuevo->state_id = 1;
       $libroNuevo->review = $req['review'];
+      $libroNuevo->interested_id = 0;
       //dd($libroNuevo);
       $libroNuevo->image=$nombreArchivo;
       $libroNuevo->save();
@@ -121,13 +123,15 @@ class BookController extends Controller
     {
       $book=Book::find($id);
       $usuarioLog=Auth::user();
-
-      $vac=compact("book","usuarioLog");
-
+      if ($book->interested_id != 0) {
+        $userInteresado = User::find($book->interested_id);
+        $vac = compact('book', 'usuarioLog', 'userInteresado');
+      } else {
+        $vac=compact("book","usuarioLog");
+      }
       return view("bookPost",$vac);
 
     }
-
 
     /**
      * Show the form for editing the specified resource.
@@ -206,7 +210,7 @@ class BookController extends Controller
     public function solicitar($id) {
     $book = Book::find($id);
     $book->state_id = 2;
-
+    $book->interested_id = Auth::user()->id;
     $book->save();
     return redirect('/bookPost/'.$id);
   }

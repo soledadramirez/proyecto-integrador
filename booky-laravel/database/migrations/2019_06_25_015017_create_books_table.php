@@ -32,6 +32,8 @@ class CreateBooksTable extends Migration
 
             $table->string('review');
 
+            $table->bigInteger('interested_id')->nullable;
+
         });
     }
 
