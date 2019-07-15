@@ -64,7 +64,7 @@
                                     Ingresa
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" href="/register">
                                     ¿Olvidaste tu contraseña?
                                 </a>
                             </div>
