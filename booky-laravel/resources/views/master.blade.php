@@ -24,7 +24,7 @@
      <?php $host =$_SERVER['REQUEST_URI'];?>
       <div class="container cont-menu ml-0">
           <ul class="navbar-nav mr-auto">
-            @if ($host=="/home_general")
+            @if ($host=="/home_general" || $host=="/")
             <li class="nav-item">
               <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>
             </li>
