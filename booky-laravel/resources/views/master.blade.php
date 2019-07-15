@@ -8,9 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/productSlider.css">
+
 
     {{-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> --}}
     @yield('custom-style')
@@ -24,7 +22,7 @@
         <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
       @endguest
 
-      <div class="container cont-menu">
+      <div class="container cont-menu ml-0">
           <ul class="navbar-nav mr-auto">
             @if (!Auth::user())
             <li class="nav-item">
@@ -87,7 +85,7 @@
     @yield ('main')
 
 
-    <footer class="col-lg-12 footer-home pt-4">
+    <footer class="col-lg-12 footer-home mt-4">
       <ul class="navbar-nav pt-4 m-0 text-center">
         <li class="nav-item active">
           @guest
@@ -96,7 +94,7 @@
             <a class="navbar-brand a-blanco" href="/home"><h1>Booky</h1> </a>
           @endguest
         </li>
-        <ul class="navbar-nav text-center">
+        <ul class="navbar-nav text-center mb-1">
           @if (!Auth::user())
           <li class="nav-item">
             <a class="nav-link a-blanco" href="#conocenos">Nosotros</a>

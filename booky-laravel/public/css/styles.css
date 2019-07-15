@@ -505,8 +505,8 @@ a.solicitar{
 
 .post{
   background: rgba(255, 255, 255, 0.8);
-
 }
+
 
 
 @media only screen and (min-width: 768px){
@@ -559,9 +559,7 @@ width: 40%;
 line-height: 44px;
 font-size: 20px;
 }
-hr{
-display: none;
-}
+
 button.btn.edit{
   padding: 0 15px;
   width: 80%;
@@ -628,7 +626,7 @@ button.btn.edit{
       border-radius: 5px;
     }
 
-@media   only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   html.login{
     font-size: 20px;
   }
@@ -680,9 +678,7 @@ button.btn.edit{
   .check label{
     font-size: 20px;
   }
-hr{
-  display: none;
-}
+
 .navbar{
   padding: 8px 90px;
 }
@@ -951,9 +947,6 @@ hr{
 
   .login h2{
     color: #000;
-  }
-  hr{
-    margin: 10px;
   }
   .datos-alt h2{
     margin: 0;
