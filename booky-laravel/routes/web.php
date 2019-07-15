@@ -69,6 +69,8 @@ return view ('editProfile');
 Route::post('/editProfile', 'userController@edit');
 
 
+
+
 // Route::get('/install', function(){
 //     Artisan::call("storage:link"),
 //     Artisan::call("migrate")
