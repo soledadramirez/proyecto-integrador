@@ -84,6 +84,8 @@ class BookController extends Controller
       $libroNuevo->author_id = $nuevoAutor->id;
       $usuarioLog= Auth::user();
       $libroNuevo->user_id =$usuarioLog->id;
+
+      
       $libroNuevo->state_id = 1;
       $libroNuevo->review = $req['review'];
       //dd($libroNuevo);

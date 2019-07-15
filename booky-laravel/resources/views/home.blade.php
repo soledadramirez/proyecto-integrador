@@ -1,7 +1,11 @@
 
 
 @extends('master')
+@section('custom-style')
+  <link rel="stylesheet" href="/css/follow.css">
+@endsection
 @section('main')
+
 
 <div class="fondo paral">
   @if (Auth::user())
