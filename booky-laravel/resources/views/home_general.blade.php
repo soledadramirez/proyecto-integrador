@@ -88,7 +88,7 @@
 
 
 
-    <div id="carouselExampleControls" name="carouselExampleControls" class="carousel slide libros-carrusel" data-ride="carousel">
+    <div id="librosRecomendados" name="carouselExampleControls" class="carousel slide libros-carrusel" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row libros-carouseles">
@@ -111,11 +111,11 @@
           </div>
         </div>
       </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#librosRecomendados" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#librosRecomendados" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -125,7 +125,7 @@
       <div class="destacado">
         <h2 class="my-4" >Autores Latinoamericanos</h2>
       </div>
-      <div id="carouselExampleControls2" name="carouselExampleControls2" class="carousel slide libros-carrusel" data-ride="carousel">
+      <div id="autoresLatam" name="carouselExampleControls2" class="carousel slide libros-carrusel" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row libros-carouseles">
@@ -148,11 +148,11 @@
             </div>
           </div>
         </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#autoresLatam" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#autoresLatam" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>

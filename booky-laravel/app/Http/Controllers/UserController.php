@@ -113,7 +113,7 @@ class UserController extends Controller
 
      $usuarioLog=Auth::user();
      $usuarioLog->name=$req["name"];
-     $usuarioLog->password=$req["password"];
+     $usuarioLog->password=bcrypt($req["password"]);
 
      $usuarioLog->save();
 
