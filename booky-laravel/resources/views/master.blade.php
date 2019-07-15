@@ -60,6 +60,9 @@
                           </a>
 
                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/home">
+                                Inicio
+                            </a>
                             <a class="dropdown-item" href="/profile">
                                 Mi perfil
                             </a>

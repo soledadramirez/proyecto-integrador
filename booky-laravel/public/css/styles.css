@@ -499,7 +499,10 @@ font-size: 18px;
 }
 .post a{
   color: #18867a;
+}
+.post a.btn{
   font-weight: 900;
+  color: #fff;
 }
 .post {
   background: rgba(255, 255, 255, 0.8);

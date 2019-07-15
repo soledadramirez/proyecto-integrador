@@ -18,7 +18,7 @@
               <div class="card-body">
                 <h5 class="card-title">{{$book->title->name}}</h5>
                 <p class="card-text">{{$book->review}}</p>
-                  
+
 
 
                 <ul class="list-group list-group-flush">
@@ -51,7 +51,7 @@
                <form  class="" action="/borrarPost" method="post" style="float:right">
              {{csrf_field()}}
                <input type="hidden" name="id" value="{{$book->id}}">
-               <input type="submit" name="" value="Eliminar publicación" style="color:red">
+               <input type="submit" name="" value="Eliminar publicación" style="color:#18867a">
                </form>
                @endif
               </div>
