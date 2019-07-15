@@ -38,7 +38,7 @@
                "<a href="/bookPost/{{$book->id}}">{{$book->title->name}}</a>"</li>
 
             @if (Auth::user()->id !== $book->user->id)
-                <li class="list-group-item"> ¿Te interesa? <a href="/solicitar/{{$book->id}}" class="btn btn-success m-4 solicitar">¡Solicitalo!</a> </li>
+                <li class="list-group-item"> ¿Te interesa? <a href="/solicitar/{{$book->id}}" class="btn btn-success m-4">¡Solicitalo!</a> </li>
             @else
                 <li class="list-group-item">Gracias por compartir este libro!</li>
             @endif
@@ -77,7 +77,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  {{-- <footer class="col-lg-12 footer-home">
+  <footer class="col-lg-12 footer-home">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
@@ -92,7 +92,7 @@
 
 
 
-  </footer> --}}
+  </footer>
 
 
   @endsection

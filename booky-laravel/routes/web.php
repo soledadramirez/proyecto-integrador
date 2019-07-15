@@ -62,17 +62,10 @@ Route::get('/resultadoLibros', function(){
   return view('resultadoLibros');
 });
 
-
-// Route::post('/editProfile', 'UserController@editarPerfil');
-// Route::get('/editProfile', function(){
-//   return view('editProfile');
-// });
-
 Route::get('/editProfile',  function(){
 return view ('editProfile');
 });
 Route::post('/editProfile', 'userController@edit');
-
 
 // Route::get('/install', function(){
 //     Artisan::call("storage:link"),

@@ -144,11 +144,6 @@ class UserController extends Controller
         //
     }
 
-    public function editarPerfil(){
-
-      return view('editProfile');
-    }
-
 
 
 

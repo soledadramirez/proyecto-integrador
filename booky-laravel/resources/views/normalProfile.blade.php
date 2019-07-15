@@ -85,8 +85,8 @@
 {{ csrf_field() }}
 {{ method_field('DELETE') }}
 
-<button type="submit" id="delete-follow-{{ $user->target_id }}" class="btn btn-light">
-<i class="fa fa-btn fa-trash"></i><span class="pl-2" style="color:#18867a">Dejar de seguir</span>
+<button type="submit" id="delete-follow-{{ $user->target_id }}" class="btn btn-danger">
+<i class="fa fa-btn fa-trash"></i>Dejar de seguir
 </button>
 </form>
 
@@ -96,7 +96,7 @@
 {{ csrf_field() }}
 
 <button type="submit" id="follow-user-{{ $user->id }}" class="btn btn-success">
-<i style="color:#fff" class="fa fa-btn fa-user"></i><span class="pl-2">Seguir</span>
+<i class="fa fa-btn fa-user"></i>Seguir
 </button>
 </form>
 
@@ -176,7 +176,7 @@
   </div>
 </div>
 </div>
-{{-- <footer class="col-lg-12 footer-home">
+<footer class="col-lg-12 footer-home">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
       <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
@@ -188,7 +188,7 @@
       <a class="nav-link" href="#">FAQ</a>
     </li>
   </ul>
-</footer> --}}
+</footer>
 
 <script src="/js/follow.js">
 

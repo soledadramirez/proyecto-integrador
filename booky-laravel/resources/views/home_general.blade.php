@@ -3,7 +3,6 @@
 @extends('master')
 @section('main')
 
-
 <div class="fondo paral">
     <form class="form-group row my-0 p-0" id="search" action="/buscarLibros" method="get">
       <div class="col-lg-8">
@@ -55,6 +54,7 @@
       <li data-target="#demo" data-slide-to="2"></li>
     </ul>
 
+<<<<<<< HEAD
    <!-- The slideshow -->
     <div class="carousel-inner">
       <div class="carousel-item active mx-auto">
@@ -71,6 +71,37 @@
       </div>
       <div class="carousel-item">
         <img src="images/libros/fundacion.jpeg" class="d-block w-100 img-fluid">
+=======
+
+<div class="container">
+
+
+<div class="destacado">
+  <h2>Libros destacados</h2>
+</div>
+
+<div id="carouselExampleControls" class="carousel slide libros-carrusel" data-ride="carousel">
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <div class="row libros-carouseles">
+      <div class="col-2 libros-carouseles"><a href="#"> <img src="images/libros/adorno.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/bartok.png" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images//libros/benjamin.png" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/chomsky.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/fundacion.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/doerr.jpg" class="d-block w-100" alt="..."> </a> </div>
+
+</div>
+  </div>
+  <div class="carousel-item">
+    <div class="row">
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/benjamin2.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/benjamin3.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/hemingway.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/herzog.jpeg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/homo.jpg" class="d-block w-100" alt="..."> </a> </div>
+      <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/lolita.jpeg" class="d-block w-100" alt="..."> </a> </div>
+>>>>>>> 2f467f20ee8c50e2f83fbdee502ceb792f8a56d5
       </div>
       <div class="carousel-item">
         <img src="images/libros/doerr.jpg" class="d-block w-100 img-fluid">
@@ -84,8 +115,29 @@
 
 <div class="d-none d-sm-none d-md-block">
   <div class="container">
+<<<<<<< HEAD
     <div class="destacado">
       <h2 class="my-4" name="libros-recomendados" id="libros-recomendados">Libros destacados</h2>
+=======
+
+
+  <div class="destacado">
+    <h2>Autores Latinoamericanos</h2>
+  </div>
+
+  <div id="carouselExampleControls2" class="carousel slide libros-carrusel" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row libros-carouseles">
+        <div class="col-2 libros-carouseles"><a href="#"> <img src="images/libros/garcia-marquez.jpg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles "> <a href="#"> <img src="images/libros/bogado.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/borges.jpeg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/ciempies.jpg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/detectives.jpg" class="d-block w-100" alt="..."> </a> </div>
+        <div class="col-2 libros-carouseles"> <a href="#"> <img src="images/libros/jazmin-paraguayo.jpeg" class="d-block w-100" alt="..."> </a> </div>
+
+  </div>
+>>>>>>> 2f467f20ee8c50e2f83fbdee502ceb792f8a56d5
     </div>
 
     <div id="carouselExampleControls" name="carouselExampleControls" class="carousel slide libros-carrusel" data-ride="carousel">
@@ -162,11 +214,11 @@
 
 
 @if (!Auth::user())
-  <div class="conocenos row mt-4" id="conocenos" name>
+  <div class="conocenos row mt-4">
     <div class="text-conocenos col-xl-6">
       <div class="card conocenos">
         <div class="card-body conocenos">
-          <h1 class="card-title">Un poco sobre nosotros</h1>
+          <h1 class="card-title">Conocenos</h1>
           <p class="card-text conocenos">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
@@ -202,7 +254,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  {{-- <footer class="col-lg-12 footer-home">
+  <footer class="col-lg-12 footer-home">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
@@ -217,6 +269,6 @@
 
 
 
-  </footer> --}}
+  </footer>
 
   @endsection
