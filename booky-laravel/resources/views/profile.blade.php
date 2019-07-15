@@ -11,7 +11,7 @@
 
     <form class="" action="/profile" method="post" enctype="multipart/form-data" class="">
         {{csrf_field()}}
-          <input type="file" onchange="previewFile()" name="image" class="image_select form-control-file mx-auto" style="color:red">
+
 
           @if(Auth::user()->image)
           <div class="circle" style="display:flex;justify-content:flex-end">
@@ -23,7 +23,7 @@
             <img src="/images/fotoPerfil.jpg" alt="">
           </div>
           @endif
-
+          <input type="file" onchange="previewFile()" name="image" class="image_select form-control-file mx-auto text-center" style="color:#18867a">
             <button style="display:none" type="submit" class="btn btn-success agregImage confirm_image">Confirmar imagen</button>
         </div>
       </form>
@@ -79,7 +79,7 @@
     <div class="row user-data book-button">
     <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="/agregarLibros">Cargar libro</a></button>
     {{-- <button type="submit" name="button" class="col-sm-5 btn btn-success"><a href="#">Pedir libro</a></button> --}}
-    <a class= "col-sm-5 btn btn-link edit text-center" href="/editProfile" style="margin:auto"> Editar perfil</a>
+    <a class= "col-sm-5 btn btn-light p-2 edit text-center" href="/editProfile" style="margin:auto"> Editar perfil</a>
    </div>
   </div>
   </div>

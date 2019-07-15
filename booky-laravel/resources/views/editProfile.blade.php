@@ -2,13 +2,13 @@
 
 @section('main')
 
-<div class="container">
-    <div class="row cont-form-reg">
-        <div class="col-sm-12 panel-cont">
-            <div class="panel panel-default offset-lg-6">
+<div class="fondo paral">
+    <div class="row container mx-auto transparent">
+        <div class="col-sm-10 panel-cont mx-auto">
+            <div class="panel panel-default offset-lg-6 mx-auto">
                 <div class="panel-body">
 
-                    <form class="form-horizontal form-login col-md-12" method="POST" action="/editProfile">
+                    <form class="form-horizontal col-md-12 header-profile" method="POST" action="/editProfile">
                       {{csrf_field()}}
                         <h2>Ingresa tus nuevos datos</h2>
                         <div class="form-group row{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -68,7 +68,7 @@
                         </div>
 
 
-                        <div class="form-group">
+                        <div class="form-group my-4">
                             <div class="col-md-8 mx-auto">
                                 <button type="submit" class="btn-login btn-register w-100">
                                 Guardar cambios
